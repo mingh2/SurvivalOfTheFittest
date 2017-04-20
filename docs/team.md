@@ -5,12 +5,13 @@ title:  Team
 
 # {{ page.title }}
 
+## Team Members List
 
-## USER 1
-***UCI Net ID***: ucinetid
+## Ming Huang
+***UCI Net ID***: mingh2
 
-## USER 2
-***UCI Net ID***: ucinetid
+## Zixun Ai
+***UCI Net ID***: aiz
 
-## USER 3
-***UCI Net ID***: ucinetid
+## Kevin (Zijia) Ke
+***UCI Net ID***: zijiak
