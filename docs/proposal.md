@@ -17,17 +17,17 @@ Moreover, if the time will be available later on, we would spend more time on de
 
 # 3. Evaluation Plan
 
-# 3.1 Variable for the Evaluation 
+## 3.1 Variable for the Evaluation 
 
 N	= Number of Monster Eliminated
 T = Number of Different Types of Monster the Agent Can Combat with
 H = Agent’s Health Level
 
-# 3.2 Evaluation Equation 
+## 3.2 Evaluation Equation 
 
 Performance = NTH (May add on weights or other factors. To be decided later)
 
-# 3.3 Evaluation Summary 
+## 3.3 Evaluation Summary 
 
 The performance will be evaluated by three factors – number of monster eliminated, number of different types of monster the agent can handle, and the health remained after the combat. The baseline would be fighting with one Zombie without dying. The first improvement would be concentrate on increasing the number of Zombie that agent can combat with without dying. Then, we would work on allowing the agent to learn not only how to deal with Zombie, but also other creatures – Cave Spider, Creeper, and Skeleton – that has different behavior.
 
