@@ -3,9 +3,7 @@ layout: default
 title:  Team
 ---
 
-# {{ page.title }}
-
-## Team Members List
+# Team Members List
 
 ## Ming Huang
 ***UCI Net ID***: mingh2
