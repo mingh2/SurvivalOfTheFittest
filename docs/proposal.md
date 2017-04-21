@@ -10,6 +10,12 @@ The Project aims to create an agent who can learn to fight with different creatu
 Input(s): TBA
 Output(s): Agent's Actions
 
+### Minecraft Mobs and Survival 
+
+Minecraft has a broad range of mobs with different kinds of behavior. Some of them are passive, but there are many hostile mobs during night time and in the Nether. There are several bosses that user can battle with for a longer and harder times. For the project, we are focusing on hostile mobs and boss mobs including Blaze, Chicken Jockey, Creeper, Skeleton, et cetera. 
+
+<img src="https://hydra-media.cursecdn.com/minecraft.gamepedia.com/b/bd/Blaze.png?version=15f9a1312c42fe4ea4e1cc032972c086" width="100px">
+
 # 2. AI/ML Algorithms
 
 The agent acts on dynamic programming with shortest path algorithm such as Bellman-Ford to conduct action and evolutionary neural network to make decision.
