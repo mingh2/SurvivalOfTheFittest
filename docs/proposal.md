@@ -39,3 +39,10 @@ To evaluate the performance of the agent at each generation, the agent has acces
 # 4. Appointment with the Instructor:
 
 The appointment time is on April 25, Tuesday afternoon at 3:30pm.
+
+# 5. Reference
+
+https://en.wikipedia.org/wiki/Neuroevolution
+
+https://en.wikipedia.org/wiki/Evolutionary_algorithm
+
