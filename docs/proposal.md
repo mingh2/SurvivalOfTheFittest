@@ -7,13 +7,13 @@ title:  Proposal
 
 The Project aims to create an agent who can learn to fight with different creatures in Minecraft within a designated arena. We intend to start working with an agent combating with a single Zombie in an unobstructed map. Then, we would train the agent with other Minecraft Monsters – Zombie Pigman, Wither, Blaze, etc. If possible, the agent should learn to utilize the terrain to its advantage when given a more complex map. The agent does not take any command from human users. The agent should also save evolutionary information for the evolutionary neural network to be used and analyzed by future generation and human users. It would focus on eliminating more monsters with less damage on its health.  
 
-Input(s): TBA
+Input(s): TBA (No user input for now. The agent should learn to combat with Mobs without user intervention)
 
 Output(s): Agent's Actions
 
 ### Minecraft Mobs and Survival 
 
-Minecraft has a broad range of mobs with different kinds of behavior. Some of them are passive, but there are many hostile mobs during night time and in the Nether. There are several bosses that user can battle with for a longer and harder times. One of the main gaming mod in Minecraft is survival. The agent need to build shelters and combat with Mobs to survive and flourish. For the project, we are focusing on hostile mobs and boss mobs including Blaze, Chicken Jockey, Creeper, Skeleton, et cetera. 
+Minecraft has a broad range of mobs with different kinds of behavior. Some of them are passive, but there are many hostile mobs during night time and in the Nether. There are several bosses that user can battle with for a longer and harder times. One of the main gaming mod in Minecraft is survival. The agent needs to build shelters and combat with Mobs to survive and flourish. For the project, we are focusing on hostile mobs and boss mobs including Blaze, Chicken Jockey, Creeper, Skeleton, et cetera. 
 
 <img src="https://hydra-media.cursecdn.com/minecraft.gamepedia.com/b/bd/Blaze.png?version=15f9a1312c42fe4ea4e1cc032972c086" width="100px"><img src="https://hydra-media.cursecdn.com/minecraft.gamepedia.com/d/d3/Chicken_Jockey.png?version=8b1140769c932f3fab34df81354068bf" width="100px"><img src="https://hydra-media.cursecdn.com/minecraft.gamepedia.com/0/0a/Creeper.png?version=29e05da97976522ab5c6d5c1bb6f09fd" width="100px"><img src="https://hydra-media.cursecdn.com/minecraft.gamepedia.com/c/c3/Zombie.png?version=4e99cb43244a05db3d1fa8675610918b" width="100px">
 
