@@ -22,9 +22,6 @@ The performance will be evaluated by three factors – number of monster elimina
 To evaluate the performance of the agent at each generation, the agent has access to the three evaluation variables. It would be programmed to maximize all three variables. The base goal is surviving and triumph in a flat unobstructed map with one Zombie. Our midterm goal includes an agent who can teach itself to fight with Zombie, Creeper, and Skeleton in the same map at the same time with more than 20 unit of Monsters. The moonshot case would be a combat with the Enderdragon.
 
 
-
-
-
 # 4. Appointment with the Instructor:
 
 The appointment time is on April 25, Tuesday afternoon at 3:30pm.
