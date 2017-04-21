@@ -15,6 +15,9 @@ Output(s): Agent's Actions
 Minecraft has a broad range of mobs with different kinds of behavior. Some of them are passive, but there are many hostile mobs during night time and in the Nether. There are several bosses that user can battle with for a longer and harder times. For the project, we are focusing on hostile mobs and boss mobs including Blaze, Chicken Jockey, Creeper, Skeleton, et cetera. 
 
 <img src="https://hydra-media.cursecdn.com/minecraft.gamepedia.com/b/bd/Blaze.png?version=15f9a1312c42fe4ea4e1cc032972c086" width="100px">
+<img src="https://hydra-media.cursecdn.com/minecraft.gamepedia.com/d/d3/Chicken_Jockey.png?version=8b1140769c932f3fab34df81354068bf" width="100px">
+<img src="https://hydra-media.cursecdn.com/minecraft.gamepedia.com/0/0a/Creeper.png?version=29e05da97976522ab5c6d5c1bb6f09fd" width="100px">
+<img src="https://hydra-media.cursecdn.com/minecraft.gamepedia.com/2/23/Skeleton.png?version=a592b6fc5020e3130ff67dbd6a1cfe4f" width="100px">
 
 # 2. AI/ML Algorithms
 
