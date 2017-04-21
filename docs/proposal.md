@@ -27,4 +27,4 @@ To evaluate the performance of the agent at each generation, the agent has acces
 
 # 4. Appointment with the Instructor:
 
-## 4.1: The appointment time is on April 25, Tuesday afternoon at 3:30pm.
+The appointment time is on April 25, Tuesday afternoon at 3:30pm.
