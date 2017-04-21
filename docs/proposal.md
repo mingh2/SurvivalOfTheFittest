@@ -20,7 +20,9 @@ Moreover, if the time will be available later on, we would spend more time on de
 ## 3.1 Variable for the Evaluation 
 
 N	= Number of Monster Eliminated
+
 T = Number of Different Types of Monster the Agent Can Combat with
+
 H = Agent’s Health Level
 
 ## 3.2 Evaluation Equation 
