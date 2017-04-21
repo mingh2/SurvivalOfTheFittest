@@ -7,6 +7,8 @@ title:  Proposal
 
 The Project aims to create an agent who can learn to fight with different creatures in Minecraft within a designated arena. We intend to start working with an agent combating with a single Zombie in an unobstructed map. Then, we would train the agent with other Minecraft Monsters – Zombie Pigman, Wither, Blaze, etc. If possible, the agent should learn to utilize the terrain to its advantage when given a more complex map. The agent does not take any command from human users. The agent should also save evolutionary information for the evolutionary neural network to be used and analyzed by future generation and human users. It would focus on eliminating more monsters with less damage on its health.  
 
+Input(s): TBA
+Output(s): Agent's Actions
 
 # 2. AI/ML Algorithms
 
