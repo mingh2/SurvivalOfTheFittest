@@ -1,11 +1,11 @@
 ###########
 # site.title
 
-title:    'mingh2/SurvivalOfTheFittest'
-subtitle: 'CS 175: Project in AI (in Minecraft)'
+title:    'mingh2/SurvivalOfTheFittest'^M
+subtitle: 'CS 175: Project in AI (in Minecraft)'^M
 
-name:         'Survival of The Fittest'
-description:  'Minecraft Malmo Project for CS 175 at UC Irvine'
+name:         'Survival of The Fittest'^M
+description:  'Minecraft Malmo Project for CS 175 at UC Irvine'^M
 
 #########################
 # more settings
