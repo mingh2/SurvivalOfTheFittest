@@ -10,7 +10,7 @@ The Project aims to create an agent who can learn to fight with different creatu
 
 # 2. AI/ML Algorithms
 
-The agent acts on dynamic programming with shortest path algorithm such as Bellman-Ford to conduct action and evolutionary neural network to make decision. 
+The agent acts on dynamic programming with shortest path algorithm such as Bellman-Ford to conduct action and evolutionary neural network to make decision.
 
 Moreover, if the time will be available later on, we would spend more time on designing different game mode (i.e., maze, jungle, ocean islands, etc), and more algorithms would be implemented, such as Depth-First Search, Greedy, and Alpha-Beta Pruning.
 
