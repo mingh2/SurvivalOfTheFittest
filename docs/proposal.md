@@ -17,6 +17,18 @@ Moreover, if the time will be available later on, we would spend more time on de
 
 # 3. Evaluation Plan
 
+# 3.1 Variable for the Evaluation 
+
+N	= Number of Monster Eliminated
+T = Number of Different Types of Monster the Agent Can Combat with
+H = Agent’s Health Level
+
+# 3.2 Evaluation Equation 
+
+Performance = NTH (May add on weights or other factors. To be decided later)
+
+# 3.3 Evaluation Summary 
+
 The performance will be evaluated by three factors – number of monster eliminated, number of different types of monster the agent can handle, and the health remained after the combat. The baseline would be fighting with one Zombie without dying. The first improvement would be concentrate on increasing the number of Zombie that agent can combat with without dying. Then, we would work on allowing the agent to learn not only how to deal with Zombie, but also other creatures – Cave Spider, Creeper, and Skeleton – that has different behavior.
 
 To evaluate the performance of the agent at each generation, the agent has access to the three evaluation variables. It would be programmed to maximize all three variables. The base goal is surviving and triumph in a flat unobstructed map with one Zombie. Our midterm goal includes an agent who can teach itself to fight with Zombie, Creeper, and Skeleton in the same map at the same time with more than 20 unit of Monsters. The moonshot case would be a combat with the Enderdragon.
