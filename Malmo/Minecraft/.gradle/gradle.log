@@ -1,0 +1,598 @@
+****************************
+ Powered By MCP:             
+ http://modcoderpack.com/    
+ Searge, ProfMobius, Fesh0r, 
+ R4wk, ZeuX, IngisKahn, bspkrs
+ MCP Data version : 9.10
+****************************
+:deobfCompileDummyTask
+:deobfProvidedDummyTask
+:compileApiJava UP-TO-DATE
+:processApiResources UP-TO-DATE
+:apiClasses UP-TO-DATE
+:copyModToClient
+:copyModToServer
+:deleteSchemas
+:copySchemas
+:jaxb UP-TO-DATE
+:sourceMainJava UP-TO-DATE
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:jar
+:getVersionJson
+:extractNatives SKIPPED
+:extractUserdev UP-TO-DATE
+:getAssetIndex UP-TO-DATE
+:getAssets
+Current status: 312/734   42%
+Current status: 546/734   74%
+:makeStart SKIPPED
+:runClient
+[11:06:28] [main/INFO] [GradleStart]: Extra: []
+[11:06:28] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/kezijia/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker]
+[11:06:28] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[11:06:28] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[11:06:28] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[11:06:28] [main/INFO] [FML]: Forge Mod Loader version 11.14.3.1543 for Minecraft 1.8 loading
+[11:06:28] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_66, running on Mac OS X:x86_64:10.12.1, installed at /Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre
+[11:06:28] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[11:06:28] [main/INFO] [FML]: Found a command line coremod : com.microsoft.Malmo.OverclockingPlugin
+[11:06:28] [main/WARN] [FML]: The coremod com.microsoft.Malmo.OverclockingPlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
+[11:06:28] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[11:06:28] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[11:06:28] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[11:06:28] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[11:06:28] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[11:06:28] [main/ERROR] [FML]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
+[11:06:29] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
+[11:06:29] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[11:06:29] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[11:06:29] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[11:06:30] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[11:06:30] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[11:06:30] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[11:06:30] [main/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:transform:52]: MALMO: Attempting to transform MinecraftServer
+[11:06:30] [main/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:147]: MALMO: Found Minecraft, attempting to transform it
+[11:06:30] [main/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:153]: MALMO: Found Minecraft.runGameLoop() method, attempting to transform it
+[11:06:30] [main/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:168]: MALMO: Hooked into call to Minecraft.updateDisplay()
+[11:06:32] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:transform:52]: MALMO: Attempting to transform MinecraftServer
+[11:06:32] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:112]: MALMO: Found MinecraftServer, attempting to transform it
+[11:06:32] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:118]: MALMO: Found MinecraftServer.run() method, attempting to transform it
+[11:06:32] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[11:06:32] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[11:06:32] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[11:06:32] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[11:06:32] [Client thread/INFO]: Setting user: Player197
+[11:06:36] [Client thread/INFO]: LWJGL Version: 2.9.2
+[11:06:36] [Client thread/INFO] [MinecraftForge]: Attempting early MinecraftForge initialization
+[11:06:36] [Client thread/INFO] [FML]: MinecraftForge v11.14.3.1543 Initialized
+[11:06:36] [Client thread/INFO] [FML]: Replaced 204 ore recipies
+[11:06:37] [Client thread/INFO] [MinecraftForge]: Completed early MinecraftForge initialization
+[11:06:37] [Client thread/INFO] [FML]: Found 0 mods from the command line. Injecting into mod discoverer
+[11:06:37] [Client thread/INFO] [FML]: Searching /Users/kezijia/Downloads/Malmo-0.21.0-Mac-64bit/Minecraft/run/mods for mods
+[11:06:40] [Client thread/INFO] [FML]: Forge Mod Loader has identified 4 mods to load
+[11:06:40] [Client thread/INFO] [FML]: Attempting connection with missing mods [mcp, FML, Forge, malmomod] at CLIENT
+[11:06:40] [Client thread/INFO] [FML]: Attempting connection with missing mods [mcp, FML, Forge, malmomod] at SERVER
+[11:06:41] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
+[11:06:41] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in /Users/kezijia/Downloads/Malmo-0.21.0-Mac-64bit/Minecraft/build/libs/MalmoMod-0.21.0.jar
+[11:06:41] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in /Users/kezijia/Downloads/Malmo-0.21.0-Mac-64bit/Minecraft/build/libs/MalmoMod-0.21.0.jar
+[11:06:41] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in /Users/kezijia/Downloads/Malmo-0.21.0-Mac-64bit/Minecraft/build/libs/MalmoMod-0.21.0.jar
+[11:06:41] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
+[11:06:41] [Client thread/INFO] [FML]: Found 384 ObjectHolder annotations
+[11:06:41] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
+[11:06:41] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
+[11:06:41] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
+[11:06:41] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.SchemaHelper:testSchemaVersionNumbers:157]: Testing schemas against internal version number: 0.21
+[11:06:41] [Client thread/INFO] [FML]: Applying holder lookups
+[11:06:41] [Client thread/INFO] [FML]: Holder lookups applied
+[11:06:41] [Client thread/INFO] [FML]: Injecting itemstacks
+[11:06:41] [Client thread/INFO] [FML]: Itemstack injection complete
+[11:06:42] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[11:06:43] [Thread-7/INFO]: Initializing LWJGL OpenAL
+[11:06:43] [Thread-7/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[11:06:43] [Thread-7/INFO]: OpenAL initialized.
+[11:06:43] [Sound Library Loader/INFO]: Sound engine started
+[11:06:45] [Client thread/INFO] [FML]: Max texture size: 16384
+[11:06:45] [Client thread/INFO]: Created: 16x16 textures-atlas
+[11:06:47] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_MOD_READY
+[11:06:47] [Client thread/INFO] [FML]: Injecting itemstacks
+[11:06:47] [Client thread/INFO] [FML]: Itemstack injection complete
+[11:06:47] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 4 mods
+[11:06:47] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
+[11:06:47] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in /Users/kezijia/Downloads/Malmo-0.21.0-Mac-64bit/Minecraft/build/libs/MalmoMod-0.21.0.jar
+[11:06:47] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in /Users/kezijia/Downloads/Malmo-0.21.0-Mac-64bit/Minecraft/build/libs/MalmoMod-0.21.0.jar
+[11:06:47] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in /Users/kezijia/Downloads/Malmo-0.21.0-Mac-64bit/Minecraft/build/libs/MalmoMod-0.21.0.jar
+[11:06:47] [Client thread/INFO]: SoundSystem shutting down...
+[11:06:47] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[11:06:47] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[11:06:48] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[11:06:48] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[11:06:48] [Thread-9/INFO]: OpenAL initialized.
+[11:06:48] [Sound Library Loader/INFO]: Sound engine started
+[11:06:49] [Client thread/INFO] [FML]: Max texture size: 16384
+[11:06:50] [Client thread/INFO]: Created: 512x512 textures-atlas
+[11:06:51] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_MOD_READY
+[11:06:51] [Thread-11/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:run:191]: Listening for messages on port 10000
+[11:06:51] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[11:06:51] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[11:07:47] [Thread-13/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[11:07:47] [Thread-13/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Hello world!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>1000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time><Weather>clear</Weather></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;7,44*49,73,35:1,159:4,95:13,35:13,159:11,95:10,159:14,159:6,35:6,95:6;12;" seed=""/><DrawingDecorator><DrawSphere radius="30" type="air" x="-27" y="70" z="0"/></DrawingDecorator><MazeDecorator><Seed>0</Seed><AllowDiagonalMovement>false</AllowDiagonalMovement><SizeAndPosition height="10" length="6" scale="1" width="6" xOrigin="-32" yOrigin="69" zOrigin="-5"/><StartBlock fixedToEdge="true" height="1" heightVariance="0" type="emerald_b
+[11:07:48] [Thread-13/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[11:07:48] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Hello world!
+[11:07:48] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[11:07:48] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[11:07:48] [Thread-14/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:run:191]: Listening for messages on port 10211
+[11:07:48] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[11:07:48] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[11:07:48] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_NEW_WORLD
+[11:07:48] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_NEW_WORLD
+[11:07:50] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[11:07:50] [Server thread/INFO]: Generating keypair
+[11:07:50] [Server thread/INFO]: Converting map!
+[11:07:50] [Server thread/INFO]: Scanning folders...
+[11:07:50] [Server thread/INFO]: Total conversion count is 0
+[11:07:50] [Server thread/INFO] [FML]: Injecting existing block and item data into this server instance
+[11:07:50] [Server thread/INFO] [FML]: Applying holder lookups
+[11:07:50] [Server thread/INFO] [FML]: Holder lookups applied
+[11:07:50] [Server thread/INFO] [FML]: Loading dimension 0 (TEMP_10000_430e3ced-b016-4f21-ab7a-c2f93b06f55d) (net.minecraft.server.integrated.IntegratedServer@474c88d4)
+[11:07:50] [Server thread/WARN]: Unable to find spawn biome
+[11:07:52] [Server thread/INFO] [FML]: Loading dimension 1 (TEMP_10000_430e3ced-b016-4f21-ab7a-c2f93b06f55d) (net.minecraft.server.integrated.IntegratedServer@474c88d4)
+[11:07:52] [Server thread/INFO] [FML]: Loading dimension -1 (TEMP_10000_430e3ced-b016-4f21-ab7a-c2f93b06f55d) (net.minecraft.server.integrated.IntegratedServer@474c88d4)
+[11:07:52] [Server thread/INFO]: Preparing start region for level 0
+[11:07:53] [Server thread/INFO]: Preparing spawn area: 64%
+[11:07:54] [Server thread/INFO]: Changing view distance to 6, from 10
+[11:07:55] [Client thread/INFO]: Deleting level TEMP_10000_afa6dfbc-7c53-429c-95d0-2e8fcb70905a
+[11:07:55] [Client thread/INFO]: Attempt 1...
+[11:07:56] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_MOD_READY
+[11:07:56] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[11:07:56] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[11:07:56] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_MOD_READY
+[11:07:56] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[11:07:56] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[11:07:56] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:execute:468]: INCOMING MISSION: Received MissionInit directly through ServerStateMachine constructor.
+[11:07:56] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Hello world!
+[11:07:56] [Server thread/INFO]: Received mission: §9Hello world!
+[11:07:56] [Server thread/INFO]: Source: §a127.0.0.1
+[11:07:56] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[11:07:56] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[11:07:56] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2
+[11:07:56] [Netty Server IO #1/INFO] [FML]: Client protocol version 2
+[11:07:56] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 4 mods : FML@8.0.99.99,malmomod@0.21.0,Forge@11.14.3.1543,mcp@9.05
+[11:07:56] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection established
+[11:07:58] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.MissionHandlers.MazeDecoratorImplementation:findSubgoals:444]: Attempting to find subgoals...
+[11:07:58] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[11:07:58] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[11:07:58] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[11:07:58] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> CS175AwesomeMazeBot
+[11:07:58] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
+[11:07:58] [Server thread/INFO]: CS175AwesomeMazeBot[local:E:26d2d9e3] logged in with entity id 0 at (1085.5, 56.0, -79.5)
+[11:07:58] [Server thread/INFO]: CS175AwesomeMazeBot joined the game
+[11:07:59] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 3609ms behind, skipping 72 tick(s)
+[11:08:00] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:00] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:01] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[11:08:01] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[11:08:01] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[11:08:01] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.VideoHook:resizeIfNeeded:152]: Resized the window
+[11:08:01] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[11:08:02] [Client thread/INFO]: [CHAT] §l10...
+[11:08:02] [Client thread/INFO]: [CHAT] §l9...
+[11:08:03] [Client thread/INFO]: [CHAT] §l8...
+[11:08:03] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: IDLING
+[11:08:03] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: IDLING
+[11:08:03] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[11:08:03] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[11:08:05] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[11:08:05] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[11:08:05] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10907.
+[11:08:05] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[11:08:05] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[11:08:05] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[11:08:05] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[11:08:05] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[11:08:05] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[11:08:05] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[11:08:05] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[11:08:05] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[11:08:06] [Thread-19/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[11:08:06] [Thread-19/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Hello world!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>1000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time><Weather>clear</Weather></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;7,44*49,73,35:1,159:4,95:13,35:13,159:11,95:10,159:14,159:6,35:6,95:6;12;" seed=""/><DrawingDecorator><DrawSphere radius="30" type="air" x="-27" y="70" z="0"/></DrawingDecorator><MazeDecorator><Seed>0</Seed><AllowDiagonalMovement>false</AllowDiagonalMovement><SizeAndPosition height="10" length="6" scale="1" width="6" xOrigin="-32" yOrigin="69" zOrigin="-5"/><StartBlock fixedToEdge="true" height="1" heightVariance="0" type="emerald_b
+[11:08:06] [Thread-19/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[11:08:06] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Hello world!
+[11:08:06] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[11:08:06] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[11:08:06] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[11:08:06] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[11:08:06] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[11:08:06] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:checkForMissionCommand:492]: INCOMING MISSION: Received MissionInit directly through queue.
+[11:08:06] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Hello world!
+[11:08:06] [Server thread/INFO]: Received mission: §9Hello world!
+[11:08:06] [Server thread/INFO]: Source: §a127.0.0.1
+[11:08:06] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[11:08:06] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[11:08:07] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[11:08:07] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[11:08:07] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[11:08:07] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:07] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:07] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:07] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:07] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.MissionHandlers.MazeDecoratorImplementation:findSubgoals:444]: Attempting to find subgoals...
+[11:08:07] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[11:08:07] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[11:08:07] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[11:08:07] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> CS175AwesomeMazeBot
+[11:08:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[11:08:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[11:08:08] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[11:08:08] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[11:08:08] [Client thread/INFO]: [CHAT] §l10...
+[11:08:09] [Client thread/INFO]: [CHAT] §l9...
+[11:08:09] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: IDLING
+[11:08:09] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: IDLING
+[11:08:09] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[11:08:09] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[11:08:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[11:08:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[11:08:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10907.
+[11:08:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[11:08:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[11:08:10] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[11:08:10] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[11:08:10] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[11:08:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[11:08:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[11:08:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[11:08:10] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[11:08:10] [Server thread/INFO]: Saving and pausing game...
+[11:08:10] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_430e3ced-b016-4f21-ab7a-c2f93b06f55d'/Overworld
+[11:08:11] [Thread-23/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[11:08:11] [Thread-23/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Hello world!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>1000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time><Weather>clear</Weather></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;7,44*49,73,35:1,159:4,95:13,35:13,159:11,95:10,159:14,159:6,35:6,95:6;12;" seed=""/><DrawingDecorator><DrawSphere radius="30" type="air" x="-27" y="70" z="0"/></DrawingDecorator><MazeDecorator><Seed>0</Seed><AllowDiagonalMovement>false</AllowDiagonalMovement><SizeAndPosition height="10" length="7" scale="1" width="7" xOrigin="-32" yOrigin="69" zOrigin="-5"/><StartBlock fixedToEdge="true" height="1" heightVariance="0" type="emerald_b
+[11:08:11] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_430e3ced-b016-4f21-ab7a-c2f93b06f55d'/Nether
+[11:08:11] [Thread-23/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[11:08:11] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Hello world!
+[11:08:11] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[11:08:11] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[11:08:11] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[11:08:11] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[11:08:11] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[11:08:11] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_430e3ced-b016-4f21-ab7a-c2f93b06f55d'/The End
+[11:08:11] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[11:08:11] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:11] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:checkForMissionCommand:492]: INCOMING MISSION: Received MissionInit directly through queue.
+[11:08:11] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Hello world!
+[11:08:11] [Server thread/INFO]: Received mission: §9Hello world!
+[11:08:11] [Server thread/INFO]: Source: §a127.0.0.1
+[11:08:11] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[11:08:11] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[11:08:12] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[11:08:12] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[11:08:12] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:12] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:12] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.MissionHandlers.MazeDecoratorImplementation:findSubgoals:444]: Attempting to find subgoals...
+[11:08:12] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[11:08:12] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[11:08:12] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[11:08:12] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> CS175AwesomeMazeBot
+[11:08:12] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:12] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[11:08:12] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[11:08:12] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[11:08:13] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[11:08:13] [Client thread/INFO]: [CHAT] §l10...
+[11:08:13] [Client thread/INFO]: [CHAT] §l9...
+[11:08:13] [Client thread/INFO]: [CHAT] §l8...
+[11:08:14] [Client thread/INFO]: [CHAT] §l7...
+[11:08:14] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: IDLING
+[11:08:14] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: IDLING
+[11:08:14] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[11:08:14] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[11:08:14] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[11:08:14] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[11:08:14] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10907.
+[11:08:14] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[11:08:14] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[11:08:14] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[11:08:14] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[11:08:14] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[11:08:14] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[11:08:14] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[11:08:14] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[11:08:14] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[11:08:16] [Thread-27/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[11:08:16] [Thread-27/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Hello world!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>1000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time><Weather>clear</Weather></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;7,44*49,73,35:1,159:4,95:13,35:13,159:11,95:10,159:14,159:6,35:6,95:6;12;" seed=""/><DrawingDecorator><DrawSphere radius="30" type="air" x="-27" y="70" z="0"/></DrawingDecorator><MazeDecorator><Seed>0</Seed><AllowDiagonalMovement>false</AllowDiagonalMovement><SizeAndPosition height="10" length="7" scale="1" width="7" xOrigin="-32" yOrigin="69" zOrigin="-5"/><StartBlock fixedToEdge="true" height="1" heightVariance="0" type="emerald_b
+[11:08:16] [Thread-27/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[11:08:16] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Hello world!
+[11:08:16] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[11:08:16] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[11:08:16] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[11:08:16] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[11:08:16] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[11:08:16] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:checkForMissionCommand:492]: INCOMING MISSION: Received MissionInit directly through queue.
+[11:08:16] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Hello world!
+[11:08:16] [Server thread/INFO]: Received mission: §9Hello world!
+[11:08:16] [Server thread/INFO]: Source: §a127.0.0.1
+[11:08:16] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[11:08:16] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[11:08:16] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[11:08:16] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[11:08:16] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[11:08:16] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:16] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.MissionHandlers.MazeDecoratorImplementation:findSubgoals:444]: Attempting to find subgoals...
+[11:08:16] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[11:08:16] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[11:08:16] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[11:08:16] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> CS175AwesomeMazeBot
+[11:08:16] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:16] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[11:08:16] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[11:08:16] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[11:08:16] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[11:08:17] [Client thread/INFO]: [CHAT] §l10...
+[11:08:18] [Client thread/INFO]: [CHAT] §l9...
+[11:08:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: IDLING
+[11:08:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: IDLING
+[11:08:18] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[11:08:18] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[11:08:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[11:08:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[11:08:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10907.
+[11:08:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[11:08:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[11:08:18] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[11:08:18] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[11:08:18] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[11:08:18] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[11:08:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[11:08:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[11:08:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[11:08:20] [Thread-31/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[11:08:20] [Thread-31/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Hello world!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>1000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time><Weather>clear</Weather></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;7,44*49,73,35:1,159:4,95:13,35:13,159:11,95:10,159:14,159:6,35:6,95:6;12;" seed=""/><DrawingDecorator><DrawSphere radius="30" type="air" x="-27" y="70" z="0"/></DrawingDecorator><MazeDecorator><Seed>0</Seed><AllowDiagonalMovement>false</AllowDiagonalMovement><SizeAndPosition height="10" length="8" scale="1" width="8" xOrigin="-32" yOrigin="69" zOrigin="-5"/><StartBlock fixedToEdge="true" height="1" heightVariance="0" type="emerald_b
+[11:08:20] [Thread-31/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[11:08:20] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Hello world!
+[11:08:20] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[11:08:20] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[11:08:20] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[11:08:20] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[11:08:20] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[11:08:20] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[11:08:20] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:20] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:checkForMissionCommand:492]: INCOMING MISSION: Received MissionInit directly through queue.
+[11:08:20] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Hello world!
+[11:08:20] [Server thread/INFO]: Received mission: §9Hello world!
+[11:08:20] [Server thread/INFO]: Source: §a127.0.0.1
+[11:08:20] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[11:08:20] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[11:08:20] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[11:08:20] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[11:08:20] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.MissionHandlers.MazeDecoratorImplementation:findSubgoals:444]: Attempting to find subgoals...
+[11:08:20] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[11:08:20] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:20] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[11:08:20] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[11:08:20] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> CS175AwesomeMazeBot
+[11:08:20] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:20] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[11:08:20] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[11:08:20] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[11:08:20] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[11:08:21] [Client thread/INFO]: [CHAT] §l10...
+[11:08:21] [Client thread/INFO]: [CHAT] §l9...
+[11:08:22] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: IDLING
+[11:08:22] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: IDLING
+[11:08:22] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[11:08:22] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[11:08:22] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[11:08:22] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[11:08:22] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10907.
+[11:08:22] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[11:08:22] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[11:08:22] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[11:08:22] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[11:08:22] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[11:08:22] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[11:08:22] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[11:08:22] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[11:08:22] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[11:08:24] [Thread-35/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[11:08:24] [Thread-35/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Hello world!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>1000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time><Weather>clear</Weather></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;7,44*49,73,35:1,159:4,95:13,35:13,159:11,95:10,159:14,159:6,35:6,95:6;12;" seed=""/><DrawingDecorator><DrawSphere radius="30" type="air" x="-27" y="70" z="0"/></DrawingDecorator><MazeDecorator><Seed>0</Seed><AllowDiagonalMovement>false</AllowDiagonalMovement><SizeAndPosition height="10" length="8" scale="1" width="8" xOrigin="-32" yOrigin="69" zOrigin="-5"/><StartBlock fixedToEdge="true" height="1" heightVariance="0" type="emerald_b
+[11:08:24] [Thread-35/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[11:08:24] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Hello world!
+[11:08:24] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[11:08:24] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[11:08:24] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[11:08:24] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[11:08:24] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[11:08:24] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[11:08:24] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:24] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:checkForMissionCommand:492]: INCOMING MISSION: Received MissionInit directly through queue.
+[11:08:24] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Hello world!
+[11:08:24] [Server thread/INFO]: Received mission: §9Hello world!
+[11:08:24] [Server thread/INFO]: Source: §a127.0.0.1
+[11:08:24] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[11:08:24] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[11:08:24] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[11:08:24] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[11:08:24] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.MissionHandlers.MazeDecoratorImplementation:findSubgoals:444]: Attempting to find subgoals...
+[11:08:24] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[11:08:24] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[11:08:24] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[11:08:24] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> CS175AwesomeMazeBot
+[11:08:24] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:24] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[11:08:24] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[11:08:24] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[11:08:24] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[11:08:25] [Client thread/INFO]: [CHAT] §l10...
+[11:08:26] [Client thread/INFO]: [CHAT] §l9...
+[11:08:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: IDLING
+[11:08:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: IDLING
+[11:08:26] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[11:08:26] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[11:08:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[11:08:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[11:08:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10907.
+[11:08:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[11:08:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[11:08:26] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[11:08:26] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[11:08:26] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[11:08:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[11:08:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[11:08:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[11:08:26] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[11:08:28] [Thread-39/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[11:08:28] [Thread-39/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Hello world!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>1000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time><Weather>clear</Weather></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;7,44*49,73,35:1,159:4,95:13,35:13,159:11,95:10,159:14,159:6,35:6,95:6;12;" seed=""/><DrawingDecorator><DrawSphere radius="30" type="air" x="-27" y="70" z="0"/></DrawingDecorator><MazeDecorator><Seed>0</Seed><AllowDiagonalMovement>false</AllowDiagonalMovement><SizeAndPosition height="10" length="9" scale="1" width="9" xOrigin="-32" yOrigin="69" zOrigin="-5"/><StartBlock fixedToEdge="true" height="1" heightVariance="0" type="emerald_b
+[11:08:28] [Thread-39/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[11:08:28] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Hello world!
+[11:08:28] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[11:08:28] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[11:08:28] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[11:08:28] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[11:08:28] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[11:08:28] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:checkForMissionCommand:492]: INCOMING MISSION: Received MissionInit directly through queue.
+[11:08:28] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Hello world!
+[11:08:28] [Server thread/INFO]: Received mission: §9Hello world!
+[11:08:28] [Server thread/INFO]: Source: §a127.0.0.1
+[11:08:28] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[11:08:28] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[11:08:28] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[11:08:28] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[11:08:28] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[11:08:28] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:28] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.MissionHandlers.MazeDecoratorImplementation:findSubgoals:444]: Attempting to find subgoals...
+[11:08:28] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[11:08:28] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[11:08:28] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[11:08:28] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> CS175AwesomeMazeBot
+[11:08:28] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:28] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[11:08:28] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[11:08:28] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[11:08:28] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[11:08:28] [Client thread/INFO]: [CHAT] §l10...
+[11:08:29] [Client thread/INFO]: [CHAT] §l9...
+[11:08:30] [Client thread/INFO]: [CHAT] §l8...
+[11:08:31] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: IDLING
+[11:08:31] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: IDLING
+[11:08:31] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[11:08:31] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[11:08:31] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[11:08:31] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[11:08:31] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10907.
+[11:08:31] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[11:08:31] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[11:08:31] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[11:08:31] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[11:08:31] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[11:08:31] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[11:08:31] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[11:08:31] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[11:08:31] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[11:08:33] [Thread-43/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[11:08:33] [Thread-43/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Hello world!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>1000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time><Weather>clear</Weather></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;7,44*49,73,35:1,159:4,95:13,35:13,159:11,95:10,159:14,159:6,35:6,95:6;12;" seed=""/><DrawingDecorator><DrawSphere radius="30" type="air" x="-27" y="70" z="0"/></DrawingDecorator><MazeDecorator><Seed>0</Seed><AllowDiagonalMovement>false</AllowDiagonalMovement><SizeAndPosition height="10" length="9" scale="1" width="9" xOrigin="-32" yOrigin="69" zOrigin="-5"/><StartBlock fixedToEdge="true" height="1" heightVariance="0" type="emerald_b
+[11:08:33] [Thread-43/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[11:08:33] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Hello world!
+[11:08:33] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[11:08:33] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[11:08:33] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[11:08:33] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[11:08:33] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[11:08:33] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[11:08:33] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:33] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:checkForMissionCommand:492]: INCOMING MISSION: Received MissionInit directly through queue.
+[11:08:33] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Hello world!
+[11:08:33] [Server thread/INFO]: Received mission: §9Hello world!
+[11:08:33] [Server thread/INFO]: Source: §a127.0.0.1
+[11:08:33] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[11:08:33] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[11:08:33] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[11:08:33] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[11:08:33] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.MissionHandlers.MazeDecoratorImplementation:findSubgoals:444]: Attempting to find subgoals...
+[11:08:33] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[11:08:33] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[11:08:33] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[11:08:33] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> CS175AwesomeMazeBot
+[11:08:33] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:33] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[11:08:33] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[11:08:33] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[11:08:33] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[11:08:33] [Client thread/INFO]: [CHAT] §l10...
+[11:08:34] [Client thread/INFO]: [CHAT] §l9...
+[11:08:35] [Client thread/INFO]: [CHAT] §l8...
+[11:08:35] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: IDLING
+[11:08:35] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: IDLING
+[11:08:35] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[11:08:35] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[11:08:35] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[11:08:35] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[11:08:35] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10907.
+[11:08:35] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[11:08:35] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[11:08:35] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[11:08:35] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[11:08:35] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[11:08:35] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[11:08:35] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[11:08:35] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[11:08:36] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[11:08:37] [Thread-47/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[11:08:37] [Thread-47/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Hello world!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>1000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time><Weather>clear</Weather></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;7,44*49,73,35:1,159:4,95:13,35:13,159:11,95:10,159:14,159:6,35:6,95:6;12;" seed=""/><DrawingDecorator><DrawSphere radius="30" type="air" x="-27" y="70" z="0"/></DrawingDecorator><MazeDecorator><Seed>0</Seed><AllowDiagonalMovement>false</AllowDiagonalMovement><SizeAndPosition height="10" length="10" scale="1" width="10" xOrigin="-32" yOrigin="69" zOrigin="-5"/><StartBlock fixedToEdge="true" height="1" heightVariance="0" type="emerald
+[11:08:37] [Thread-47/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[11:08:37] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Hello world!
+[11:08:37] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[11:08:37] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[11:08:37] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[11:08:37] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[11:08:37] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[11:08:37] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:checkForMissionCommand:492]: INCOMING MISSION: Received MissionInit directly through queue.
+[11:08:37] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[11:08:37] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Hello world!
+[11:08:37] [Server thread/INFO]: Received mission: §9Hello world!
+[11:08:37] [Server thread/INFO]: Source: §a127.0.0.1
+[11:08:37] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[11:08:37] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[11:08:37] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:37] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[11:08:37] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[11:08:37] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.MissionHandlers.MazeDecoratorImplementation:findSubgoals:444]: Attempting to find subgoals...
+[11:08:37] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[11:08:37] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[11:08:37] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[11:08:37] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> CS175AwesomeMazeBot
+[11:08:38] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - CS175AwesomeMazeBot
+[11:08:38] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[11:08:38] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[11:08:38] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[11:08:38] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[11:08:38] [Client thread/INFO]: [CHAT] §l10...
+[11:08:39] [Client thread/INFO]: [CHAT] §l9...
+[11:08:40] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: IDLING
+[11:08:40] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: IDLING
+[11:08:40] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[11:08:40] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[11:08:40] [Client thread/INFO]: [CHAT] §l8...
+[11:08:40] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[11:08:40] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[11:08:40] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10907.
+[11:08:40] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[11:08:40] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[11:08:40] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[11:08:40] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[11:08:40] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[11:08:40] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[11:08:40] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[11:08:40] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[11:08:40] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[11:08:42] [Thread-51/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[11:08:42] [Thread-51/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Hello world!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>1000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time><Weather>clear</Weather></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;7,44*49,73,35:1,159:4,95:13,35:13,159:11,95:10,159:14,159:6,35:6,95:6;12;" seed=""/><DrawingDecorator><DrawSphere radius="30" type="air" x="-27" y="70" z="0"/></DrawingDecorator><MazeDecorator><Seed>0</Seed><AllowDiagonalMovement>false</AllowDiagonalMovement><SizeAndPosition height="10" length="10" scale="1" width="10" xOrigin="-32" yOrigin="69" zOrigin="-5"/><StartBlock fixedToEdge="true" height="1" heightVariance="0" type="emerald
+[11:08:42] [Thread-51/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[11:08:42] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Hello world!
+[11:08:42] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[11:08:42] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[11:08:42] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[11:08:42] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[11:08:42] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[11:08:42] [Server thread/INFO] [STDOUT]: [com.microsoft

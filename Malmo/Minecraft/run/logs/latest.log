@@ -1,0 +1,112 @@
+[11:06:32] [Client thread/INFO]: Setting user: Player197
+[11:06:36] [Client thread/INFO]: LWJGL Version: 2.9.2
+[11:06:41] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
+[11:06:41] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in /Users/kezijia/Downloads/Malmo-0.21.0-Mac-64bit/Minecraft/build/libs/MalmoMod-0.21.0.jar
+[11:06:41] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in /Users/kezijia/Downloads/Malmo-0.21.0-Mac-64bit/Minecraft/build/libs/MalmoMod-0.21.0.jar
+[11:06:41] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in /Users/kezijia/Downloads/Malmo-0.21.0-Mac-64bit/Minecraft/build/libs/MalmoMod-0.21.0.jar
+[11:06:42] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[11:06:43] [Thread-7/INFO]: Initializing LWJGL OpenAL
+[11:06:43] [Thread-7/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[11:06:43] [Thread-7/INFO]: OpenAL initialized.
+[11:06:43] [Sound Library Loader/INFO]: Sound engine started
+[11:06:45] [Client thread/INFO]: Created: 16x16 textures-atlas
+[11:06:47] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
+[11:06:47] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in /Users/kezijia/Downloads/Malmo-0.21.0-Mac-64bit/Minecraft/build/libs/MalmoMod-0.21.0.jar
+[11:06:47] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in /Users/kezijia/Downloads/Malmo-0.21.0-Mac-64bit/Minecraft/build/libs/MalmoMod-0.21.0.jar
+[11:06:47] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in /Users/kezijia/Downloads/Malmo-0.21.0-Mac-64bit/Minecraft/build/libs/MalmoMod-0.21.0.jar
+[11:06:47] [Client thread/INFO]: SoundSystem shutting down...
+[11:06:47] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[11:06:47] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[11:06:48] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[11:06:48] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[11:06:48] [Thread-9/INFO]: OpenAL initialized.
+[11:06:48] [Sound Library Loader/INFO]: Sound engine started
+[11:06:50] [Client thread/INFO]: Created: 512x512 textures-atlas
+[11:07:50] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[11:07:50] [Server thread/INFO]: Generating keypair
+[11:07:50] [Server thread/INFO]: Converting map!
+[11:07:50] [Server thread/INFO]: Scanning folders...
+[11:07:50] [Server thread/INFO]: Total conversion count is 0
+[11:07:50] [Server thread/WARN]: Unable to find spawn biome
+[11:07:52] [Server thread/INFO]: Preparing start region for level 0
+[11:07:53] [Server thread/INFO]: Preparing spawn area: 64%
+[11:07:54] [Server thread/INFO]: Changing view distance to 6, from 10
+[11:07:55] [Client thread/INFO]: Deleting level TEMP_10000_afa6dfbc-7c53-429c-95d0-2e8fcb70905a
+[11:07:55] [Client thread/INFO]: Attempt 1...
+[11:07:56] [Server thread/INFO]: Received mission: §9Hello world!
+[11:07:56] [Server thread/INFO]: Source: §a127.0.0.1
+[11:07:58] [Server thread/INFO]: CS175AwesomeMazeBot[local:E:26d2d9e3] logged in with entity id 0 at (1085.5, 56.0, -79.5)
+[11:07:58] [Server thread/INFO]: CS175AwesomeMazeBot joined the game
+[11:07:59] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 3609ms behind, skipping 72 tick(s)
+[11:08:02] [Client thread/INFO]: [CHAT] §l10...
+[11:08:02] [Client thread/INFO]: [CHAT] §l9...
+[11:08:03] [Client thread/INFO]: [CHAT] §l8...
+[11:08:06] [Server thread/INFO]: Received mission: §9Hello world!
+[11:08:06] [Server thread/INFO]: Source: §a127.0.0.1
+[11:08:07] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[11:08:07] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[11:08:08] [Client thread/INFO]: [CHAT] §l10...
+[11:08:09] [Client thread/INFO]: [CHAT] §l9...
+[11:08:10] [Server thread/INFO]: Saving and pausing game...
+[11:08:10] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_430e3ced-b016-4f21-ab7a-c2f93b06f55d'/Overworld
+[11:08:11] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_430e3ced-b016-4f21-ab7a-c2f93b06f55d'/Nether
+[11:08:11] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_430e3ced-b016-4f21-ab7a-c2f93b06f55d'/The End
+[11:08:11] [Server thread/INFO]: Received mission: §9Hello world!
+[11:08:11] [Server thread/INFO]: Source: §a127.0.0.1
+[11:08:12] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[11:08:12] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[11:08:13] [Client thread/INFO]: [CHAT] §l10...
+[11:08:13] [Client thread/INFO]: [CHAT] §l9...
+[11:08:13] [Client thread/INFO]: [CHAT] §l8...
+[11:08:14] [Client thread/INFO]: [CHAT] §l7...
+[11:08:16] [Server thread/INFO]: Received mission: §9Hello world!
+[11:08:16] [Server thread/INFO]: Source: §a127.0.0.1
+[11:08:16] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[11:08:16] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[11:08:17] [Client thread/INFO]: [CHAT] §l10...
+[11:08:18] [Client thread/INFO]: [CHAT] §l9...
+[11:08:20] [Server thread/INFO]: Received mission: §9Hello world!
+[11:08:20] [Server thread/INFO]: Source: §a127.0.0.1
+[11:08:20] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[11:08:20] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[11:08:21] [Client thread/INFO]: [CHAT] §l10...
+[11:08:21] [Client thread/INFO]: [CHAT] §l9...
+[11:08:24] [Server thread/INFO]: Received mission: §9Hello world!
+[11:08:24] [Server thread/INFO]: Source: §a127.0.0.1
+[11:08:24] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[11:08:24] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[11:08:25] [Client thread/INFO]: [CHAT] §l10...
+[11:08:26] [Client thread/INFO]: [CHAT] §l9...
+[11:08:28] [Server thread/INFO]: Received mission: §9Hello world!
+[11:08:28] [Server thread/INFO]: Source: §a127.0.0.1
+[11:08:28] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[11:08:28] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[11:08:28] [Client thread/INFO]: [CHAT] §l10...
+[11:08:29] [Client thread/INFO]: [CHAT] §l9...
+[11:08:30] [Client thread/INFO]: [CHAT] §l8...
+[11:08:33] [Server thread/INFO]: Received mission: §9Hello world!
+[11:08:33] [Server thread/INFO]: Source: §a127.0.0.1
+[11:08:33] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[11:08:33] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[11:08:33] [Client thread/INFO]: [CHAT] §l10...
+[11:08:34] [Client thread/INFO]: [CHAT] §l9...
+[11:08:35] [Client thread/INFO]: [CHAT] §l8...
+[11:08:37] [Server thread/INFO]: Received mission: §9Hello world!
+[11:08:37] [Server thread/INFO]: Source: §a127.0.0.1
+[11:08:37] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[11:08:37] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[11:08:38] [Client thread/INFO]: [CHAT] §l10...
+[11:08:39] [Client thread/INFO]: [CHAT] §l9...
+[11:08:40] [Client thread/INFO]: [CHAT] §l8...
+[11:08:42] [Server thread/INFO]: Received mission: §9Hello world!
+[11:08:42] [Server thread/INFO]: Source: §a127.0.0.1
+[11:08:42] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[11:08:42] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[11:08:42] [Client thread/INFO]: [CHAT] §l10...
+[11:08:43] [Client thread/INFO]: [CHAT] §l9...
+[11:08:56] [Server thread/INFO]: Saving and pausing game...
+[11:08:56] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_430e3ced-b016-4f21-ab7a-c2f93b06f55d'/Overworld
+[11:08:56] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_430e3ced-b016-4f21-ab7a-c2f93b06f55d'/Nether
+[11:08:56] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_430e3ced-b016-4f21-ab7a-c2f93b06f55d'/The End
+[11:09:10] [Client Shutdown Thread/INFO]: Stopping server
+[11:09:10] [Client Shutdown Thread/INFO]: Saving players
