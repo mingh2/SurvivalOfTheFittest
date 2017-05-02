@@ -13,13 +13,9 @@ import math
 from collections import namedtuple
 
 current_yaw = 0
-
 EntityInfo = namedtuple('EntityInfo', 'x, y, z, yaw, pitch, name')
 
 def getBestAngle(entities, current_yaw):
-
-
-
     us = entities[0]
     zombies = []
 
@@ -28,13 +24,12 @@ def getBestAngle(entities, current_yaw):
             zombies.append(ent)
         else:
             us = ent
-    print "Our Position: ", us.x, us.z
+    print "Agent Position: ", us.x, us.z
 
     for zombie in zombies:
         print "Zombie Position:", zombie.x, zombie.z
 
     if zombies:
-
         usZombieDistance = max(math.sqrt((us.x - zombies[0].x) ** 2 + (us.z - zombies[0].z) ** 2) - 3, 0)
         print "Us Zombie Distance:", usZombieDistance
 
@@ -53,24 +48,25 @@ def getBestAngle(entities, current_yaw):
 
         zombie = zombies[0]
         if us.z == zombie.z:
-            current_yaw = 180
+            best_yaw = 180
         else:
             angle = math.atan2(zombie.z - us.z, zombie.x - us.x) * 57.2958
-            current_yaw = angle + 180
+            best_yaw = angle + 180
 
 
-        # while current_yaw < 0:
-        #     current_yaw += 360
-        # while current_yaw > 360:
-        #     current_yaw -= 360
-        print current_yaw
+        # while best_yaw < 0:
+        #     best_yaw += 360
+        # while best_yaw > 360:
+        #     best_yaw -= 360
+        # print best_yaw
 
-    return current_yaw
+    return 90
 
 
 
 # Main Function
 def act(agent_host):
+    global current_yaw
     # Loop until mission starts:
     print "Waiting for the mission to start ",
     world_state = agent_host.getWorldState()
@@ -97,13 +93,19 @@ def act(agent_host):
                 best_yaw = getBestAngle(entities, current_yaw)
                 difference = best_yaw - current_yaw;
 
+                print "Best Yaw:", str(best_yaw)
+                print "Current Yaw:", str(current_yaw)
+                print "Difference:", str(difference)
+
                 while difference < -180:
-                    difference += 360;
+                    difference += 360
                 while difference > 180:
-                    difference -= 360;
-                difference /= 180.0;
+                    difference -= 360
+                difference /= 180.0
                 agent_host.sendCommand("turn " + str(difference))
 
+                current_yaw = best_yaw
+                
         sys.stdout.write(".")
         time.sleep(0.1)
         world_state = agent_host.getWorldState()
