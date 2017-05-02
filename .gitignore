@@ -20,3 +20,11 @@
 *.dat_mcr
 
 *.mca
+
+*.gz
+
+*.dat
+
+*.log
+
+*.pyc
