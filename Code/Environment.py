@@ -9,16 +9,16 @@
 def mob_XML_generator(init):
     missionXML='''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
                 <Mission xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                
+
                   <About>
                     <Summary>Survival of the Fittest!</Summary>
                   </About>
-                  
+
                   <ServerSection>
                     <ServerInitialConditions>
-                      <Time> 
+                      <Time>
                         <StartTime>17000</StartTime>
-                        <AllowPassageOfTime>false</AllowPassageOfTime> 
+                        <AllowPassageOfTime>false</AllowPassageOfTime>
                       </Time>
                     </ServerInitialConditions>
                     <ServerHandlers>
@@ -37,13 +37,16 @@ def mob_XML_generator(init):
                       <ServerQuitWhenAnyAgentFinishes/>
                     </ServerHandlers>
                   </ServerSection>
-                  
+
                   <AgentSection mode="Survival">
                     <Name>SOTF Bot</Name>
-                    <AgentStart> 
+                    <AgentStart>
                       <Placement x="5" y="16" z="0" yaw="90"/>
                     </AgentStart>
                     <AgentHandlers>
+                      <ObservationFromNearbyEntities>
+                        <Range name="entities" xrange="'''+str(10)+'''" yrange="2" zrange="'''+str(10)+'''" />
+                      </ObservationFromNearbyEntities>
                       <ObservationFromFullStats/>
                       <ContinuousMovementCommands turnSpeedDegs="180"/>
                     </AgentHandlers>
@@ -62,9 +65,9 @@ def mob_XML_generator(init):
 
                           <ServerSection>
                             <ServerInitialConditions>
-                              <Time> 
+                              <Time>
                                 <StartTime>17000</StartTime>
-                                <AllowPassageOfTime>false</AllowPassageOfTime> 
+                                <AllowPassageOfTime>false</AllowPassageOfTime>
                               </Time>
                             </ServerInitialConditions>
                             <ServerHandlers>
@@ -86,7 +89,7 @@ def mob_XML_generator(init):
 
                           <AgentSection mode="Survival">
                             <Name>SOTF Bot</Name>
-                            <AgentStart> 
+                            <AgentStart>
                               <Placement x="5" y="16" z="0" yaw="90"/>
                             </AgentStart>
                             <AgentHandlers>
@@ -99,4 +102,3 @@ def mob_XML_generator(init):
 
 
     return missionXML
-
