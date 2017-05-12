@@ -11,7 +11,7 @@ import time
 
 # Import Other Part of the Code
 from Environment import mob_XML_generator
-from Agent import act
+from Agent import zombies_fighter
 
 # Main Function
 def main():
@@ -60,7 +60,35 @@ def main():
             else:
                 time.sleep(2)
 
-    act(agent_host)
+    # Loop until mission starts:
+    print "Waiting for the mission to start ",
+    world_state = agent_host.getWorldState()
+    while not world_state.has_mission_begun:
+        sys.stdout.write(".")
+        time.sleep(0.1)
+        world_state = agent_host.getWorldState()
+        for error in world_state.errors:
+            print "Error:", error.text
+
+    print
+    print "Mission running "
+
+
+    agent = zombies_fighter()
+    # Loop until mission ends:
+    while world_state.is_mission_running:
+
+        log = agent.act(agent_host, world_state)
+        print log
+
+        time.sleep(0.1)
+        world_state = agent_host.getWorldState()
+        for error in world_state.errors:
+            print "Error:", error.text
+
+    print
+    print "Mission ended"
+    # Mission has ended.
 
 
 
