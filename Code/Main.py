@@ -16,9 +16,12 @@ from World_state_interpreter import world_state_interpreter
 from Visual import visualization
 from Action import action
 
+
 # Main Function
 def main():
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
+
+
 
     # Create default Malmo objects:
 
@@ -32,6 +35,12 @@ def main():
     if agent_host.receivedArgument("help"):
         print agent_host.getUsage()
         exit(0)
+
+    x = 21
+    y = 21
+    ws_interpre = world_state_interpreter(x, y)
+    visual = visualization(x, y)
+    action_available = action(agent_host)
 
     # Attempt to start a mission:
     max_retries = 2
@@ -76,12 +85,7 @@ def main():
     print
     print "Mission running "
 
-    x = 21
-    y = 21
     agent = zombies_fighter()
-    ws_interpre = world_state_interpreter(x, y)
-    visual = visualization(x, y)
-    action_available = action(agent_host)
 
     # Loop until mission ends:
     while world_state.is_mission_running:

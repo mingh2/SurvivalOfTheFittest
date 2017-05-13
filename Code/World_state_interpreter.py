@@ -32,7 +32,7 @@ class world_state_interpreter:
                 counter += 1
 
             if counter == 0:
-                self._end = True 
+                self._end = True
             return counter
         else:
             return False
