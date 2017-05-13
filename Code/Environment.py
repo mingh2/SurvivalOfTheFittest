@@ -42,6 +42,9 @@ def mob_XML_generator(init):
                     <Name>SOTF Bot</Name>
                     <AgentStart>
                       <Placement x="5" y="16" z="0" yaw="90"/>
+                      <Inventory>
+                        <InventoryItem slot="0" type="diamond_sword"/>
+                      </Inventory>
                     </AgentStart>
                     <AgentHandlers>
                       <ObservationFromNearbyEntities>

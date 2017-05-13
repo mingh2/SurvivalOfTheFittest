@@ -97,6 +97,7 @@ def main():
             matrix = visual.get_matrix()
 
         if matrix != None:
+            action_available.get_ws(ws_interpre)
             agent.act(agent_host, matrix, action_available)
 
 
