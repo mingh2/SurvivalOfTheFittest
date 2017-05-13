@@ -21,7 +21,7 @@ class zombies_fighter:
         self._counter += 1
 
         print self._counter
-        if self._counter < 15:
+        if self._counter < 10:
             action.up()
         elif self._counter < 40:
             action.attack()
