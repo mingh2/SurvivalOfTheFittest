@@ -1,4 +1,5 @@
 import json
+import math
 from collections import namedtuple, defaultdict
 
 EntityInfo = namedtuple('EntityInfo', 'x, y, z, yaw, pitch, name')
@@ -61,20 +62,56 @@ class world_state_interpreter:
     def entities_to_matrix(self):
         if self._available:
             agent = self.info_of_agent()
-            agent_x = int(agent.x)
-            agent_z = int(agent.z)
+            agent_x = agent.x
+            agent_z = agent.z
 
             matrix = [['None' for x in range(self._world_x)] for y in range(self._world_z)]
             enemies = self.info_of_enemies()
             for ent in enemies:
-                x = int(ent.x)
-                z = int(ent.z)
-                x = x - agent_x + self._world_x // 2
-                z = z - agent_z + self._world_z // 2
-                matrix[x][z] = ent.name
-                print x
-                print z
+                x = ent.x
+                z = ent.z
+                x = self._world_x - (int(x - agent_x) + self._world_x // 2 + 1)
+                z = int(z - agent_z) + self._world_z // 2
+                matrix[z][x] = ent.name
 
+            return matrix
+
+        else:
+            return False
+
+    def load_grid(self):
+        """
+        Adopted From Assignment 1 
+        
+        Used the agent observation API to get a 21 X 21 grid box around the agent (the agent is in the middle).
+
+        Args
+            world_state:    <object>    current agent world state
+
+        Returns
+            grid:   <list>  the world grid blocks represented as a list of blocks (see Tutorial.pdf)
+        """
+        if self._available:
+            world_state = self._world_state
+            msg = world_state.observations[-1].text
+            observations = json.loads(msg)
+            grid = observations.get(u'env', 0)
+            return grid
+
+        else:
+            return False
+
+    def grid_matrix(self):
+        if self._available:
+            grid = self.load_grid()
+            axis = int(math.sqrt(len(grid)))
+
+            matrix = [['None' for x in range(self._world_x)] for y in range(self._world_z)]
+            for i in range(len(grid)):
+
+                x = i // axis
+                z = axis - 1 - (i % axis)
+                matrix[x][z] = grid[i]
             return matrix
 
         else:

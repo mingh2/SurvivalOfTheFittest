@@ -15,6 +15,7 @@ class visualization:
         self._world_x = x
         self._world_y = y
         self.init_canvas()
+        self._matrix = [['None' for x in range(self._world_x)] for y in range(self._world_y)]
 
 
     def init_canvas(self, scale = 20):
@@ -31,24 +32,41 @@ class visualization:
     def get_entities(self, ent):
         self._ent = ent
 
+    def get_environment(self, env):
+        self._env = env
+
+    def get_matrix(self):
+        return self._matrix
+
     def draw(self):
         """Update and Draw the Environment"""
 
         # Drawing the Grid and Enemies Position
         for x in range(self._world_x):
             for y in range(self._world_y):
-                if self._ent[x][y] == "None":
+                self._canvas.create_rectangle((self._world_x - 1 - x) * self._scale,
+                                              (self._world_y - 1 - y) * self._scale,
+                                              (self._world_x - 1 - x + 1) * self._scale,
+                                              (self._world_y - 1 - y + 1) * self._scale,
+                                              outline="#fff", fill="#000")
+                self._matrix[x][y] = "clear"
+                if self._env[x][y] == "stone":
                     self._canvas.create_rectangle((self._world_x - 1 - x) * self._scale,
                                                   (self._world_y - 1 - y) * self._scale,
                                                   (self._world_x - 1 - x + 1) * self._scale,
                                                   (self._world_y - 1 - y + 1) * self._scale,
-                                                  outline="#fff", fill="#000")
-                else:
+                                                  outline="#fff", fill="#00f")
+                    self._matrix[x][y] = "blocked"
+
+                if self._ent[x][y] != "None":
                     self._canvas.create_rectangle((self._world_x - 1 - x) * self._scale,
                                                   (self._world_y - 1 - y) * self._scale,
                                                   (self._world_x - 1 - x + 1) * self._scale,
                                                   (self._world_y - 1 - y + 1) * self._scale,
                                                   outline="#fff", fill="#f00")
+                    self._matrix[x][y] = "enemy"
+
+
 
         # Agent Position
         x = self._world_x // 2

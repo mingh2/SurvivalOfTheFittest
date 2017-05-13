@@ -49,6 +49,13 @@ def mob_XML_generator(init):
                       </ObservationFromNearbyEntities>
                       <ObservationFromFullStats/>
                       <ContinuousMovementCommands turnSpeedDegs="180"/>
+                      <AbsoluteMovementCommands/>
+                      <ObservationFromGrid>
+                        <Grid name="env">
+                          <min x="-10" y="0" z="-10"/>
+                          <max x="10" y="0" z="10"/>
+                        </Grid>
+                      </ObservationFromGrid>
                     </AgentHandlers>
                   </AgentSection>
                 </Mission>'''
@@ -93,8 +100,17 @@ def mob_XML_generator(init):
                               <Placement x="5" y="16" z="0" yaw="90"/>
                             </AgentStart>
                             <AgentHandlers>
-                              <ObservationFromFullStats/>
+                              <ObservationFromNearbyEntities>
+                                 <Range name="entities" xrange="'''+str(10)+'''" yrange="2" zrange="'''+str(10)+'''" />
+                              </ObservationFromNearbyEntities>
                               <ContinuousMovementCommands turnSpeedDegs="180"/>
+                              <AbsoluteMovementCommands/>
+                              <ObservationFromGrid>
+                                <Grid name="env">
+                                  <min x="-10" y="0" z="-10"/>
+                                  <max x="10" y="0" z="10"/>
+                                </Grid>
+                              </ObservationFromGrid>
                             </AgentHandlers>
                           </AgentSection>
                         </Mission>'''

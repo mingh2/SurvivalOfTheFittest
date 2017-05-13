@@ -12,6 +12,9 @@ import time
 # Import Other Part of the Code
 from Environment import mob_XML_generator
 from Agent import zombies_fighter
+from World_state_interpreter import world_state_interpreter
+from Visual import visualization
+from Action import action
 
 # Main Function
 def main():
@@ -73,15 +76,31 @@ def main():
     print
     print "Mission running "
 
-
+    x = 21
+    y = 21
     agent = zombies_fighter()
+    ws_interpre = world_state_interpreter(x, y)
+    visual = visualization(x, y)
+    action_available = action(agent_host)
+
     # Loop until mission ends:
     while world_state.is_mission_running:
+        matrix = None
 
-        log = agent.act(agent_host, world_state)
-        print log
+        ws_interpre.input(world_state)
+        ent_matrix = ws_interpre.entities_to_matrix()
+        env_matrix = ws_interpre.grid_matrix()
+        if ent_matrix != False and env_matrix != False:
+            visual.get_entities(ent_matrix)
+            visual.get_environment(env_matrix)
+            visual.draw()
+            matrix = visual.get_matrix()
 
-        time.sleep(0.1)
+        if matrix != None:
+            agent.act(agent_host, matrix, action_available)
+
+
+        #time.sleep(0.1)
         world_state = agent_host.getWorldState()
         for error in world_state.errors:
             print "Error:", error.text
