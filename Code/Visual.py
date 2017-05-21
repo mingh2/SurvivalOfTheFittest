@@ -78,3 +78,6 @@ class visualization:
                                       outline="#fff", fill="#0f0")
 
         self._root.update()
+
+    def quit(self):
+        self._root.destroy()

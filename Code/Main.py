@@ -130,6 +130,7 @@ def main():
         print
         print "Mission ended"
         # Mission has ended.
+        visual.quit()
 
 
 
