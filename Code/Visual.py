@@ -49,14 +49,14 @@ class visualization:
                                               (self._world_x - 1 - x + 1) * self._scale,
                                               (self._world_y - 1 - y + 1) * self._scale,
                                               outline="#fff", fill="#000")
-                self._matrix[x][y] = "clear"
+                self._matrix[self._world_y - 1 - y][self._world_x - 1 - x] = "clear"
                 if self._env[x][y] == "stone":
                     self._canvas.create_rectangle((self._world_x - 1 - x) * self._scale,
                                                   (self._world_y - 1 - y) * self._scale,
                                                   (self._world_x - 1 - x + 1) * self._scale,
                                                   (self._world_y - 1 - y + 1) * self._scale,
                                                   outline="#fff", fill="#00f")
-                    self._matrix[x][y] = "blocked"
+                    self._matrix[self._world_y - 1 - y][self._world_x - 1 - x] = "blocked"
 
                 if self._ent[x][y] != "None":
                     self._canvas.create_rectangle((self._world_x - 1 - x) * self._scale,
@@ -64,7 +64,7 @@ class visualization:
                                                   (self._world_x - 1 - x + 1) * self._scale,
                                                   (self._world_y - 1 - y + 1) * self._scale,
                                                   outline="#fff", fill="#f00")
-                    self._matrix[x][y] = "enemy"
+                    self._matrix[self._world_y - 1 - y][self._world_x - 1 - x ]= "enemy"
 
 
 
