@@ -30,7 +30,8 @@ class neural_network:
 
     def train(self, x, y, learning_rate = 0.2):
 
-        a = np.concatenate((np.ones(1).T, np.array(x)), axis=1)
+        #a = np.concatenate((np.ones(1).T, np.array(x)), axis=1)
+        a = np.concatenate((np.ones(1).T, np.array(x)))
         a = np.reshape(a, (1, 4))
 
         a = [a]
@@ -53,9 +54,9 @@ class neural_network:
             self.weights[i] += learning_rate * layer.T.dot(delta)
 
     def predict(self, x):
-        a = np.concatenate((np.ones(1).T, np.array(x)), axis=1)
+        # a = np.concatenate((np.ones(1).T, np.array(x)), axis=1)
+        a = np.concatenate((np.ones(1).T, np.array(x)))
         a = np.reshape(a, (1, 4))
-
 
         for i in range(0, len(self.weights)):
             a = sigmoid(np.dot(a, self.weights[i]))
