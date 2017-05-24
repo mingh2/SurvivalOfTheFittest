@@ -65,8 +65,11 @@ def main():
             try:
                 if (retry == 0):
                     # The Zombie Does Not Exist On the First Try Caused by Drawing Error
+                    new_gen = False
+                    if i < 1:
+                        new_gen = True
                     map_gen = auto_env()
-                    missionXML = map_gen.mob_XML_generator(True)
+                    missionXML = map_gen.mob_XML_generator(new_gen)
                     my_mission = MalmoPython.MissionSpec(missionXML, True)
                     my_mission_record = MalmoPython.MissionRecordSpec()
                     agent_host.startMission(my_mission, my_mission_record)
