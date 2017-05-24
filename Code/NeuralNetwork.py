@@ -11,10 +11,16 @@ def sigmoid(x):
 def sigmoid_prime(x):
     return sigmoid(x) * (1 - sigmoid(x))
 
+def tanh(x):
+    return np.tanh(x)
+
+def tanh_prime(x):
+    return 1.0 - x**2
+
 class neural_network:
     def __init__(self, gamma):
         #Possible Moves: Correspond to Up, Down, Left, Right
-        self.layers = [3, 6, 1]
+        self.layers = [1 + 169, 128, 64, 16, 1]
         self.weights = []
         self.memories = []
 
@@ -28,26 +34,27 @@ class neural_network:
         wts = 2 * np.random.random((self.layers[i] + 1, self.layers[i+1])) - 1
         self.weights.append(wts)
 
-    def train(self, x, y, learning_rate = 0.2):
+    def train(self, x, y, learning_rate = 0.3):
 
         #a = np.concatenate((np.ones(1).T, np.array(x)), axis=1)
+
         a = np.concatenate((np.ones(1).T, np.array(x)))
-        a = np.reshape(a, (1, 4))
 
         a = [a]
 
-        for i in range(len(self.weights)):
-            dot_value = np.dot(a[i], self.weights[i])
-            activation = sigmoid(dot_value)
+        for l in range(len(self.weights)):
+            dot_value = np.dot(a[l], self.weights[l])
+            activation = tanh(dot_value)
             a.append(activation)
 
         error = y - a[-1]
-        deltas = [error * sigmoid_prime(a[-1])]
+        deltas = [error * tanh_prime(a[-1])]
 
-        for i in range(len(a) - 2, 0, -1):
-            deltas.append(deltas[-1].dot(self.weights[i].T) * sigmoid_prime(a[i]))
+        for l in range(len(a) - 2, 0, -1):
+            deltas.append(deltas[-1].dot(self.weights[l].T)*tanh_prime(a[l]))
 
         deltas.reverse()
+
         for i in range(len(self.weights)):
             layer = np.atleast_2d(a[i])
             delta = np.atleast_2d(deltas[i])
@@ -56,17 +63,16 @@ class neural_network:
     def predict(self, x):
         # a = np.concatenate((np.ones(1).T, np.array(x)), axis=1)
         a = np.concatenate((np.ones(1).T, np.array(x)))
-        a = np.reshape(a, (1, 4))
 
         for i in range(0, len(self.weights)):
-            a = sigmoid(np.dot(a, self.weights[i]))
-        return a
+            a = tanh(np.dot(a, self.weights[i]))
+        return a[0]
 
     def remember(self, state, possible_actions, action, reward, next_state, done):
         self.memories.append((state, possible_actions, action, reward, next_state, done))
 
     def replay(self, batch_size):
-        print "LENGTH: ", len(self.memories)
+        print "Replaying"
 
         batches = min(batch_size, len(self.memories))
         batches = np.random.choice(len(self.memories), batches)
@@ -79,13 +85,17 @@ class neural_network:
                 max_q_value = -maxint - 1
                 max_q_value_action = ''
                 for action in possible_actions:
-                    q_value = self.predict(state + [action])
+                    q_value = self.predict([action] + state)
                     if q_value > max_q_value:
                         max_q_value = q_value
                         max_q_value_action = action
                 target = target + self.gamma * max_q_value
 
-            self.train(state + [action], target)
+            self.train([action] + state, target)
+
+        if len(self.memories) > 1500:
+            np.random.shuffle(self.memories)
+            self.memories = self.memories[:int(len(self.memories) * 0.8)]
 
     def get_weights(self):
         return self.weights

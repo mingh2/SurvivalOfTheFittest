@@ -28,7 +28,7 @@ gamma = 1
 def main():
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
 
-    agent = zombies_fighter()
+    agent = zombies_fighter(gamma=0.75)
 
     # Create default Malmo objects:
 
@@ -101,7 +101,9 @@ def main():
         print
         print "Mission running "
 
-
+        show_best = False
+        if (i + 1) % 5 == 0:
+            show_best = True
 
         # Loop until mission ends:
         while world_state.is_mission_running:
@@ -118,7 +120,8 @@ def main():
 
             if matrix != None:
                 # action_available.get_ws(ws_interpre)
-                agent.run(agent_host, matrix)
+
+                agent.run(agent_host, matrix, False)
 
 
             #time.sleep(0.1)
@@ -126,7 +129,7 @@ def main():
             for error in world_state.errors:
                 print "Error:", error.text
 
-        agent.replay(32)
+        agent.replay(128)
         print
         print "Mission ended"
         # Mission has ended.
