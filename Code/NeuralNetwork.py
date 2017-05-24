@@ -20,7 +20,7 @@ def tanh_prime(x):
 class neural_network:
     def __init__(self, gamma):
         #Possible Moves: Correspond to Up, Down, Left, Right
-        self.layers = [1 + 169, 128, 64, 16, 1]
+        self.layers = [1 + 169, 128, 64, 16, 4, 1]
         self.weights = []
         self.memories = []
 
@@ -90,7 +90,7 @@ class neural_network:
                         max_q_value = q_value
                         max_q_value_action = action
                 target = target + self.gamma * max_q_value
-            # print target
+            print target
 
             self.train([action] + state, target)
 

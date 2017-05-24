@@ -29,7 +29,7 @@ gamma = 1
 def main():
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
 
-    agent = zombies_fighter(gamma=0.75)
+    agent = zombies_fighter(gamma=0.7)
 
     # Create default Malmo objects:
 
@@ -134,6 +134,7 @@ def main():
             for error in world_state.errors:
                 print "Error:", error.text
 
+        time.sleep(1)
         agent.replay(128)
         print
         print "Mission ended"

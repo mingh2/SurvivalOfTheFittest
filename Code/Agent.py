@@ -24,11 +24,11 @@ class zombies_fighter:
 
         self.previous_state = None
         self.previous_action = None
-        self.previous_reward = 0
+        self.previous_two_states = None
         self.previous_closest_enemy = 0
         self.previous_closest_wall = 0
 
-        self.action_map = {'left': 0, 'right': 1, 'up': 2, 'down': 3}
+        self.action_map = {'left': 1, 'right': 2, 'up': 4, 'down': 8}
 
 
     def act(self, agent_host, action):
@@ -46,18 +46,18 @@ class zombies_fighter:
 
         move = Move(agent_host)
 
-        if action == 0:
+        if action == 1:
             move.left()
-            print 'left'
-        elif action == 1:
-            move.right()
-            print 'right'
+            print 'Action: Left'
         elif action == 2:
+            move.right()
+            print 'Action: Right'
+        elif action == 4:
             move.up()
-            print 'up'
-        elif action == 3:
+            print 'Action: Up'
+        elif action == 8:
             move.down()
-            print 'down'
+            print 'Action: Down'
 
     def get_curr_state(self, agent_host, matrix):
         wall = 0
@@ -74,13 +74,13 @@ class zombies_fighter:
                     distance = (col - 10) ** 2 + (row - 10) ** 2
                     if distance < closeset_wall:
                         closeset_wall = distance
-                    state.append(-1)
+                    state.append(2)
                 elif matrix[col][row] == 'enemy':
                     # enemy = col * 21 + row
                     distance = (col - 10) ** 2 + (row - 10) ** 2
                     if distance < closeset_enemy:
                         closeset_enemy = distance
-                    state.append(2)
+                    state.append(3)
                 elif col == 10 and row == 10:
                     state.append(0)
                 else:
@@ -143,7 +143,12 @@ class zombies_fighter:
         state, life, closeset_enemy, closeset_wall = self.get_curr_state(agent_host, matrix)
 
         possible_actions = self.get_possible_actions(matrix)
-        a0 = self.choose_action(state, possible_actions, show_best)
+        if self.previous_state != None:
+            #Make Prediction Based on two states if possible
+            a0 = self.choose_action([x + y for x, y in zip(self.previous_state, state)],
+                possible_actions, show_best)
+        else:
+            a0 = self.choose_action(state, possible_actions, show_best)
 
         if self.previous_state != None:
             reward = 0
@@ -152,11 +157,8 @@ class zombies_fighter:
             if life == 0.0:
                 done = True
 
-            if len(self.previous_possable_actions) > len(possible_actions):
-                if len(possible_actions) <= 2:
-                    reward = reward - 0.30
-                else:
-                    reward = reward - 0.20
+            # if len(self.previous_possable_actions) > len(possible_actions):
+            #     reward = reward - 0.10
 
             if self.previous_life > life:
                 if len(possible_actions) <= 2:
@@ -166,26 +168,38 @@ class zombies_fighter:
 
             if self.previous_closest_enemy <= 3.0 and \
                 self.previous_closest_enemy - 1 > closeset_enemy:
-                reward = reward - 0.10
-
-            if self.previous_closest_enemy + 1 < closeset_enemy:
-                reward = reward + 0.20
+                reward = reward - 0.20
 
             if closeset_wall <= 1.0:
-                reward = reward - 0.20
+                reward = reward - 0.10
+
+            if self.previous_closest_enemy <= 3.0 and \
+                self.previous_closest_enemy + 1 < closeset_enemy:
+                reward = reward + 0.30
+            elif self.previous_closest_enemy + 1 < closeset_enemy and \
+                self.previous_closest_wall < closeset_wall:
+                reward = reward + 0.40
+            elif self.previous_closest_enemy + 1 < closeset_enemy:
+                reward = reward + 0.05
+
+
 
             print "Actual Value: ", reward
 
-            self.nn.remember(self.previous_state, self.previous_action,
-                reward, state, possible_actions, done)
+            if self.previous_two_states != None:
+                self.nn.remember(self.previous_two_states, self.previous_action,
+                    reward, state, possible_actions, done)
+            else:
+                self.nn.remember(self.previous_state, self.previous_action,
+                    reward, state, possible_actions, done)
             self.replay(16)
 
-            self.previous_reward = reward
             self.previous_closest_enemy = closeset_enemy
             self.previous_closest_wall = closeset_wall
+            self.previous_two_states = [x + y for x, y in zip(self.previous_state, state)]
 
         self.previous_life = life
-        self.previous_possable_actions = possible_actions
+        # self.previous_possable_actions = possible_actions
         self.previous_state = state
         self.previous_action = a0
 
