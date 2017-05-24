@@ -90,7 +90,7 @@ class neural_network:
                         max_q_value = q_value
                         max_q_value_action = action
                 target = target + self.gamma * max_q_value
-            print target
+            # print target
 
             self.train([action] + state, target)
 

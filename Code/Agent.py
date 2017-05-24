@@ -172,7 +172,7 @@ class zombies_fighter:
                 reward = reward + 0.20
 
             if closeset_wall <= 1.0:
-                reward = reward - 0.02
+                reward = reward - 0.20
 
             print "Actual Value: ", reward
 
