@@ -50,12 +50,12 @@ def main():
     n = 25
     alpha = 1
     gamma = 1
-
+    
+    visual = visualization(x, y)
     for i in range(num_reps):
         print "Survival # " + str(i + 1)
 
         ws_interpre = world_state_interpreter(x, y)
-        visual = visualization(x, y)
         action_available = action(agent_host)
 
         # Attempt to start a mission:
@@ -133,7 +133,7 @@ def main():
         print
         print "Mission ended"
         # Mission has ended.
-        visual.quit()
+    visual.quit()
 
 
 
