@@ -146,7 +146,7 @@ class zombies_fighter:
         a0 = self.choose_action(state, possible_actions, show_best)
 
         if self.previous_state != None:
-            reward = 0
+            reward = 0.05
 
             done = False
             if life == 0.0:
@@ -163,7 +163,7 @@ class zombies_fighter:
 
             if self.previous_closest_enemy <= 3.0 and \
                 self.previous_closest_enemy - 1 > closeset_enemy:
-                reward = reward - 1.0
+                reward = reward - 0.10
 
             if self.previous_closest_enemy + 1 < closeset_enemy:
                 reward = reward + 0.10
