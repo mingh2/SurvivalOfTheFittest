@@ -15,6 +15,7 @@ from Agent import zombies_fighter
 from World_state_interpreter import world_state_interpreter
 from Visual import visualization
 from Action import action
+from Auto_Env import auto_env
 
 
 num_reps = 30000
@@ -64,7 +65,8 @@ def main():
             try:
                 if (retry == 0):
                     # The Zombie Does Not Exist On the First Try Caused by Drawing Error
-                    missionXML = mob_XML_generator(True)
+                    map_gen = auto_env()
+                    missionXML = map_gen.mob_XML_generator(True)
                     my_mission = MalmoPython.MissionSpec(missionXML, True)
                     my_mission_record = MalmoPython.MissionRecordSpec()
                     agent_host.startMission(my_mission, my_mission_record)
