@@ -66,7 +66,7 @@ def main():
                 if (retry == 0):
                     # The Zombie Does Not Exist On the First Try Caused by Drawing Error
                     new_gen = False
-                    if i < 1:
+                    if i < 2:
                         new_gen = True
                     map_gen = auto_env()
                     missionXML = map_gen.mob_XML_generator(new_gen)

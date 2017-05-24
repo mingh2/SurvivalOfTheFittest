@@ -52,7 +52,7 @@ class auto_env:
                           <DrawingDecorator>
                             ''' + self.re_init() + self.room() + self.complication() + self.zombie() + '''
                           </DrawingDecorator>
-                          <ServerQuitFromTimeUp timeLimitMs="30000"/>
+                          <ServerQuitFromTimeUp timeLimitMs="1"/>
                           <ServerQuitWhenAnyAgentFinishes/>
                         </ServerHandlers>
                       </ServerSection>
