@@ -68,8 +68,8 @@ class neural_network:
             a = tanh(np.dot(a, self.weights[i]))
         return a[0]
 
-    def remember(self, state, possible_actions, action, reward, next_state, done):
-        self.memories.append((state, possible_actions, action, reward, next_state, done))
+    def remember(self, state, action, reward, next_state, possible_actions, done):
+        self.memories.append((state, action, reward, next_state, possible_actions, done))
 
     def replay(self, batch_size):
         print "Replaying"
@@ -78,24 +78,26 @@ class neural_network:
         batches = np.random.choice(len(self.memories), batches)
 
         for i in batches:
-            state, possible_actions, action, reward, next_state, done = self.memories[i]
+            state, action, reward, next_state, possible_actions, done = self.memories[i]
             target = reward
 
             if not done:
                 max_q_value = -maxint - 1
                 max_q_value_action = ''
                 for action in possible_actions:
-                    q_value = self.predict([action] + state)
+                    q_value = self.predict([action] + next_state)
                     if q_value > max_q_value:
                         max_q_value = q_value
                         max_q_value_action = action
                 target = target + self.gamma * max_q_value
+            print target
 
             self.train([action] + state, target)
 
         if len(self.memories) > 1500:
             np.random.shuffle(self.memories)
             self.memories = self.memories[:int(len(self.memories) * 0.8)]
+        print "OUT"
 
     def get_weights(self):
         return self.weights

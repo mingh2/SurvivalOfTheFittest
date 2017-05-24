@@ -146,7 +146,7 @@ class zombies_fighter:
         a0 = self.choose_action(state, possible_actions, show_best)
 
         if self.previous_state != None:
-            reward = 0.05
+            reward = 0
 
             done = False
             if life == 0.0:
@@ -159,22 +159,25 @@ class zombies_fighter:
                     reward = reward - 0.20
 
             if self.previous_life > life:
-                reward = reward - 0.50
+                if len(possible_actions) <= 2:
+                    reward = reward - 0.50
+                else:
+                    reward = reward - 0.40
 
             if self.previous_closest_enemy <= 3.0 and \
                 self.previous_closest_enemy - 1 > closeset_enemy:
                 reward = reward - 0.10
 
             if self.previous_closest_enemy + 1 < closeset_enemy:
-                reward = reward + 0.10
+                reward = reward + 0.20
 
             if closeset_wall <= 1.0:
                 reward = reward - 0.02
 
             print "Actual Value: ", reward
 
-            self.nn.remember(self.previous_state, self.previous_possable_actions,
-                self.previous_action, reward, state, done)
+            self.nn.remember(self.previous_state, self.previous_action,
+                reward, state, possible_actions, done)
             self.replay(16)
 
             self.previous_reward = reward
