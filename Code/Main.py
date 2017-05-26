@@ -31,20 +31,20 @@ def main():
         debug = True
 
     # Create default Malmo objects:
-
     agent_host = MalmoPython.AgentHost()
+
     try:
         agent_host.parse(sys.argv)
     except RuntimeError as e:
-        print 'ERROR:', e
+        print 'ERROR(Runtime):', e
         print agent_host.getUsage()
         exit(1)
     if agent_host.receivedArgument("help"):
         print agent_host.getUsage()
         exit(0)
 
-    x = 21
-    y = 21
+    # Set the size of the matrix
+    x, y = 21, 21
 
     NUM_REPS = 3000
     N = 25
@@ -53,7 +53,7 @@ def main():
     
     visual = visualization(x, y, debug)
     for i in range(NUM_REPS):
-        print "Survival # " + str(i + 1)
+        print "Survival Mode # " + str(i + 1)
 
         ws_interpre = world_state_interpreter(x, y)
         action_available = action(agent_host)
@@ -64,10 +64,11 @@ def main():
             try:
                 if (retry == 0):
                     # The Zombie Does Not Exist On the First Try Caused by Drawing Error
-                    new_gen = False
-                    if i < 2:
-                        new_gen = True
+                    new_gen = False if i >= 2 else True
+                    # if i < 2:
+                    #     new_gen = True
                     map_gen = auto_env()
+
                     missionXML = map_gen.mob_XML_generator(new_gen)
                     my_mission = MalmoPython.MissionSpec(missionXML, True)
                     my_mission_record = MalmoPython.MissionRecordSpec()
@@ -85,6 +86,7 @@ def main():
                     my_mission_record = MalmoPython.MissionRecordSpec()
                     agent_host.startMission(my_mission, my_mission_record)
                 break
+
             except RuntimeError as e:
                 if retry == max_retries - 1:
                     print "Error starting mission:", e
@@ -105,9 +107,9 @@ def main():
         print
         print "Mission running "
 
-        show_best = False
-        if (i + 1) % 5 == 0:
-            show_best = True
+        show_best = False if (i + 1) % 5 != 0 else True
+        # if (i + 1) % 5 == 0:
+        #     show_best = True
 
         # Loop until mission ends:
         while world_state.is_mission_running:
@@ -117,19 +119,20 @@ def main():
             ws_interpre.input(world_state)
             ent_matrix = ws_interpre.entities_to_matrix()
             env_matrix = ws_interpre.grid_matrix()
-            if ent_matrix != False and env_matrix != False:
+
+            # if ent_matrix != False and env_matrix != False:
+            if ent_matrix and env_matrix:
                 visual.get_entities(ent_matrix)
                 visual.get_environment(env_matrix)
                 visual.draw()
                 matrix = visual.get_matrix()
 
-            if matrix != None:
-                # action_available.get_ws(ws_interpre)
+            # if matrix != None:
+            #     action_available.get_ws(ws_interpre)
+            if matrix:
                 agent.run(agent_host, matrix, False)
-            
 
-
-            #time.sleep(0.1) # Use it for testing
+            #time.sleep(0.1) # Use it for testing purpose
             world_state = agent_host.getWorldState()
             for error in world_state.errors:
                 print "Error:", error.text
