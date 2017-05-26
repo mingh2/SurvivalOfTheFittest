@@ -34,6 +34,9 @@ Therefore, we use Deep Q Network, in which the Q-Function is represented by a Ne
 
 As shown in the pseudocode, the experience <previous_state, previous_action, reward, current_state> is stored inside a deque. Once an episode is ended, a small batch of random experience is retrieved from the deque and updated the weights of Neutral Network based on these experiences using stochastic gradient descent. The idea is that these random experiences can help our agent avoid local minium.
 
+
+#### 
+
 ## Remaining Goals and Challenges
 
 As briefly mentioned in the project summary, our ultimate objective is still developing an agent that can survive attacks from different mobs in a complex environment with a variable amount of enemies. We hope to combine what we have learned in CompSci 175, CompSci 171, CompSci 177 and various online resources to code such agent. 
@@ -41,6 +44,8 @@ As briefly mentioned in the project summary, our ultimate objective is still dev
 In the next few weeks, regarding the testing environment, we are first going to introduce the complex environment generator into the testing process and increase the amount of Zombie from one to a larger number. Then we would also try to adopt different kind of mobs that can challenge our agent in a variety of ways. 
 
 The core improvement needed is to seek a better way to train the Deep Q Network to increase survival times. As shown in the video, we are making progress in allowing the agent to survive longer. However, due to the current limitation, we have limited our goal to be only 30 seconds, and we have not produced stable result – an agent can always survive up to 30 seconds. Improving the survival time would be one of the most important parts of our project. 
+
+Another major challenge is that, we should explore a better way to evaluate a state. For a given state, the Q-Values predicted for four possible actions are quite similar, which is not what we expect. We believe that the Q-Values for one or two actions should outperformed the other options.
 
 Beside the Deep Q Network, we would also keep trying to build a Neuroevolution of Augmenting Topologies solution for the agent training. The performance of Neuroevolution of Augmenting Topologies shown in our research is promising. Although it is a difficult challenge, we would still try to produce a better alternative than our existing Deep Q Network. It could be an improved version of our current Deep Q-Learning or could be a Neuroevolution of Augmenting Topologies. 
 
