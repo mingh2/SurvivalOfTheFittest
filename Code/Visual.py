@@ -11,11 +11,13 @@ import Tkinter as tk
 class visualization:
     """GUI Display for Agent to Visualize The Environment"""
 
-    def __init__(self, x = 21, y = 21):
+    def __init__(self, x = 21, y = 21, debug=False):
         self._world_x = x
         self._world_y = y
-        self.init_canvas()
         self._matrix = [['None' for x in range(self._world_x)] for y in range(self._world_y)]
+        self.debug = debug
+        if self.debug:
+            self.init_canvas()
 
 
     def init_canvas(self, scale = 20):
@@ -44,26 +46,29 @@ class visualization:
         # Drawing the Grid and Enemies Position
         for x in range(self._world_x):
             for y in range(self._world_y):
-                self._canvas.create_rectangle((self._world_x - 1 - x) * self._scale,
-                                              (self._world_y - 1 - y) * self._scale,
-                                              (self._world_x - 1 - x + 1) * self._scale,
-                                              (self._world_y - 1 - y + 1) * self._scale,
-                                              outline="#fff", fill="#000")
-                self._matrix[self._world_y - 1 - y][self._world_x - 1 - x] = "clear"
-                if self._env[x][y] == "stone":
+                if self.debug:
                     self._canvas.create_rectangle((self._world_x - 1 - x) * self._scale,
                                                   (self._world_y - 1 - y) * self._scale,
                                                   (self._world_x - 1 - x + 1) * self._scale,
                                                   (self._world_y - 1 - y + 1) * self._scale,
-                                                  outline="#fff", fill="#00f")
+                                                  outline="#fff", fill="#000")
+                self._matrix[self._world_y - 1 - y][self._world_x - 1 - x] = "clear"
+                if self._env[x][y] == "stone":
+                    if self.debug:
+                        self._canvas.create_rectangle((self._world_x - 1 - x) * self._scale,
+                                                      (self._world_y - 1 - y) * self._scale,
+                                                      (self._world_x - 1 - x + 1) * self._scale,
+                                                      (self._world_y - 1 - y + 1) * self._scale,
+                                                      outline="#fff", fill="#00f")
                     self._matrix[self._world_y - 1 - y][self._world_x - 1 - x] = "blocked"
 
                 if self._ent[x][y] != "None":
-                    self._canvas.create_rectangle((self._world_x - 1 - x) * self._scale,
-                                                  (self._world_y - 1 - y) * self._scale,
-                                                  (self._world_x - 1 - x + 1) * self._scale,
-                                                  (self._world_y - 1 - y + 1) * self._scale,
-                                                  outline="#fff", fill="#f00")
+                    if self.debug:
+                        self._canvas.create_rectangle((self._world_x - 1 - x) * self._scale,
+                                                      (self._world_y - 1 - y) * self._scale,
+                                                      (self._world_x - 1 - x + 1) * self._scale,
+                                                      (self._world_y - 1 - y + 1) * self._scale,
+                                                      outline="#fff", fill="#f00")
                     self._matrix[self._world_y - 1 - y][self._world_x - 1 - x ]= "enemy"
 
 
@@ -71,13 +76,14 @@ class visualization:
         # Agent Position
         x = self._world_x // 2
         y = self._world_y // 2
-        self._canvas.create_oval((self._world_x-1-x)*self._scale,
-                                      (self._world_y-1-y)*self._scale,
-                                      (self._world_x-1-x+1)*self._scale,
-                                      (self._world_y-1-y+1)*self._scale,
-                                      outline="#fff", fill="#0f0")
+        if self.debug:
+            self._canvas.create_oval((self._world_x-1-x)*self._scale,
+                                          (self._world_y-1-y)*self._scale,
+                                          (self._world_x-1-x+1)*self._scale,
+                                          (self._world_y-1-y+1)*self._scale,
+                                          outline="#fff", fill="#0f0")
 
-        self._root.update()
+            self._root.update()
 
     def quit(self):
         self._root.destroy()
