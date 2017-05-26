@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  Team
+title:  Team Members
 ---
 
 # Team Members List
