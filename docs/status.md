@@ -18,8 +18,12 @@ By the final report time, our team aims to utilize the environment generator to 
 
 ## Approach
 We are using Deep Q Network algorithm to train our agent. And the pseudocode of simpler version is shown as follow:
-
 <img src="Pseudocode.png" width="100%"> 
+
+The basic idea of Deep Q Network is similar to that of the Q-Learning where we have a reward (Q-Value) of a state with each of its corresponding action. Then we pick the action that generates the maximum Q-Value.
+
+However, Q Learning is not a feasible approach in our case, since the state is too large and complicated. With a map size of 21 * 21 and three possible entities on each block of map, our program will require gigabytes of space to store a Q-Table.
+<img src="State%20Representation.png" width="100%"> 
 
 ## Remaining Goals and Challenges
 
