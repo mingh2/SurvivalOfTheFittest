@@ -1,7 +1,9 @@
+# This file creates the game environment automatically and keeps
+# generating new environment every time the episode is updated.
 
 class auto_env:
     """
-    Automatic Generation of Environment XML
+        Automatic Generation of Environment XML
     """
     def __init__(self, range = 10, complexity = 10, max = 10, ent = 1, complex = False):
         self._range = range
@@ -83,8 +85,8 @@ class auto_env:
                     </Mission>'''
 
         if init:
-            # To avoid the Drawing Decorator Error on the first run.
-            # Kill The Agent and Start the second Run Directly
+            # [ Hard-Code ] To avoid the Drawing Decorator Error on the first run.
+            # Kill The Agent on the First Run and Start the Second Run Directly.
             missionXML = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
                             <Mission xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
@@ -123,8 +125,7 @@ class auto_env:
                                 </AgentStart>
                                 <AgentHandlers>
                                   <ObservationFromNearbyEntities>
-                                     <max name="entities" xmax="''' + str(
-                10) + '''" ymax="2" zmax="''' + str(10) + '''" />
+                                     <max name="entities" xmax="''' + str(10) + '''" ymax="2" zmax="''' + str(10) + '''" />
                                   </ObservationFromNearbyEntities>
                                   <ContinuousMovementCommands turnSpeedDegs="180"/>
                                   <AbsoluteMovementCommands/>
