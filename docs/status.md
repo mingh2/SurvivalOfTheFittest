@@ -19,6 +19,7 @@ By the final report time, our team aims to utilize the environment generator to 
 ## Approach
 We are using Deep Q Network algorithm to train our agent. And the pseudocode of simpler version is shown as follow:
 
+<img src="Pseudocode.png" width="100%"> 
 
 ## Remaining Goals and Challenges
 
