@@ -8,6 +8,8 @@ import MalmoPython
 import os
 import sys
 import time
+import pickle
+
 
 # Import Other Part of the Code
 from Environment import mob_XML_generator
@@ -29,7 +31,11 @@ gamma = 1
 def main():
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
 
-    agent = zombies_fighter(gamma=0.7)
+    agent = zombies_fighter(gamma=0.8)
+    
+    debug = False
+    if len(sys.argv) > 1 and sys.argv[1] == "debug=True":
+        debug = True
 
     # Create default Malmo objects:
 
@@ -52,7 +58,7 @@ def main():
     alpha = 1
     gamma = 1
     
-    visual = visualization(x, y)
+    visual = visualization(x, y, debug)
     for i in range(num_reps):
         print "Survival # " + str(i + 1)
 
@@ -112,6 +118,7 @@ def main():
 
         # Loop until mission ends:
         while world_state.is_mission_running:
+            time.sleep(0.2)
             matrix = None
 
             ws_interpre.input(world_state)
@@ -121,12 +128,14 @@ def main():
                 visual.get_entities(ent_matrix)
                 visual.get_environment(env_matrix)
                 visual.draw()
+#                print "Here"
                 matrix = visual.get_matrix()
 
             if matrix != None:
                 # action_available.get_ws(ws_interpre)
-
+#                print "Running"
                 agent.run(agent_host, matrix, False)
+            
 
 
             #time.sleep(0.1)
@@ -134,12 +143,18 @@ def main():
             for error in world_state.errors:
                 print "Error:", error.text
 
-        time.sleep(1)
+        print agent.calculate_mse()
+        agent.reset_mse()
         agent.replay(128)
         print
         print "Mission ended"
+        
+        with open('Weights.txt', 'wb') as f:
+            pickle.dump(agent.get_weights(), f)
         # Mission has ended.
-    visual.quit()
+        time.sleep(1)
+    if debug:
+        visual.quit()
 
 
 
@@ -147,6 +162,5 @@ def main():
 # Execute The Program
 if __name__ == '__main__':
     main()
-    f = open('Weights.txt', 'w')
-    f.write(agent.get_weights())
-    print agent.get_weights()
+    with open('Weights.txt', 'wb') as f:
+        pickle.dump(agent.get_weights(), f)

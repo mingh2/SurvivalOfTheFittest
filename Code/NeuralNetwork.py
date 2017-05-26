@@ -20,7 +20,7 @@ def tanh_prime(x):
 class neural_network:
     def __init__(self, gamma):
         #Possible Moves: Correspond to Up, Down, Left, Right
-        self.layers = [1 + 169, 128, 64, 16, 4, 1]
+        self.layers = [1 + 441, 256, 128, 64, 32, 16, 8, 1]
         self.weights = []
         self.memories = []
 
@@ -34,7 +34,7 @@ class neural_network:
         wts = 2 * np.random.random((self.layers[i] + 1, self.layers[i+1])) - 1
         self.weights.append(wts)
 
-    def train(self, x, y, learning_rate = 0.3):
+    def train(self, x, y, learning_rate = 0.2):
 
         #a = np.concatenate((np.ones(1).T, np.array(x)), axis=1)
 
@@ -71,28 +71,29 @@ class neural_network:
     def remember(self, state, action, reward, next_state, possible_actions, done):
         self.memories.append((state, action, reward, next_state, possible_actions, done))
 
-    def replay(self, batch_size):
+    def replay(self, batch_size, episode = 10):
         print "Replaying"
 
         batches = min(batch_size, len(self.memories))
         batches = np.random.choice(len(self.memories), batches)
-
-        for i in batches:
-            state, action, reward, next_state, possible_actions, done = self.memories[i]
-            target = reward
-
-            if not done:
-                max_q_value = -maxint - 1
-                max_q_value_action = ''
-                for action in possible_actions:
-                    q_value = self.predict([action] + next_state)
-                    if q_value > max_q_value:
-                        max_q_value = q_value
-                        max_q_value_action = action
-                target = target + self.gamma * max_q_value
-            print target
-
-            self.train([action] + state, target)
+        
+        for _ in range(episode):
+            for i in batches:
+                state, action, reward, next_state, possible_actions, done = self.memories[i]
+                target = reward
+                    
+                if not done:
+                    max_q_value = -maxint - 1
+                    max_q_value_action = ''
+                    for action in possible_actions:
+                        q_value = self.predict([action] + next_state)
+                        if q_value > max_q_value:
+                            max_q_value = q_value
+                            max_q_value_action = action
+                    target = target + self.gamma * max_q_value
+            #            print target
+                
+                self.train([action] + state, target)
 
         if len(self.memories) > 1500:
             np.random.shuffle(self.memories)
