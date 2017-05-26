@@ -8,6 +8,10 @@ class world_state_interpreter:
     def __init__(self, x = 21, z = 21):
         self._world_x = x
         self._world_z = z
+        self._time_init = 9999
+        self._score = 0
+        self._end = False
+        self._life = 20
         self._available = False
 
     def input(self, world_state):
@@ -17,17 +21,18 @@ class world_state_interpreter:
             self._available = False
 
         self._world_state = world_state
+        self.update_status()
 
     def number_of_non_agent_entities(self):
         if self._available:
-            msg = self._world_state.observations[-1].text
-            ob = json.loads(msg)
-            entities = [EntityInfo(**k) for k in ob["entities"]]
+            entities = self.info_of_agent()
 
             counter = 0
             for ent in entities:
-                if ent.name != u'SOTF Bot':
-                    counter += 1
+                counter += 1
+
+            if counter == 0:
+                self._end = True
             return counter
         else:
             return False
@@ -36,25 +41,41 @@ class world_state_interpreter:
         if self._available:
             msg = self._world_state.observations[-1].text
             ob = json.loads(msg)
-            entities = [EntityInfo(**k) for k in ob["entities"]]
 
-            enemies = []
-            for ent in entities:
-                if ent.name != u'SOTF Bot':
-                    enemies.append(ent)
-            return enemies
+            entities = []
+            for ent in ob["entities"]:
+                if ent[u'name'] == u'Zombie':
+                    entities.append(EntityInfo(**ent))
+            return entities
         else:
             return False
+
+    def update_status(self):
+        if self._available:
+            msg = self._world_state.observations[-1].text
+            ob = json.loads(msg)
+            life = int(ob.get(u'Life', 0))
+            if life == 0:
+                self._available = False
+
+            time = int(ob.get(u'TotalTime',0))
+            if self._time_init > time:
+                self._time_init = time
+
+            score = life * 1000 + time - self._time_init
+            if self._score < score:
+                self._score = score
+
 
     def info_of_agent(self):
         if self._available:
             msg = self._world_state.observations[-1].text
             ob = json.loads(msg)
-            entities = [EntityInfo(**k) for k in ob["entities"]]
 
-            for ent in entities:
-                if ent.name == u'SOTF Bot':
-                    return ent
+            for ent in ob["entities"]:
+                if ent[u'name'] == u'SOTF Bot':
+                    return EntityInfo(**ent)
+
             return False
         else:
             return False
