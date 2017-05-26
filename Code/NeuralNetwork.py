@@ -1,9 +1,11 @@
+# This file creates basic attributes and environment to build up neural
+# network for the game, including the predict and train functions.
+
 import random
 import numpy as np
 from sys import maxint
 
 random.seed(7)
-
 
 def sigmoid(x):
     return 1.0/(1.0 + np.exp(-x))
@@ -35,11 +37,7 @@ class neural_network:
         self.weights.append(wts)
 
     def train(self, x, y, learning_rate = 0.2):
-
-        #a = np.concatenate((np.ones(1).T, np.array(x)), axis=1)
-
         a = np.concatenate((np.ones(1).T, np.array(x)))
-
         a = [a]
 
         for l in range(len(self.weights)):
@@ -91,7 +89,7 @@ class neural_network:
                             max_q_value = q_value
                             max_q_value_action = action
                     target = target + self.gamma * max_q_value
-            #            print target
+                    # print target
                 
                 self.train([action] + state, target)
 
