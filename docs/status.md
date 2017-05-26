@@ -28,7 +28,7 @@ However, Q Learning is not a feasible approach in our case, since the state is t
 For now, our agent tries to survive inside a 21-by-21 cage with one enemy shown as above. The environment our agent can see is also a 21-by-21 matrix where the agent itself is located at the center of the matrix (matrix[10][10])
 To simplify the state, we use 1 to represent enemy, 0 to represent both the agent and the air and -1 to represent block. For each state, there are four associated actions: left (use value 1 to represent), right (use value 2 to represent), up (use value 4 to represent) and down (use value 8 to represent). 
 
-Therefore, we use Deep Q Network, in which the Q-Function is represented by a Neural Network. It takes the state (matrix) and four actions as input and output the Q-Value for each possible action. As last, the agent pick the action with largest predicted Q-Value and act.
+Therefore, we use Deep Q Network, in which the Q-Function is represented by a Neural Network. It takes the state (matrix) and four actions as input and output the Q-Value for each possible action. As last, the agent picks the action with largest predicted Q-Value and act.
 
 As shown in the pseudocode, the experience <previous_state, previous_action, reward, current_state> is stored inside a deque. Once an episode is ended, a small batch of random experience is retrieved from the deque and updated the weights of Neutral Network based on these experiences using stochastic gradient descent. The idea is that these random experiences can help our agent avoid local minium.
 
