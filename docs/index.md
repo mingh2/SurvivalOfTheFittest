@@ -18,4 +18,11 @@ _A Malmo Project for CompSci 175 at UC Irvine_
 #### So, let's survive ... In the harsh environment of Minecraft. 
 
 
+## Repository
+#### Main Branch: 
+https://github.com/mingh2/SurvivalOfTheFittest
+#### Active Working Branch: 
+https://github.com/KurosuHa/SurvivalOfTheFittest
+
+
 
