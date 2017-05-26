@@ -16,6 +16,10 @@ By the final report time, our team aims to utilize the environment generator to 
 
 #### 
 
+## Approach
+We are using Deep Q Network algorithm to train our agent. And the pseudocode of simpler version is shown as follow:
+
+
 ## Remaining Goals and Challenges
 
 As briefly mentioned in the project summary, our ultimate objective is still developing an agent that can survive attacks from different mobs in a complex environment with a variable amount of enemies. We hope to combine what we have learned in CompSci 175, CompSci 171, CompSci 177 and various online resources to code such agent. 
