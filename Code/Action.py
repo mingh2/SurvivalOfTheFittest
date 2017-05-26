@@ -1,5 +1,10 @@
+# This file defines all possible actions that could generate
+# from the agent, including "stop", go "up", "down", "left",
+# and "right", and also "attack"
+
 from collections import namedtuple, defaultdict
 
+# Create basic state information for agent's action
 EntityInfo = namedtuple('EntityInfo', 'x, y, z, yaw, pitch, name')
 
 class action:
@@ -33,13 +38,12 @@ class action:
         self._host.sendCommand("move 0")
         self._host.sendCommand("strafe 1")
 
-    # Attack Command
     def get_ws(self, ws):
         self._ws = ws
 
     def find_yaw(self):
         """
-            Working In Progress 
+            Working In Progress... (5/26/2017)
             
             The idea of this function is to find the nearest enemy 
             Then figure out the yaw to face the enemy 
@@ -52,16 +56,19 @@ class action:
          
         """
         ws = self._ws
-        agent = ws.info_of_agent()
-        enemies = ws.info_of_enemies()
-
-
+        # agent = ws.info_of_agent()
+        # enemies = ws.info_of_enemies()
 
 
     def attack(self):
         """ 
-            When Attacking, the Agent Cannot Move 
-            Working In Progress 
+            Working In Progress... (5/26/2017)
+            
+            When attacking a Zombie, the agent cannot move and it has 
+            to stay at its current position. We currently decide to 
+            disable the action of "attack" and only focus on how to
+            train the agent's evasion from the Zombie's attacks.
+            
         """
         self.stop()
 
