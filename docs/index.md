@@ -22,7 +22,7 @@ _A Malmo Project for CompSci 175 at UC Irvine_
 #### Main Branch: 
 [https://github.com/mingh2/SurvivalOfTheFittest](https://github.com/mingh2/SurvivalOfTheFittest)
 #### Active Working Branch: 
-[https://github.com/KurosuHa/SurvivalOfTheFittest](https://github.com/KurosuHa/SurvivalOfTheFittest)
+[https://github.com/Ai-Zixun/SurvivalOfTheFittest](https://github.com/Ai-Zixun/SurvivalOfTheFittest)
 
 
 ## Inspirational Resource  
