@@ -20,18 +20,20 @@ _A Malmo Project for CompSci 175 at UC Irvine_
 
 ## Repository
 #### Main Branch: 
-https://github.com/mingh2/SurvivalOfTheFittest
+[https://github.com/mingh2/SurvivalOfTheFittest](https://github.com/mingh2/SurvivalOfTheFittest)
 #### Active Working Branch: 
-https://github.com/KurosuHa/SurvivalOfTheFittest
+[https://github.com/KurosuHa/SurvivalOfTheFittest](https://github.com/KurosuHa/SurvivalOfTheFittest)
 
 
 ## Inspirational Resource  
 
 #### Neural Network 
-https://www.analyticsvidhya.com/blog/2016/10/an-introduction-to-implementing-neural-networks-using-tensorflow/
+
+[https://www.analyticsvidhya.com/blog/2016/10/an-introduction-to-implementing-neural-networks-using-tensorflow/](https://www.analyticsvidhya.com/blog/2016/10/an-introduction-to-implementing-neural-networks-using-tensorflow/)
+
 
 #### Deep Q Network 
-http://karpathy.github.io/2016/05/31/rl/
+[http://karpathy.github.io/2016/05/31/rl/](http://karpathy.github.io/2016/05/31/rl/)
 
 #### NEAT Mario Video 
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/qv6UVOQ0F44?ecver=2" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
