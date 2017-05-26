@@ -86,6 +86,7 @@ class zombies_fighter:
 
         for col in range(len(matrix)):
             for row in range(len(matrix[col])):
+                # Decide different actions based on the position on the matrix
                 if matrix[col][row] == 'blocked':
                     # wall = wall + (col * 21 + row)
                     distance = sqrt((col - 10) ** 2 + (row - 10) ** 2)
@@ -105,10 +106,10 @@ class zombies_fighter:
 
         while True:
             world_state = agent_host.getWorldState()
+
             if world_state.number_of_observations_since_last_state > 0:
                 msg = world_state.observations[-1].text
                 ob = json.loads(msg)
-
                 life = ob[u'Life']
 
                 return state, life, closest_enemy, closest_wall
@@ -118,6 +119,11 @@ class zombies_fighter:
 
 
     def choose_action(self, curr_state, possible_actions, show_best):
+        '''
+            The general idea of this function is similar to what we did
+            for Assignment 2 - to implement the algorithm of q-value and
+            update the maximum q-value to the agent.
+        '''
         rnd = random.random()
 
         print "Possible Actions: ", possible_actions
@@ -157,17 +163,16 @@ class zombies_fighter:
         self.nn.replay(batch_size)
 
     def run(self, agent_host, matrix, show_best=False):
-        
-        
-
         state, life, closest_enemy, closest_wall = self.get_curr_state(agent_host, matrix)
 
         possible_actions = self.get_possible_actions(matrix)
+
 #        if self.previous_state != None:
 #            #Make Prediction Based on two states if possible
 #            a0 = self.choose_action([x + y for x, y in zip(self.previous_state, state)],
 #                possible_actions, show_best)
 #        else:
+
         a0 = self.choose_action(state, possible_actions, show_best)
 
         if self.previous_state != None:
@@ -177,23 +182,27 @@ class zombies_fighter:
             if life == 0.0:
                 done = True
 
+            # Set up the rules of reward based on various of factors.
+            # Need to build a more sophisticated rule in the future.
 
-            #Reward Based On Health
+            # 1. Reward Based On Health
             if self.previous_life > life:
                 if len(possible_actions) <= 2:
                     reward = reward - 0.30
                 else:
                     reward = reward - 0.20
 #
-            #Reard Based On Closest Enemy
-#            if self.previous_closest_enemy <= 3.0 and \
-#                self.previous_closest_enemy - 1 > closest_enemy:
-#                reward = reward - 0.30
-#            if self.previous_closest_enemy <= 3.0 and \
-#                self.previous_closest_enemy + 1 < closest_enemy:
-#                reward = reward + 0.30
-#
-#            print closest_enemy, closest_wall
+            # 2. Reard Based On Closest Enemy
+            '''
+            if self.previous_closest_enemy <= 3.0 and \
+                self.previous_closest_enemy - 1 > closest_enemy:
+                reward = reward - 0.30
+            if self.previous_closest_enemy <= 3.0 and \
+                self.previous_closest_enemy + 1 < closest_enemy:
+                reward = reward + 0.30
+            print closest_enemy, closest_wall
+            '''
+
             if closest_enemy <= 3.0:
                 reward -= 1/max(1, closest_enemy) * 0.20
             else:
@@ -203,16 +212,14 @@ class zombies_fighter:
             elif self.previous_closest_enemy < closest_enemy:
                 reward += 0.40
 
-
-            #Reward Based On Closest Wall
+            # 3. Reward Based On Closest Wall
             if closest_wall <= 1.0 or len(possible_actions) <= 2:
-                reward = reward - 0.15
+                # reward = reward - 0.15
+                reward -= 0.15
 
 #            closest_enemy = max(1.0, closest_enemy)
 #            closest_wall = max(1.0, closest_wall)
 #            reward = reward + (-0.70/closest_enemy) + (-0.30/closest_wall)
-
-
 
             print "Actual Value: ", reward
             self.mse.append((reward - self.predict_value) ** 2)
@@ -221,6 +228,7 @@ class zombies_fighter:
 #                self.nn.remember(self.previous_two_states, self.previous_action,
 #                    reward, state, possible_actions, done)
 #            else:
+
             self.nn.remember(self.previous_state, self.previous_action,
                 reward, state, possible_actions, done)
             self.replay(8)
@@ -229,10 +237,11 @@ class zombies_fighter:
             self.previous_closest_wall = closest_wall
 #            self.previous_two_states = [x + y for x, y in zip(self.previous_state, state)]
 
+        # Update information of previous state for the agent
         self.previous_life = life
-        # self.previous_possable_actions = possible_actions
         self.previous_state = state
         self.previous_action = a0
+        # self.previous_possable_actions = possible_actions
 
         self.act(agent_host, a0)
 
