@@ -5,11 +5,14 @@ title:  Team
 
 # Team Members List
 
-## Ming Huang
+## Huang, Ming
 ***UCI Net ID***: mingh2
+***Github ID***: mingh2
 
-## Zixun Ai
+## Ai, Zixun
 ***UCI Net ID***: aiz
+***Github ID***: Ai-Zixun 
 
-## Kevin (Zijia) Ke
+## Ke, Kevin (Zijia) 
 ***UCI Net ID***: zijiak
+***Github ID***: KevinKozj
