@@ -19,7 +19,7 @@ def tanh_prime(x):
 
 class neural_network:
     def __init__(self, gamma):
-        #Possible Moves: Correspond to Up, Down, Left, Right
+        # Possible Moves: Correspond to Up, Down, Left, Right
         self.layers = [1 + 441, 256, 128, 64, 32, 16, 8, 1]
         self.weights = []
         self.memories = []

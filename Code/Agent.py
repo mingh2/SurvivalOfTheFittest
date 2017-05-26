@@ -1,5 +1,4 @@
-import random
-import json
+import random, json
 from Action import action as Move
 from NeuralNetwork import neural_network as nn
 from sys import maxint
@@ -9,20 +8,24 @@ from math import log, sqrt
 class zombies_fighter:
     def __init__(self,  alpha=0.3, gamma=1):
         """
-                Args
+            Args:
             alpha:  <float>  learning rate      (default = 0.3)
             gamma:  <float>  value decay rate   (default = 1)
             n:      <int>    number of back steps to update (default = 1)
         """
 
         self._counter = 0
-        self.epsilon = 0.30  # chance of taking a random action instead of the best
+        # Possibility of taking a random action instead of the best one
+        self.epsilon = 0.30
 
+        # Store a neural network attribute to the agent for its Q-value predictions
+        self.gamma = gamma
         self.nn = nn(gamma)
-        self.gamma, self.alpha = gamma, alpha
+        self.alpha = alpha
+
+        # Collections of the previous state's information
         self.previous_life = 0.0
         self.previous_possable_actions = []
-
         self.previous_state = None
         self.previous_action = None
         self.previous_two_states = None
@@ -37,13 +40,16 @@ class zombies_fighter:
 
     def act(self, agent_host, action):
         """
+        Execute the action and reflect it in the console window
         Args
-            Matrix:     NxN matrix, represent the environment
-                        "clear":    No Wall, No Enemy
-                        "blocked":  Wall, or other kind of unreachable location
-                        "enemy":    Zombie or other kind of mob
-            Action:     A class include all action available for the agent
-                        up, down, left, right
+            Agent_Host:     NxN matrix, represent the environment
+                        "clear":    Neither "blocked" nor "enemy" where is 
+                                        accessible for the agent
+                        "blocked":  Wall, or other kind of unreachable position
+                        "enemy":    Zombie (will have other mobs in the soon future)
+                        
+            Action:     A class include all action available for the agent,
+                            only including up, down, left, and right at this point
         """
 
         self._counter += 1
@@ -64,34 +70,39 @@ class zombies_fighter:
             print 'Action: Down'
 
     def get_curr_state(self, agent_host, matrix):
-        wall = 0
-        enemy = 0
+        '''
+            Collect the information of the agent's current state.
+            
+            Return values include a list of states, if the agent is surviving or not,
+                the distance to its closest zombie and wall.
+        '''
+
+        # wall = 0
+        # enemy = 0
         state = []
 
-        closeset_wall = sqrt(len(matrix) ** 2 + len(matrix[0]) ** 2)
-        closeset_enemy = closeset_wall
+        closest_wall = sqrt(len(matrix) ** 2 + len(matrix[0]) ** 2)
+        closest_enemy = closest_wall
 
         for col in range(len(matrix)):
             for row in range(len(matrix[col])):
                 if matrix[col][row] == 'blocked':
                     # wall = wall + (col * 21 + row)
                     distance = sqrt((col - 10) ** 2 + (row - 10) ** 2)
-                    if distance < closeset_wall:
-                        closeset_wall = distance
+                    if distance < closest_wall:
+                        closest_wall = distance
                     state.append(2)
                 elif matrix[col][row] == 'enemy':
                     # enemy = col * 21 + row
                     distance = sqrt((col - 10) ** 2 + (row - 10) ** 2)
-                    if distance < closeset_enemy:
-                        closeset_enemy = distance
+                    if distance < closest_enemy:
+                        closest_enemy = distance
                     state.append(3)
                 elif col == 10 and row == 10:
                     state.append(0)
                 else:
                     state.append(1)
 
-
-        # print "Wall: ", wall
         while True:
             world_state = agent_host.getWorldState()
             if world_state.number_of_observations_since_last_state > 0:
@@ -100,10 +111,10 @@ class zombies_fighter:
 
                 life = ob[u'Life']
 
-                return state, life, closeset_enemy, closeset_wall
+                return state, life, closest_enemy, closest_wall
             
             elif not world_state.is_mission_running:
-                return state, 0, closeset_enemy, closeset_wall
+                return state, 0, closest_enemy, closest_wall
 
 
     def choose_action(self, curr_state, possible_actions, show_best):
@@ -149,7 +160,7 @@ class zombies_fighter:
         
         
 
-        state, life, closeset_enemy, closeset_wall = self.get_curr_state(agent_host, matrix)
+        state, life, closest_enemy, closest_wall = self.get_curr_state(agent_host, matrix)
 
         possible_actions = self.get_possible_actions(matrix)
 #        if self.previous_state != None:
@@ -176,30 +187,30 @@ class zombies_fighter:
 #
             #Reard Based On Closest Enemy
 #            if self.previous_closest_enemy <= 3.0 and \
-#                self.previous_closest_enemy - 1 > closeset_enemy:
+#                self.previous_closest_enemy - 1 > closest_enemy:
 #                reward = reward - 0.30
 #            if self.previous_closest_enemy <= 3.0 and \
-#                self.previous_closest_enemy + 1 < closeset_enemy:
+#                self.previous_closest_enemy + 1 < closest_enemy:
 #                reward = reward + 0.30
 #
-#            print closeset_enemy, closeset_wall
-            if closeset_enemy <= 3.0:
-                reward -= 1/max(1, closeset_enemy) * 0.20
+#            print closest_enemy, closest_wall
+            if closest_enemy <= 3.0:
+                reward -= 1/max(1, closest_enemy) * 0.20
             else:
-                reward += min(20, closeset_enemy) / 20 * 0.20
-            if self.previous_closest_enemy > closeset_enemy or (closeset_enemy <= 1.0):
+                reward += min(20, closest_enemy) / 20 * 0.20
+            if self.previous_closest_enemy > closest_enemy or (closest_enemy <= 1.0):
                 reward -= 0.30
-            elif self.previous_closest_enemy < closeset_enemy:
+            elif self.previous_closest_enemy < closest_enemy:
                 reward += 0.40
 
 
             #Reward Based On Closest Wall
-            if closeset_wall <= 1.0 or len(possible_actions) <= 2:
+            if closest_wall <= 1.0 or len(possible_actions) <= 2:
                 reward = reward - 0.15
 
-#            closeset_enemy = max(1.0, closeset_enemy)
-#            closeset_wall = max(1.0, closeset_wall)
-#            reward = reward + (-0.70/closeset_enemy) + (-0.30/closeset_wall)
+#            closest_enemy = max(1.0, closest_enemy)
+#            closest_wall = max(1.0, closest_wall)
+#            reward = reward + (-0.70/closest_enemy) + (-0.30/closest_wall)
 
 
 
@@ -214,8 +225,8 @@ class zombies_fighter:
                 reward, state, possible_actions, done)
             self.replay(8)
 
-            self.previous_closest_enemy = closeset_enemy
-            self.previous_closest_wall = closeset_wall
+            self.previous_closest_enemy = closest_enemy
+            self.previous_closest_wall = closest_wall
 #            self.previous_two_states = [x + y for x, y in zip(self.previous_state, state)]
 
         self.previous_life = life
