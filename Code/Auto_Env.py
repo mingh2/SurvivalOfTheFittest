@@ -33,7 +33,8 @@ class auto_env:
         XML = '''<DrawEntity x="-5" y="16" z="0" type="Zombie"/>'''
         return XML
 
-    # Move Commands
+    # Move Commands. Similar to what we have in Environment.py,
+    # which generates the initial environment of the game.
     def mob_XML_generator(self, init):
         missionXML = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
                     <Mission xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">

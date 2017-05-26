@@ -4,8 +4,6 @@
 # Initial Environment Setting
 # ------------------------------------------------------------------------------------------------
 
-
-
 def mob_XML_generator(init):
     missionXML='''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
                 <Mission xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -64,8 +62,8 @@ def mob_XML_generator(init):
                 </Mission>'''
 
     if init:
-        # To avoid the Drawing Decorator Error on the first run.
-        # Kill The Agent and Start the second Run Directly
+        # [ Hard-Code ] To avoid the Drawing Decorator Error on the first run.
+        # Kill The Agent on the First Run and Start the Second Run Directly.
         missionXML = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
                         <Mission xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 

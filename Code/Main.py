@@ -1,17 +1,12 @@
 # ------------------------------------------------------------------------------------------------
 # CompSci 175
 # Group 6: Survival of the Fittest
-# Core
+# The Main Function
 # ------------------------------------------------------------------------------------------------
 
-import MalmoPython
-import os
-import sys
-import time
-import pickle
+import MalmoPython, os, sys, time, pickle
 
-
-# Import Other Part of the Code
+# Import Code Written by Us
 from Environment import mob_XML_generator
 from Agent import zombies_fighter
 from World_state_interpreter import world_state_interpreter
@@ -19,16 +14,14 @@ from Visual import visualization
 from Action import action
 from Auto_Env import auto_env
 
-
-num_reps = 30000
-n = 25
-alpha = 1
-gamma = 1
-
-
+NUM_REPS = 30000
+N = 25
+ALPHA = 1
+GAMMA = 1
 
 # Main Function
 def main():
+    global NUM_REPS, N, ALPHA, GAMMA
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
 
     agent = zombies_fighter(gamma=0.8)
@@ -53,13 +46,13 @@ def main():
     x = 21
     y = 21
 
-    num_reps = 3000
-    n = 25
-    alpha = 1
-    gamma = 1
+    NUM_REPS = 3000
+    N = 25
+    ALPHA = 1
+    GAMMA = 1
     
     visual = visualization(x, y, debug)
-    for i in range(num_reps):
+    for i in range(NUM_REPS):
         print "Survival # " + str(i + 1)
 
         ws_interpre = world_state_interpreter(x, y)
@@ -128,17 +121,15 @@ def main():
                 visual.get_entities(ent_matrix)
                 visual.get_environment(env_matrix)
                 visual.draw()
-#                print "Here"
                 matrix = visual.get_matrix()
 
             if matrix != None:
                 # action_available.get_ws(ws_interpre)
-#                print "Running"
                 agent.run(agent_host, matrix, False)
             
 
 
-            #time.sleep(0.1)
+            #time.sleep(0.1) # Use it for testing
             world_state = agent_host.getWorldState()
             for error in world_state.errors:
                 print "Error:", error.text
@@ -155,9 +146,6 @@ def main():
         time.sleep(1)
     if debug:
         visual.quit()
-
-
-
 
 # Execute The Program
 if __name__ == '__main__':
