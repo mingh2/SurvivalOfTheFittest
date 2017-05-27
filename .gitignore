@@ -30,3 +30,11 @@
 *.pyc
 
 *.xml
+
+*.pyc
+
+*.lock
+
+*.bin
+
+*.jar
