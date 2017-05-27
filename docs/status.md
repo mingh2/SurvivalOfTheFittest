@@ -61,12 +61,7 @@ Here's a MSE for our first 300 episode.
 
 <img src="Mean_Sqaure_Error.png" width="50%"> 
 
-Even though the total survial time for our agent is gradually improving (from 20s to 30s after 300 episode).
-The MSE for during this period does not decrease a lot as we expected. 
-One reason might be that the the way we assign a reward to each state and its assoicated action is too complicated for the Neural Network to learn and approximate. 
-The other reason might be that the learning rate is too small (0.01 as we generated this picture) so that we can hardly see major improvements within 300 episode.
-
-Therefore, finding a better way to assign reward and a more straightforward evaluation method is a major focus before the final.
+Even though the total survival  time for our agent is gradually improving (from the 20s to 30s after 300 episode). The MSE for during this period does not decrease a lot as we expected. One reason might be that the way we assign a reward to each state and its associated  action is too complicated for the Neural Network to learn and approximate. The other reason might be that the learning rate is too small (0.01 as we generated this picture) so that we can hardly see significant  improvements within 300 episode. Therefore, finding a better way to assign reward and a more straightforward evaluation method is a major focus before the final.
 
 
 ## Remaining Goals and Challenges
