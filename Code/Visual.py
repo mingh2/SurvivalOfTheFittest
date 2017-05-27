@@ -7,7 +7,8 @@ class visualization:
         Visualize The Environment, including the size of the
         matrix we showed on Tkinter, entities and envrionments,
         and a smaller canvas to show a vertical view of 
-        the game map.
+        the game map. The default size of the game matrix
+        is 21 x 21.
     """
 
     def __init__(self, x = 21, y = 21, debug=False):
@@ -20,7 +21,10 @@ class visualization:
 
 
     def init_canvas(self, scale = 20):
-        """Set-up the Canvas"""
+        """
+            Initialize the Canvas (the game map) to provide a
+            more direct vertical view for the purpose of testing
+        """
         self._scale = scale
         root = tk.Tk()
         root.wm_title("Environment")
@@ -40,7 +44,11 @@ class visualization:
         return self._matrix
 
     def draw(self):
-        """Update and Draw the Environment"""
+        """
+            Update and Draw the Environment, with showing
+            corresponding object in each position, including
+            "clear", "blocked", and "enemy".
+        """
 
         # Drawing the Grid and Enemies Position
         for x in range(self._world_x):
@@ -52,6 +60,7 @@ class visualization:
                                                   (self._world_y - 1 - y + 1) * self._scale,
                                                   outline="#fff", fill="#000")
                 self._matrix[self._world_y - 1 - y][self._world_x - 1 - x] = "clear"
+
                 if self._env[x][y] == "stone":
                     if self.debug:
                         self._canvas.create_rectangle((self._world_x - 1 - x) * self._scale,
@@ -70,11 +79,10 @@ class visualization:
                                                       outline="#fff", fill="#f00")
                     self._matrix[self._world_y - 1 - y][self._world_x - 1 - x ]= "enemy"
 
-
-
-        # Agent Position
+        # Update the Agent Position
         x = self._world_x // 2
         y = self._world_y // 2
+
         if self.debug:
             self._canvas.create_oval((self._world_x-1-x)*self._scale,
                                           (self._world_y-1-y)*self._scale,
