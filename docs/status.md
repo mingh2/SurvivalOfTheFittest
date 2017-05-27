@@ -5,6 +5,8 @@ title:  Project Status Update
 
 *A Malmo Project for CompSci 175 at UC Irvine*
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w_hhVbIIH90" frameborder="0" allowfullscreen></iframe>
+
 ## Project Summary
 
 The Survival of the Fittest Project (Our CompSci 175 Project) aims to utilize the knowledge regarding machine learnings and intelligence system to build an agent who can survive under the wave of attacking from mobs in Minecraft Project Malmo. In the initial proposal, the goal of the project aimed to “train the agent with… Zombie Pigman, Wither, Blaze, etc.” and allow the agent to “utilize the terrain to its advantage when given a more complex map.” However, we are facing some feasibilities on current stage. We intend to construct adequate infrastructures (Agent Deep Q Network Method or Agent Neuroevolution of Augmenting Topologies Method, Environment, etc.) to train the agent and even let it fights with all mobs in all terrain. **The key objective is to train an agent to survive in a complex environment as long as possible. Longevity is the goal.** 
@@ -14,7 +16,7 @@ At this stage, the current objective is to establish one of the methods (either 
 For the final report, our team aims to utilize the environment generator to prepare/train the agent in a more sophisticated manner. We would also improve the performance of our existing Deep Q Network, and possibly keep attempting to build an agent with the Neuroevolution of Augmenting Topologies. The complexity (toughness) of enemies would also be increased by that time. We expect the agent can not only survive under constant attacking by Zonbie, but also deal with various of attacks from Zombie Pigman, Wither, and Blaze. 
 
 
-#### 
+
 
 ## Approach
 We are using Deep Q Network algorithm to train our agent. And the pseudocode of simpler version is shown as follow:
@@ -36,7 +38,7 @@ Hence, alternatively, we decided to use Deep Q Network, in which the Q-Function 
 As shown in the pseudocode shown above, the experience <previous_state, previous_action, reward, current_state> is stored inside a deque (a double-end queue). Once an episode is ended, a small batch of random experience is retrieved from the deque and updated the weights of Neutral Network based on these experiences by using stochastic gradient descent, because these random experiences can help our agent avoiding local minium.
 
 
-#### 
+
 
 ## Remaining Goals and Challenges
 
