@@ -19,13 +19,13 @@ For the final report, our team aims to utilize the environment generator to prep
 ## Approach
 We are using Deep Q Network algorithm to train our agent. And the pseudocode of simpler version is shown as follow:
 
-<img src="Pseudocode.png" width="80%"> 
+<img src="Pseudocode.png" width="50%"> 
 
 The basic idea of Deep Q Network is similar to that of the Q-Learning where we have a reward (Q-Value) of a state with each of its corresponding action(s). Then we select the action which possesses the maximum Q-Value among all options.
 
 However, Q Learning is not a feasible approach in our case, since the state is too large and complicated. With a map size of 21 * 21 and three possible entities on each block of map, our program will require gigabytes of space to store a Q-Table (which is 3^441).
 
-<img src="State%20Representation.png" width="80%"> 
+<img src="State%20Representation.png" width="50%"> 
 
 For now, our agent tries to survive inside a 21-by-21 cage with one enemy shown as above. The environment our agent can see is also a 21-by-21 matrix where the agent itself is located at the center of the matrix (matrix[10][10]) at the very beginning.
 
