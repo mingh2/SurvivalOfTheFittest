@@ -1,5 +1,6 @@
 # This file creates basic attributes and environment to build up neural
-# network for the game, including the predict and train functions.
+# network for the game, including the predict and train functions for
+# the most part.
 
 import random
 import numpy as np
@@ -28,7 +29,7 @@ class neural_network:
 
         self.gamma = gamma
 
-        #range of weights (-1, 1)
+        # The range of weights is (-1, 1)
         for i in range (1, len(self.layers)-1):
             wts = 2 * np.random.random((self.layers[i-1] + 1, self.layers[i] + 1)) - 1
             self.weights.append(wts)
@@ -59,6 +60,9 @@ class neural_network:
             self.weights[i] += learning_rate * layer.T.dot(delta)
 
     def predict(self, x):
+        # Use axis = 1 would case an exception when running the game,
+        # so we command it out for the purpose of predicting and
+        # training smoothly.
         # a = np.concatenate((np.ones(1).T, np.array(x)), axis=1)
         a = np.concatenate((np.ones(1).T, np.array(x)))
 
@@ -79,15 +83,15 @@ class neural_network:
             for i in batches:
                 state, action, reward, next_state, possible_actions, done = self.memories[i]
                 target = reward
-                    
+
                 if not done:
                     max_q_value = -maxint - 1
-                    max_q_value_action = ''
+                    max_q_value_action = '' # Is not used right now
                     for action in possible_actions:
                         q_value = self.predict([action] + next_state)
                         if q_value > max_q_value:
                             max_q_value = q_value
-                            max_q_value_action = action
+                            max_q_value_action = action # Is not used right now
                     target = target + self.gamma * max_q_value
                     # print target
                 
@@ -96,7 +100,7 @@ class neural_network:
         if len(self.memories) > 1500:
             np.random.shuffle(self.memories)
             self.memories = self.memories[:int(len(self.memories) * 0.8)]
-        print "OUT"
+        print "Finished Replaying"
 
     def get_weights(self):
         return self.weights

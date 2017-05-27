@@ -25,10 +25,11 @@ def main():
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
 
     agent = zombies_fighter(gamma=0.8)
-    
-    debug = False
-    if len(sys.argv) > 1 and sys.argv[1] == "debug=True":
-        debug = True
+
+    debug = True if len(sys.argv) > 1 and sys.argv[1] == "debug=True" else False
+    # debug = False
+    # if len(sys.argv) > 1 and sys.argv[1] == "debug=True":
+    #     debug = True
 
     # Create default Malmo objects:
     agent_host = MalmoPython.AgentHost()
@@ -36,8 +37,8 @@ def main():
     try:
         agent_host.parse(sys.argv)
     except RuntimeError as e:
-        print 'ERROR(Runtime):', e
-        print agent_host.getUsage()
+        print 'ERROR(Runtime):', e, "\n", agent_host.getUsage()
+        # print agent_host.getUsage()
         exit(1)
     if agent_host.receivedArgument("help"):
         print agent_host.getUsage()
