@@ -7,6 +7,7 @@ title:  Project Status Update
 
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/w_hhVbIIH90" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 
+
 ## Project Summary
 
 The Survival of the Fittest Project (Our CompSci 175 Project) aims to utilize the knowledge regarding machine learnings and intelligence system to build an agent who can survive under the wave of attacking from mobs in Minecraft Project Malmo. In the initial proposal, the goal of the project aimed to “train the agent with… Zombie Pigman, Wither, Blaze, etc.” and allow the agent to “utilize the terrain to its advantage when given a more complex map.” However, we are facing some feasibilities on current stage. We intend to construct adequate infrastructures (Agent Deep Q Network Method or Agent Neuroevolution of Augmenting Topologies Method, Environment, etc.) to train the agent and even let it fights with all mobs in all terrain. **The key objective is to train an agent to survive in a complex environment as long as possible. Longevity is the goal.** 
