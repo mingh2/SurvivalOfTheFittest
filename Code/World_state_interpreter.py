@@ -1,25 +1,21 @@
-import json
-import math
+import json, math
 from collections import namedtuple, defaultdict
 
+# Create basic state information for agent's action
 EntityInfo = namedtuple('EntityInfo', 'x, y, z, yaw, pitch, name')
 
 class world_state_interpreter:
-    def __init__(self, x = 21, z = 21):
+    def __init__(self, x = 21, z = 21): # The default size of the game map is 21 x 21
         self._world_x = x
         self._world_z = z
         self._time_init = 9999
         self._score = 0
-        self._end = False
         self._life = 20
+        self._end = False
         self._available = False
 
     def input(self, world_state):
-        if world_state.number_of_observations_since_last_state > 0:
-            self._available = True
-        else:
-            self._available = False
-
+        self._available = True if world_state.number_of_observations_since_last_state > 0 else False
         self._world_state = world_state
         self.update_status()
 
