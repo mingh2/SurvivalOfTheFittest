@@ -28,13 +28,13 @@ For the final report, our team aims to utilize the environment generator to prep
 
 For now, our agent tries to survive inside a 21-by-21 cage with one enemy shown as above. The environment our agent can see is also a 21-by-21 matrix where the agent itself is located at the center of the matrix (matrix[10][10]) at the very beginning.
 
-To simplify the state, we use 1 to represent enemy, 0 to represent both the agent and the air, and -1 to represent block. For each state, there are four associated actions: left (represented by 1), right (represented by 2), up (represented by 4) and down (represented by 8). 
+To simplify the state, we use 1 to represent the enemy, 0 to represent both the agent and the air, and -1 to represent the block. For each state, there are four associated actions: left (represented by 1), right (represented by 2), up (represented by 4) and down (represented by 8).
 
-Reward for each state and action depends on three criteria: angen's current health, distance between agent and closest enmey (only one enemy for now), distance between agent and cloest wall. The agent will be rewarded less if it's attaced by enemy and lose health (-0.5). The agent will have points deducted (-0.2) if the distance between the agent and the cloeset enemy is less than 2.0 because it is probaly within the enemy's attack range. Also, the distance between the agent and the cloest wall is crucial as well (-0.1 if the distance is less than 1.0), because the closer the agent and the wall is, the more likely the agent is attacked by the enemy.
+The reward for each state and action depends on three criteria: agent's current health, the distance between agent and closest enemy (only one enemy for now), distance between agent and closest wall. The agent will be rewarded less if an enemy attacks it and lose health (-0.5). The agent will have points deducted (-0.2) if the distance between the agent and the closest enemy is less than 2.0 because it is probably within the enemy's attack range. Also, the distance between the agent and the closest wall is crucial as well (-0.1 if the distance is less than 1.0), because the closer the agent and the wall are, the more likely the agent is attacked by the enemy.
 
-Of course, the agent will be rewarded if it is able to make a move that increase the distance between enemy (+0.3) or distance between wall (+0.2) and some extra rewards if it is able to keep a long distance for a period of time. 
+Of course, the agent will be rewarded if it can make a move that increases the distance between enemy (+0.3) or distance between the wall (+0.2) and some extra bonuses if it can keep a long distance for a period.
 
-Notes: the total reward is within the range of (-1, +1) becasue we use tanh as the activation function.
+Notes: the total reward is within the range of (-1, +1) because we use reward as the activation function.
 
 
 ### Algorithm
