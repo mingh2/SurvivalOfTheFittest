@@ -1,15 +1,14 @@
-import MalmoPython
-import json
-import logging
-import math
-import os
-import random
-import sys
-import time
+import MalmoPython, json, logging, math, os, random, sys, time
 import Tkinter as tk
 
 class visualization:
-    """GUI Display for Agent to Visualize The Environment"""
+    """
+        The class introduced a GUI Displayed for Agent to 
+        Visualize The Environment, including the size of the
+        matrix we showed on Tkinter, entities and envrionments,
+        and a smaller canvas to show a vertical view of 
+        the game map.
+    """
 
     def __init__(self, x = 21, y = 21, debug=False):
         self._world_x = x

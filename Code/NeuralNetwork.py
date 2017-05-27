@@ -5,7 +5,6 @@
 import random
 import numpy as np
 from sys import maxint
-
 random.seed(7)
 
 def sigmoid(x):
@@ -94,12 +93,13 @@ class neural_network:
                             max_q_value_action = action # Is not used right now
                     target = target + self.gamma * max_q_value
                     # print target
-                
+
                 self.train([action] + state, target)
 
         if len(self.memories) > 1500:
             np.random.shuffle(self.memories)
             self.memories = self.memories[:int(len(self.memories) * 0.8)]
+
         print "Finished Replaying"
 
     def get_weights(self):
