@@ -36,19 +36,20 @@ Notes: the total reward is within the range of (-1, +1) becasue we use tanh as t
 
 ### Algorithm
 
-We are using Deep Q Network algorithm to train our agent. Here is a good graphic representation of the training process, excpet we do not need to convolute the game state since we already represent the state with matrix:
+We are using Deep Q Network algorithm to train our agent. H
+ere is a good graphic representation of the training process, except we do not need to convolute the game state since we already represent the state with matrix:
 
 <img src="https://cdn-images-1.medium.com/max/800/1*T54Ngd-b_CKcP3N6hyXLVg.png" width="50%">
 
 The basic idea of Deep Q Network is similar to that of the Q-Learning where we have a reward (Q-Value) associated with a state and each of its corresponding action(s). Then we select the action which possesses the maximum Q-Value among all options.
 
-However, Q Learning is not a feasible approach in our case, since the state is too large and complicated. With a map size of 21 * 21 and three possible entities on each block of map, our program will require gigabytes of space to store a Q-Table (3^441 possible states and 4 actions for each state).
+However, Q-Learning is not a feasible approach in our case, since the state is too large and complicated. With a map size of 21 * 21 and three possible entities on each block, our program will require gigabytes of space to store a Q-Table (3^441 possible states and 4 actions for each state).
 
-Hence, alternatively, we decided to use Deep Q Network, in which the Q-Function is represented by a Neural Network. It takes the state (matrix) and four actions as inputs, and it outputs the Q-Value for each possible action. Fianally, the agent can pick the action with the most optimized predicted Q-Value and follow it.
+Hence, alternatively, we decided to use Deep Q Network, in which the Q-Function is represented by a Neural Network. It takes the state (matrix) and four actions as inputs, and it outputs the Q-Value for each possible measures. Finally, the agent can pick the action with the most optimized predicted Q-Value and follow it.
 
-For our implementation of Neural Network, we have one input layer with 442 nodes (21 * 21 matrix that represent the current state and 1 value that represent the action), three hidden layers and a output layer with one node. We use hyperbolic tangent as the activation function so the predicted output will be within the range of (-1, 1). 
+For our implementation of Neural Network, we have one input layer with 442 nodes (21 * 21 matrix that represent the current state and 1 value that represent the action), three hidden layers and an output layer with one node. We use hyperbolic tangent as the activation function, so the predicted output will be within the range of (-1, 1). 
 
-What truly seperate Deep Q Network with other reinforcemnet learning algorithm is its ability to "replay".
+What actually separates Deep Q Network with other reinforcement learning algorithm is its ability to "replay."
 The pseudocode of replay function is shown as follow:
 
 <img src="Pseudocode.png" width="50%"> 
