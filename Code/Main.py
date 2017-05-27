@@ -25,7 +25,6 @@ def main():
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
 
     agent = zombies_fighter(gamma=0.8)
-
     debug = True if len(sys.argv) > 1 and sys.argv[1] == "debug=True" else False
     # debug = False
     # if len(sys.argv) > 1 and sys.argv[1] == "debug=True":

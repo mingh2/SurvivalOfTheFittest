@@ -22,7 +22,6 @@ class world_state_interpreter:
     def number_of_non_agent_entities(self):
         if self._available:
             entities = self.info_of_agent()
-
             counter = 0
             for ent in entities:
                 counter += 1
@@ -30,8 +29,7 @@ class world_state_interpreter:
             if counter == 0:
                 self._end = True
             return counter
-        else:
-            return False
+        return False
 
     def info_of_enemies(self):
         if self._available:
@@ -43,8 +41,7 @@ class world_state_interpreter:
                 if ent[u'name'] == u'Zombie':
                     entities.append(EntityInfo(**ent))
             return entities
-        else:
-            return False
+        return False
 
     def update_status(self):
         if self._available:
@@ -71,10 +68,8 @@ class world_state_interpreter:
             for ent in ob["entities"]:
                 if ent[u'name'] == u'SOTF Bot':
                     return EntityInfo(**ent)
-
             return False
-        else:
-            return False
+        return False
 
     def entities_to_matrix(self):
         if self._available:
@@ -90,11 +85,8 @@ class world_state_interpreter:
                 x = self._world_x - (int(x - agent_x) + self._world_x // 2 + 1)
                 z = int(z - agent_z) + self._world_z // 2
                 matrix[z][x] = ent.name
-
             return matrix
-
-        else:
-            return False
+        return False
 
     def load_grid(self):
         """
@@ -115,8 +107,7 @@ class world_state_interpreter:
             grid = observations.get(u'env', 0)
             return grid
 
-        else:
-            return False
+        return False
 
     def grid_matrix(self):
         if self._available:
@@ -131,5 +122,4 @@ class world_state_interpreter:
                 matrix[x][z] = grid[i]
             return matrix
 
-        else:
-            return False
+        return False
