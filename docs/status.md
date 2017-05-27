@@ -56,8 +56,8 @@ The pseudocode of replay function is shown as follow:
 As shown in the pseudocode shown above, the experience <previous_state, previous_action, reward, current_state> is stored each time the agent made a move. To implement this function, we use a list (will probably change to deque in the future) to memory the past experience. Once an episode is ended, a small batch of random experience is retrieved from the list and we use stochastic gradient descent to update the weights of Neutral Network based on these experiences. This method can not only help our agent avoiding local minium but also improve and stable the agent's performance since the reward for each state is discrete instead of continuous.
 
 ## Evaluation
-For now, we use the Mean Square Error between the actual Q-Value and the predicted Q-Value to evaluate our agent's performace.
-Here's a MSE for our first 300 episode.
+For now, we use the Mean Square Error between the actual Q-Value and the predicted Q-Value to evaluate our agent's performance.
+Here's an MSE for our first 300 episode.
 
 <img src="Mean_Sqaure_Error.png" width="50%"> 
 
