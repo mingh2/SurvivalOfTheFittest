@@ -58,6 +58,7 @@ As shown in the pseudocode shown above, the experience <previous_state, previous
 ## Evaluation
 For now, we use the Mean Square Error between the actual Q-Value and the predicted Q-Value to evaluate our agent's performace.
 Here's a MSE for our first 300 episode.
+
 <img src="Mean_Sqaure_Error.png" width="50%"> 
 
 Even though the total survial time for our agent is gradually improving (from 20s to 30s after 300 episode).
