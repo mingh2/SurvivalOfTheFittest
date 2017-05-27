@@ -5,7 +5,9 @@ title:  Project Status Update
 
 *A Malmo Project for CompSci 175 at UC Irvine*
 
+<div style="position:relative;height:0;padding-bottom:56.25%">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/w_hhVbIIH90" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## Project Summary
 
