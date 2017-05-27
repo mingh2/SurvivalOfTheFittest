@@ -36,8 +36,7 @@ Notes: the total reward is within the range of (-1, +1) becasue we use tanh as t
 
 ### Algorithm
 
-We are using Deep Q Network algorithm to train our agent. H
-ere is a good graphic representation of the training process, excpet we do not need to convolute the game state since we already represent the state with matrix:
+We are using Deep Q Network algorithm to train our agent. Here is a good graphic representation of the training process, excpet we do not need to convolute the game state since we already represent the state with matrix:
 
 <img src="https://cdn-images-1.medium.com/max/800/1*T54Ngd-b_CKcP3N6hyXLVg.png" width="50%">
 
