@@ -203,6 +203,7 @@ class zombies_fighter:
             print closest_enemy, closest_wall
             '''
 
+            # Setting Up the Q-Values (the evaluation function)
             if closest_enemy <= 3.0:
                 reward -= 1/max(1, closest_enemy) * 0.20
             else:
