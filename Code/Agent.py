@@ -208,6 +208,7 @@ class zombies_fighter:
                 reward -= 1/max(1, closest_enemy) * 0.20
             else:
                 reward += min(20, closest_enemy) / 20 * 0.20
+
             if self.previous_closest_enemy > closest_enemy or (closest_enemy <= 1.0):
                 reward -= 0.30
             elif self.previous_closest_enemy < closest_enemy:
