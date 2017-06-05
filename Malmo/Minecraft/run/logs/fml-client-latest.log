@@ -369,3 +369,588 @@
 [16:41:10] [Thread-11/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPInputPoller:run:191]: Listening for messages on port 10000
 [16:41:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
 [16:41:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[16:42:09] [Thread-13/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[16:42:09] [Thread-13/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Survival of the Fittest!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>17000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;3*7,3*3,10*1;7;" seed=""/><DrawingDecorator><DrawSphere radius="50" type="air" x="0" y="16" z="0"/><DrawCuboid type="beacon" x1="-10" x2="10" y1="21" y2="21" z1="-10" z2="10"/><DrawCuboid type="beacon" x1="-10" x2="10" y1="15" y2="15" z1="-10" z2="10"/><DrawCuboid type="stone" x1="-10" x2="10" y1="20" y2="10" z1="10" z2="10"/><DrawCuboid type="stone" x1="-10" x2="10" y1="20" y2="10" z1="-10" z2="-10"/><DrawCuboid type="stone" x1="-10" x2="-10"
+[16:42:10] [Thread-13/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[16:42:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Survival of the Fittest!
+[16:42:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[16:42:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[16:42:10] [Thread-14/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPInputPoller:run:191]: Listening for messages on port 10299
+[16:42:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[16:42:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[16:42:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_NEW_WORLD
+[16:42:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_NEW_WORLD
+[16:42:11] [Client thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:42:12] [Server thread/TRACE] [mcp/mcp]: Sending event FMLServerAboutToStartEvent to mod mcp
+[16:42:12] [Server thread/TRACE] [mcp/mcp]: Sent event FMLServerAboutToStartEvent to mod mcp
+[16:42:12] [Server thread/DEBUG] [FML/]: Bar Step: ServerAboutToStart - Minecraft Coder Pack took 0.001s
+[16:42:12] [Server thread/TRACE] [FML/FML]: Sending event FMLServerAboutToStartEvent to mod FML
+[16:42:12] [Server thread/TRACE] [FML/FML]: Sent event FMLServerAboutToStartEvent to mod FML
+[16:42:12] [Server thread/DEBUG] [FML/]: Bar Step: ServerAboutToStart - Forge Mod Loader took 0.007s
+[16:42:12] [Server thread/TRACE] [Forge/Forge]: Sending event FMLServerAboutToStartEvent to mod Forge
+[16:42:12] [Server thread/TRACE] [Forge/Forge]: Sent event FMLServerAboutToStartEvent to mod Forge
+[16:42:12] [Server thread/DEBUG] [FML/]: Bar Step: ServerAboutToStart - Minecraft Forge took 0.000s
+[16:42:12] [Server thread/TRACE] [malmomod/malmomod]: Sending event FMLServerAboutToStartEvent to mod malmomod
+[16:42:12] [Server thread/TRACE] [malmomod/malmomod]: Sent event FMLServerAboutToStartEvent to mod malmomod
+[16:42:12] [Server thread/DEBUG] [FML/]: Bar Step: ServerAboutToStart - Microsoft Malmo Mod took 0.002s
+[16:42:12] [Server thread/DEBUG] [FML/]: Bar Finished: ServerAboutToStart took 0.011s
+[16:42:12] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:42:12] [Server thread/INFO] [FML/]: Injecting existing block and item data into this server instance
+[16:42:12] [Server thread/DEBUG] [FML/]: Registry consistency check successful
+[16:42:12] [Server thread/DEBUG] [FML/]: Registry consistency check successful
+[16:42:12] [Server thread/TRACE] [FML/]: Skipping remap event - no remaps occured
+[16:42:12] [Server thread/INFO] [FML/]: Applying holder lookups
+[16:42:12] [Server thread/INFO] [FML/]: Holder lookups applied
+[16:42:12] [Server thread/DEBUG] [FML/]: Loading persistent fluid defaults from world
+[16:42:12] [Server thread/DEBUG] [FML/]: The fluid minecraft:lava has been selected as the default fluid for lava
+[16:42:12] [Server thread/DEBUG] [FML/]: The fluid minecraft:water has been selected as the default fluid for water
+[16:42:12] [Server thread/INFO] [FML/]: Loading dimension 0 (TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed) (net.minecraft.server.integrated.IntegratedServer@384452f9)
+[16:42:14] [Server thread/INFO] [FML/]: Loading dimension 1 (TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed) (net.minecraft.server.integrated.IntegratedServer@384452f9)
+[16:42:14] [Server thread/INFO] [FML/]: Loading dimension -1 (TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed) (net.minecraft.server.integrated.IntegratedServer@384452f9)
+[16:42:15] [Server thread/TRACE] [mcp/mcp]: Sending event FMLServerStartingEvent to mod mcp
+[16:42:15] [Server thread/TRACE] [mcp/mcp]: Sent event FMLServerStartingEvent to mod mcp
+[16:42:15] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarting - Minecraft Coder Pack took 0.001s
+[16:42:15] [Server thread/TRACE] [FML/FML]: Sending event FMLServerStartingEvent to mod FML
+[16:42:15] [Server thread/TRACE] [FML/FML]: Sent event FMLServerStartingEvent to mod FML
+[16:42:15] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarting - Forge Mod Loader took 0.000s
+[16:42:15] [Server thread/TRACE] [Forge/Forge]: Sending event FMLServerStartingEvent to mod Forge
+[16:42:15] [Server thread/TRACE] [Forge/Forge]: Sent event FMLServerStartingEvent to mod Forge
+[16:42:15] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarting - Minecraft Forge took 0.003s
+[16:42:15] [Server thread/TRACE] [malmomod/malmomod]: Sending event FMLServerStartingEvent to mod malmomod
+[16:42:15] [Server thread/TRACE] [malmomod/malmomod]: Sent event FMLServerStartingEvent to mod malmomod
+[16:42:15] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarting - Microsoft Malmo Mod took 0.000s
+[16:42:15] [Server thread/DEBUG] [FML/]: Bar Finished: ServerStarting took 0.004s
+[16:42:15] [Server thread/TRACE] [mcp/mcp]: Sending event FMLServerStartedEvent to mod mcp
+[16:42:15] [Server thread/TRACE] [mcp/mcp]: Sent event FMLServerStartedEvent to mod mcp
+[16:42:15] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarted - Minecraft Coder Pack took 0.000s
+[16:42:15] [Server thread/TRACE] [FML/FML]: Sending event FMLServerStartedEvent to mod FML
+[16:42:15] [Server thread/TRACE] [FML/FML]: Sent event FMLServerStartedEvent to mod FML
+[16:42:15] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarted - Forge Mod Loader took 0.000s
+[16:42:15] [Server thread/TRACE] [Forge/Forge]: Sending event FMLServerStartedEvent to mod Forge
+[16:42:15] [Server thread/TRACE] [Forge/Forge]: Sent event FMLServerStartedEvent to mod Forge
+[16:42:15] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarted - Minecraft Forge took 0.000s
+[16:42:15] [Server thread/TRACE] [malmomod/malmomod]: Sending event FMLServerStartedEvent to mod malmomod
+[16:42:15] [Server thread/TRACE] [malmomod/malmomod]: Sent event FMLServerStartedEvent to mod malmomod
+[16:42:15] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarted - Microsoft Malmo Mod took 0.000s
+[16:42:15] [Server thread/DEBUG] [FML/]: Bar Finished: ServerStarted took 0.001s
+[16:42:22] [Netty Local Client IO #0/TRACE] [FML/]: Handshake channel activating
+[16:42:22] [Netty Local Client IO #0/DEBUG] [FML/]: FMLHandshakeClientState: null->FMLHandshakeClientState$1:START
+[16:42:22] [Netty Local Client IO #0/DEBUG] [FML/]:   Next: HELLO
+[16:42:22] [Netty Server IO #1/TRACE] [FML/]: Handshake channel activating
+[16:42:22] [Netty Server IO #1/DEBUG] [FML/]: FMLHandshakeServerState: null->FMLHandshakeServerState$1:START
+[16:42:22] [Netty Server IO #1/DEBUG] [FML/]:   Next: HELLO
+[16:42:22] [Netty Local Client IO #0/DEBUG] [FML/]: Server FML protocol version 2, 4 byte dimension received 0
+[16:42:22] [Netty Local Client IO #0/DEBUG] [FML/]: FMLHandshakeClientState: $ServerHello->FMLHandshakeClientState$2:HELLO
+[16:42:22] [Netty Local Client IO #0/INFO] [FML/]: Server protocol version 2
+[16:42:22] [Netty Local Client IO #0/DEBUG] [FML/]: Received override dimension 0
+[16:42:22] [Netty Server IO #1/DEBUG] [FML/]: FMLHandshakeServerState: $ClientHello->FMLHandshakeServerState$2:HELLO
+[16:42:22] [Netty Server IO #1/INFO] [FML/]: Client protocol version 2
+[16:42:22] [Netty Server IO #1/DEBUG] [FML/]:   Next: HELLO
+[16:42:22] [Netty Local Client IO #0/DEBUG] [FML/]:   Next: WAITINGSERVERDATA
+[16:42:22] [Netty Server IO #1/DEBUG] [FML/]: FMLHandshakeServerState: $ModList:4 mods->FMLHandshakeServerState$2:HELLO
+[16:42:22] [Netty Server IO #1/INFO] [FML/]: Client attempting to join with 4 mods : FML@8.0.99.99,malmomod@0.21.0,Forge@11.14.3.1543,mcp@9.05
+[16:42:22] [Netty Server IO #1/DEBUG] [FML/]:   Next: WAITINGCACK
+[16:42:22] [Netty Local Client IO #0/DEBUG] [FML/]: FMLHandshakeClientState: $ModList:4 mods->FMLHandshakeClientState$3:WAITINGSERVERDATA
+[16:42:22] [Netty Local Client IO #0/DEBUG] [FML/]:   Next: PENDINGCOMPLETE
+[16:42:22] [Netty Server IO #1/DEBUG] [FML/]: FMLHandshakeServerState: $HandshakeAck:{2}->FMLHandshakeServerState$3:WAITINGCACK
+[16:42:22] [Netty Local Client IO #0/DEBUG] [FML/]: FMLHandshakeClientState: $HandshakeAck:{2}->FMLHandshakeClientState$5:PENDINGCOMPLETE
+[16:42:22] [Netty Server IO #1/DEBUG] [FML/]:   Next: COMPLETE
+[16:42:22] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_MOD_READY
+[16:42:22] [Netty Local Client IO #0/DEBUG] [FML/]:   Next: COMPLETE
+[16:42:22] [Netty Local Client IO #0/DEBUG] [FML/]: The fluid minecraft:lava has been selected as the default fluid for lava
+[16:42:22] [Netty Local Client IO #0/DEBUG] [FML/]: The fluid minecraft:water has been selected as the default fluid for water
+[16:42:22] [Netty Server IO #1/DEBUG] [FML/]: FMLHandshakeServerState: $HandshakeAck:{4}->FMLHandshakeServerState$4:COMPLETE
+[16:42:22] [Netty Local Client IO #0/DEBUG] [FML/]: FMLHandshakeClientState: $HandshakeAck:{3}->FMLHandshakeClientState$6:COMPLETE
+[16:42:22] [Netty Server IO #1/DEBUG] [FML/]:   Next: DONE
+[16:42:22] [Netty Local Client IO #0/DEBUG] [FML/]:   Next: DONE
+[16:42:22] [Netty Local Client IO #0/INFO] [FML/]: [Netty Local Client IO #0] Client side modded connection established
+[16:42:22] [Netty Server IO #1/DEBUG] [FML/]: FMLHandshakeServerState: $HandshakeAck:{5}->FMLHandshakeServerState$5:DONE
+[16:42:22] [Netty Server IO #1/DEBUG] [FML/]:   Next: DONE
+[16:42:22] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[16:42:23] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[16:42:23] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_MOD_READY
+[16:42:23] [Server thread/INFO] [FML/]: [Server thread] Server side modded connection established
+[16:42:23] [Client thread/DEBUG] [FML/]: Overriding dimension: using 0
+[16:42:23] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[16:42:23] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[16:42:23] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:execute:468]: INCOMING MISSION: Received MissionInit directly through ServerStateMachine constructor.
+[16:42:23] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Survival of the Fittest!
+[16:42:23] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[16:42:23] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[16:42:30] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:30] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:31] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:31] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:32] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:32] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:32] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:33] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:33] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:33] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:34] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:34] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:34] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:35] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:35] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:35] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:36] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:36] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:36] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:37] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:37] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:37] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:38] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:38] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:38] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:38] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:39] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:39] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:39] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:40] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:40] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:40] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:40] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:41] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:41] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:41] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:42] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:42] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:42] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:42] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:43] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:43] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:43] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:44] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:44] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:44] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:44] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:44] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[16:42:45] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[16:42:45] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[16:42:45] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> SOTF Bot
+[16:42:45] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:42:46] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[16:42:46] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[16:42:46] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[16:42:46] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[16:42:51] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$RunningEpisode:onServerTick:1162]: Warning: managed 19/20 ticks this second.
+[16:43:16] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[16:43:16] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[16:43:16] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[16:43:16] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[16:43:16] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10976.
+[16:43:16] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[16:43:16] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[16:43:16] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[16:43:16] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[16:43:16] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[16:43:16] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[16:43:16] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[16:43:16] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[16:43:17] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[16:43:20] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:43:22] [Thread-19/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[16:43:22] [Thread-19/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Survival of the Fittest!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>17000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;3*7,3*3,10*1;7;" seed=""/><DrawingDecorator><DrawSphere radius="50" type="air" x="0" y="16" z="0"/><DrawCuboid type="beacon" x1="-10" x2="10" y1="21" y2="21" z1="-10" z2="10"/><DrawCuboid type="beacon" x1="-10" x2="10" y1="15" y2="15" z1="-10" z2="10"/><DrawCuboid type="stone" x1="-10" x2="10" y1="20" y2="10" z1="10" z2="10"/><DrawCuboid type="stone" x1="-10" x2="10" y1="20" y2="10" z1="-10" z2="-10"/><DrawCuboid type="stone" x1="-10" x2="-10"
+[16:43:22] [Thread-19/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[16:43:22] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Survival of the Fittest!
+[16:43:22] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[16:43:22] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[16:43:22] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[16:43:22] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[16:43:22] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[16:43:22] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[16:43:22] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:22] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:checkForMissionCommand:492]: INCOMING MISSION: Received MissionInit directly through queue.
+[16:43:22] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Survival of the Fittest!
+[16:43:22] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[16:43:22] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[16:43:22] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:22] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:23] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:23] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:23] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:23] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:24] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:24] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:24] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:24] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:25] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:25] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:25] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:26] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:26] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:26] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:27] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:27] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:27] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:27] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:28] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:28] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:28] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[16:43:28] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[16:43:28] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[16:43:28] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> SOTF Bot
+[16:43:28] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:43:28] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[16:43:28] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[16:43:28] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[16:43:28] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[16:43:58] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[16:43:58] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[16:43:58] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[16:43:58] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[16:43:58] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10976.
+[16:43:58] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[16:43:58] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[16:43:58] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[16:43:58] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[16:43:58] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[16:43:58] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[16:43:58] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[16:43:58] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[16:43:59] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[16:44:06] [Thread-23/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[16:44:06] [Thread-23/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Survival of the Fittest!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>17000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;3*7,3*3,10*1;7;" seed=""/><DrawingDecorator><DrawSphere radius="50" type="air" x="0" y="16" z="0"/><DrawCuboid type="beacon" x1="-10" x2="10" y1="21" y2="21" z1="-10" z2="10"/><DrawCuboid type="beacon" x1="-10" x2="10" y1="15" y2="15" z1="-10" z2="10"/><DrawCuboid type="stone" x1="-10" x2="10" y1="20" y2="10" z1="10" z2="10"/><DrawCuboid type="stone" x1="-10" x2="10" y1="20" y2="10" z1="-10" z2="-10"/><DrawCuboid type="stone" x1="-10" x2="-10"
+[16:44:06] [Thread-23/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[16:44:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Survival of the Fittest!
+[16:44:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[16:44:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[16:44:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[16:44:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[16:44:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[16:44:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[16:44:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:07] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:checkForMissionCommand:492]: INCOMING MISSION: Received MissionInit directly through queue.
+[16:44:07] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Survival of the Fittest!
+[16:44:07] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[16:44:07] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[16:44:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:08] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:08] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:08] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:08] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:09] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:09] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:09] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:11] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:11] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:11] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:11] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:12] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:12] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:12] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[16:44:12] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:12] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[16:44:12] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[16:44:12] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> SOTF Bot
+[16:44:13] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:13] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[16:44:13] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[16:44:13] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[16:44:13] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[16:44:13] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:44:38] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: IDLING
+[16:44:38] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: IDLING
+[16:44:38] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[16:44:38] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[16:44:38] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[16:44:38] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[16:44:38] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10976.
+[16:44:38] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[16:44:38] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[16:44:38] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[16:44:38] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[16:44:38] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[16:44:38] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[16:44:38] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[16:44:38] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[16:44:39] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[16:44:46] [Thread-27/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[16:44:46] [Thread-27/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Survival of the Fittest!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>17000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;3*7,3*3,10*1;7;" seed=""/><DrawingDecorator><DrawSphere radius="50" type="air" x="0" y="16" z="0"/><DrawCuboid type="beacon" x1="-10" x2="10" y1="21" y2="21" z1="-10" z2="10"/><DrawCuboid type="beacon" x1="-10" x2="10" y1="15" y2="15" z1="-10" z2="10"/><DrawCuboid type="stone" x1="-10" x2="10" y1="20" y2="10" z1="10" z2="10"/><DrawCuboid type="stone" x1="-10" x2="10" y1="20" y2="10" z1="-10" z2="-10"/><DrawCuboid type="stone" x1="-10" x2="-10"
+[16:44:46] [Thread-27/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[16:44:46] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Survival of the Fittest!
+[16:44:46] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[16:44:46] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[16:44:46] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[16:44:46] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[16:44:46] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[16:44:46] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[16:44:46] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:checkForMissionCommand:492]: INCOMING MISSION: Received MissionInit directly through queue.
+[16:44:46] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Survival of the Fittest!
+[16:44:46] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[16:44:46] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[16:44:46] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:47] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:47] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:47] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:47] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:48] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:48] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:48] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:48] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:49] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:49] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:49] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:50] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:50] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:50] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:50] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:51] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:51] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:51] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:51] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:52] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:52] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:52] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:53] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:53] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:53] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:53] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:54] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:54] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:54] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:55] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:55] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:55] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:55] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:56] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:56] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:56] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:56] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:57] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:57] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:57] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:57] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[16:44:57] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[16:44:57] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[16:44:57] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> SOTF Bot
+[16:44:58] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:44:58] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[16:44:58] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[16:44:58] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[16:44:58] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[16:45:07] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:45:20] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: IDLING
+[16:45:20] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: IDLING
+[16:45:20] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[16:45:20] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[16:45:20] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[16:45:20] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[16:45:20] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10976.
+[16:45:20] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[16:45:20] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[16:45:20] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[16:45:20] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[16:45:20] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[16:45:20] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[16:45:20] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[16:45:20] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[16:45:20] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[16:45:28] [Thread-31/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[16:45:28] [Thread-31/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Survival of the Fittest!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>17000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;3*7,3*3,10*1;7;" seed=""/><DrawingDecorator><DrawSphere radius="50" type="air" x="0" y="16" z="0"/><DrawCuboid type="beacon" x1="-10" x2="10" y1="21" y2="21" z1="-10" z2="10"/><DrawCuboid type="beacon" x1="-10" x2="10" y1="15" y2="15" z1="-10" z2="10"/><DrawCuboid type="stone" x1="-10" x2="10" y1="20" y2="10" z1="10" z2="10"/><DrawCuboid type="stone" x1="-10" x2="10" y1="20" y2="10" z1="-10" z2="-10"/><DrawCuboid type="stone" x1="-10" x2="-10"
+[16:45:28] [Thread-31/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[16:45:28] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Survival of the Fittest!
+[16:45:28] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[16:45:28] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[16:45:28] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[16:45:28] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[16:45:28] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[16:45:28] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[16:45:28] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:28] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:checkForMissionCommand:492]: INCOMING MISSION: Received MissionInit directly through queue.
+[16:45:28] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Survival of the Fittest!
+[16:45:28] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[16:45:28] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[16:45:28] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:29] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:29] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:29] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:29] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:30] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:30] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:30] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:31] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:31] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:31] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:31] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:32] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:32] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:32] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:32] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:33] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:33] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[16:45:33] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[16:45:33] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[16:45:33] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> SOTF Bot
+[16:45:33] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:45:33] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[16:45:33] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[16:45:33] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[16:45:33] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[16:45:55] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:45:56] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: IDLING
+[16:45:56] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: IDLING
+[16:45:56] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[16:45:56] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[16:45:56] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[16:45:56] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[16:45:56] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10976.
+[16:45:56] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[16:45:56] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[16:45:56] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[16:45:56] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[16:45:56] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[16:45:56] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[16:45:56] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[16:45:56] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[16:45:57] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[16:46:04] [Thread-35/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[16:46:04] [Thread-35/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Survival of the Fittest!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>17000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;3*7,3*3,10*1;7;" seed=""/><DrawingDecorator><DrawSphere radius="50" type="air" x="0" y="16" z="0"/><DrawCuboid type="beacon" x1="-10" x2="10" y1="21" y2="21" z1="-10" z2="10"/><DrawCuboid type="beacon" x1="-10" x2="10" y1="15" y2="15" z1="-10" z2="10"/><DrawCuboid type="stone" x1="-10" x2="10" y1="20" y2="10" z1="10" z2="10"/><DrawCuboid type="stone" x1="-10" x2="10" y1="20" y2="10" z1="-10" z2="-10"/><DrawCuboid type="stone" x1="-10" x2="-10"
+[16:46:04] [Thread-35/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[16:46:04] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Survival of the Fittest!
+[16:46:04] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[16:46:04] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[16:46:04] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[16:46:04] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[16:46:04] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[16:46:04] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[16:46:04] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:04] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:checkForMissionCommand:492]: INCOMING MISSION: Received MissionInit directly through queue.
+[16:46:04] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Survival of the Fittest!
+[16:46:04] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[16:46:04] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[16:46:04] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:04] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:04] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:05] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:05] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:05] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:06] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:06] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:06] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:06] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:08] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[16:46:08] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[16:46:08] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[16:46:08] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> SOTF Bot
+[16:46:08] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:08] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[16:46:08] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[16:46:08] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[16:46:08] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[16:46:33] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: IDLING
+[16:46:33] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: IDLING
+[16:46:33] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[16:46:33] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[16:46:33] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[16:46:33] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[16:46:33] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10976.
+[16:46:33] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[16:46:33] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[16:46:33] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[16:46:33] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[16:46:33] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[16:46:33] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[16:46:33] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[16:46:33] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[16:46:33] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[16:46:40] [Thread-39/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[16:46:40] [Thread-39/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Survival of the Fittest!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>17000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;3*7,3*3,10*1;7;" seed=""/><DrawingDecorator><DrawSphere radius="50" type="air" x="0" y="16" z="0"/><DrawCuboid type="beacon" x1="-10" x2="10" y1="21" y2="21" z1="-10" z2="10"/><DrawCuboid type="beacon" x1="-10" x2="10" y1="15" y2="15" z1="-10" z2="10"/><DrawCuboid type="stone" x1="-10" x2="10" y1="20" y2="10" z1="10" z2="10"/><DrawCuboid type="stone" x1="-10" x2="10" y1="20" y2="10" z1="-10" z2="-10"/><DrawCuboid type="stone" x1="-10" x2="-10"
+[16:46:40] [Thread-39/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[16:46:40] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Survival of the Fittest!
+[16:46:40] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[16:46:40] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[16:46:40] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[16:46:40] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[16:46:40] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[16:46:40] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:checkForMissionCommand:492]: INCOMING MISSION: Received MissionInit directly through queue.
+[16:46:40] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Survival of the Fittest!
+[16:46:40] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[16:46:40] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[16:46:40] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[16:46:40] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:41] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:41] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:41] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:42] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:42] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:42] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:42] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:43] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:43] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:43] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:43] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:44] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:44] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:44] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[16:46:44] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[16:46:44] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[16:46:44] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> SOTF Bot
+[16:46:44] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:46:44] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - SOTF Bot
+[16:46:44] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[16:46:44] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[16:46:44] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[16:46:44] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10534.
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Broken pipe
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10534.
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Broken pipe
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10534.
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Broken pipe
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10534.
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Broken pipe
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionRunningEpisode:sendData:1727]: ERROR: TCP video frames are not getting through - quitting mission.
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: IDLING
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: IDLING
+[16:47:00] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[16:47:00] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10976.
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10976.
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Protocol wrong type for socket
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[16:47:00] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[16:47:00] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[16:47:00] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[16:47:00] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[16:47:00] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[16:47:29] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:48:14] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:48:59] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:49:44] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:50:29] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:51:14] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:51:59] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:52:44] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:53:29] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:54:14] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:54:59] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:55:44] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:56:29] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:57:14] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:57:59] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:58:44] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[16:59:29] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[17:00:14] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[17:00:59] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[17:01:44] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[17:02:29] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[17:03:14] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[17:03:59] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[17:04:44] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed
+[17:05:29] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_3e1cac5d-7fad-4057-abae-1d7f9510caed

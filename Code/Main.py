@@ -18,13 +18,13 @@ NUM_REPS = 30000
 N = 25
 ALPHA = 1
 GAMMA = 1
+agent = zombies_fighter(gamma=0.8)
 
 # Main Function
 def main():
-    global NUM_REPS, N, ALPHA, GAMMA
+    global NUM_REPS, N, ALPHA, GAMMA, agent
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
 
-    agent = zombies_fighter(gamma=0.8)
     debug = True if len(sys.argv) > 1 and sys.argv[1] == "debug=True" else False
     # debug = False
     # if len(sys.argv) > 1 and sys.argv[1] == "debug=True":
