@@ -33,7 +33,7 @@ class zombies_fighter:
         self.previous_closest_wall = 0
 
         self.action_map = {'left': 1, 'right': 2, 'up': 4, 'down': 8}
-    
+
         self.mse = []
         self.predict_value = 0.0
 
@@ -43,11 +43,11 @@ class zombies_fighter:
         Execute the action and reflect it in the console window
         Args
             Agent_Host:     NxN matrix, represent the environment
-                        "clear":    Neither "blocked" nor "enemy" where is 
+                        "clear":    Neither "blocked" nor "enemy" where is
                                         accessible for the agent
                         "blocked":  Wall, or other kind of unreachable position
                         "enemy":    Zombie (will have other mobs in the soon future)
-                        
+
             Action:     A class include all action available for the agent,
                             only including up, down, left, and right at this point
         """
@@ -72,7 +72,7 @@ class zombies_fighter:
     def get_curr_state(self, agent_host, matrix):
         '''
             Collect the information of the agent's current state.
-            
+
             Return values include a list of states, if the agent is surviving or not,
                 the distance to its closest zombie and wall.
         '''
@@ -113,7 +113,7 @@ class zombies_fighter:
                 life = ob[u'Life']
 
                 return state, life, closest_enemy, closest_wall
-            
+
             elif not world_state.is_mission_running:
                 return state, 0, closest_enemy, closest_wall
 
@@ -177,7 +177,7 @@ class zombies_fighter:
 
         if self.previous_state != None:
             reward = 0
-            
+
             done = False
             if life == 0.0:
                 done = True
@@ -206,7 +206,7 @@ class zombies_fighter:
             if closest_enemy <= 3.0:
                 reward -= 1/max(1, closest_enemy) * 0.20
             else:
-                reward += min(20, closest_enemy) / 20 * 0.20
+                reward += min(20, closest_enemy) / 20 * 0.35
 
             if self.previous_closest_enemy > closest_enemy or (closest_enemy <= 1.0):
                 reward -= 0.30

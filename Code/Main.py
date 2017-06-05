@@ -5,6 +5,8 @@
 # ------------------------------------------------------------------------------------------------
 
 import MalmoPython, os, sys, time, pickle
+import matplotlib.pyplot as plt
+import numpy as np
 
 # Import Code Written by Us
 from Environment import mob_XML_generator
@@ -19,10 +21,11 @@ N = 25
 ALPHA = 1
 GAMMA = 1
 agent = zombies_fighter(gamma=0.8)
+MSE = []
 
 # Main Function
 def main():
-    global NUM_REPS, N, ALPHA, GAMMA, agent
+    global NUM_REPS, N, ALPHA, GAMMA, MSE, agent
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
 
     debug = True if len(sys.argv) > 1 and sys.argv[1] == "debug=True" else False
@@ -46,11 +49,11 @@ def main():
     # Set the size of the matrix
     x, y = 21, 21
 
-    NUM_REPS = 3000
+    NUM_REPS = 20
     N = 25
     ALPHA = 1
     GAMMA = 1
-    
+
     visual = visualization(x, y, debug)
     for i in range(NUM_REPS):
         print "Survival Mode # " + str(i + 1)
@@ -113,7 +116,7 @@ def main():
 
         # Loop until mission ends:
         while world_state.is_mission_running:
-            time.sleep(0.2)
+            time.sleep(0.3)
             matrix = None
 
             ws_interpre.input(world_state)
@@ -137,18 +140,24 @@ def main():
             for error in world_state.errors:
                 print "Error:", error.text
 
-        print agent.calculate_mse()
+        MSE.append(agent.calculate_mse() * 100)
         agent.reset_mse()
         agent.replay(128)
         print
         print "Mission ended"
-        
+
         with open('Weights.txt', 'wb') as f:
             pickle.dump(agent.get_weights(), f)
         # Mission has ended.
         time.sleep(1)
     if debug:
         visual.quit()
+
+    plt.plot(np.arange(len(MSE)), MSE, 'o')
+
+    m, b = np.polyfit(np.arange(len(MSE)), MSE, deg=1)
+    plt.plot(np.arange(len(MSE)), m * np.arange(len(MSE)) + b, '-')
+    plt.show()
 
 # Execute The Program
 if __name__ == '__main__':
