@@ -22,7 +22,7 @@ def tanh_prime(x):
 class neural_network:
     def __init__(self, gamma):
         # Possible Moves: Correspond to Up, Down, Left, Right
-        self.layers = [1 + 441, 256, 128, 64, 32, 16, 8, 1]
+        self.layers = [121, 64, 32, 16, 4]
         self.weights = []
         self.memories = []
 
@@ -36,7 +36,7 @@ class neural_network:
         wts = 2 * np.random.random((self.layers[i] + 1, self.layers[i+1])) - 1
         self.weights.append(wts)
 
-    def train(self, x, y, learning_rate = 0.2):
+    def train(self, x, action, y, learning_rate = 0.2):
         a = np.concatenate((np.ones(1).T, np.array(x)))
         a = [a]
 
@@ -45,14 +45,13 @@ class neural_network:
             activation = tanh(dot_value)
             a.append(activation)
 
-        error = y - a[-1]
+        error = y - a[-1][action]
         deltas = [error * tanh_prime(a[-1])]
 
         for l in range(len(a) - 2, 0, -1):
             deltas.append(deltas[-1].dot(self.weights[l].T)*tanh_prime(a[l]))
 
         deltas.reverse()
-
         for i in range(len(self.weights)):
             layer = np.atleast_2d(a[i])
             delta = np.atleast_2d(deltas[i])
@@ -67,34 +66,35 @@ class neural_network:
 
         for i in range(0, len(self.weights)):
             a = tanh(np.dot(a, self.weights[i]))
-        return a[0]
+        return a.tolist()
 
-    def remember(self, state, action, reward, next_state, possible_actions, done):
-        self.memories.append((state, action, reward, next_state, possible_actions, done))
+    def remember(self, state, action, possible_actions, reward, next_state, done):
+        self.memories.append(
+            (state, action, possible_actions, reward, next_state, done)
+        )
 
     def replay(self, batch_size, episode = 10):
         print "Replaying"
 
         batches = min(batch_size, len(self.memories))
         batches = np.random.choice(len(self.memories), batches)
-        
+
         for _ in range(episode):
             for i in batches:
-                state, action, reward, next_state, possible_actions, done = self.memories[i]
+                state, action, possible_actions, reward, next_state, done = self.memories[i]
                 target = reward
 
                 if not done:
+                    q_values = self.predict(next_state)
                     max_q_value = -maxint - 1
-                    max_q_value_action = '' # Is not used right now
+                    random.shuffle(possible_actions)
                     for action in possible_actions:
-                        q_value = self.predict([action] + next_state)
+                        q_value = q_values[action]
                         if q_value > max_q_value:
                             max_q_value = q_value
-                            max_q_value_action = action # Is not used right now
                     target = target + self.gamma * max_q_value
-                    # print target
-
-                self.train([action] + state, target)
+                target = max(-1, min(1, target))
+                self.train(state, action, target)
 
         if len(self.memories) > 1500:
             np.random.shuffle(self.memories)

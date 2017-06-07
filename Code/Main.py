@@ -16,11 +16,11 @@ from Visual import visualization
 from Action import action
 from Auto_Env import auto_env
 
-NUM_REPS = 30000
+NUM_REPS = 20
 N = 25
 ALPHA = 1
-GAMMA = 1
-agent = zombies_fighter(gamma=0.8)
+GAMMA = 0.8
+agent = zombies_fighter(gamma=GAMMA)
 MSE = []
 
 # Main Function
@@ -48,11 +48,6 @@ def main():
 
     # Set the size of the matrix
     x, y = 21, 21
-
-    NUM_REPS = 20
-    N = 25
-    ALPHA = 1
-    GAMMA = 1
 
     visual = visualization(x, y, debug)
     for i in range(NUM_REPS):
@@ -116,7 +111,7 @@ def main():
 
         # Loop until mission ends:
         while world_state.is_mission_running:
-            time.sleep(0.3)
+            time.sleep(0.2)
             matrix = None
 
             ws_interpre.input(world_state)
