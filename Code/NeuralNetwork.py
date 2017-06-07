@@ -62,7 +62,7 @@ class neural_network:
         # Use axis = 1 would case an exception when running the game,
         # so we command it out for the purpose of predicting and
         # training smoothly.
-        # a = np.concatenate((np.ones(1).T, np.array(x)), axis=1)
+
         a = np.concatenate((np.ones(1).T, np.array(x)))
 
         for i in range(0, len(self.weights)):
