@@ -38,3 +38,13 @@
 *.bin
 
 *.jar
+
+*.bin
+
+*.log
+
+*.properties
+
+*.dat_old
+
+*.txt
