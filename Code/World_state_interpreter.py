@@ -112,7 +112,7 @@ class world_state_interpreter:
     def grid_matrix(self):
         if self._available:
             grid = self.load_grid()
-            axis = int(math.sqrt(len(grid)))
+            axis = 1 if type(grid) == int else int(math.sqrt(len(grid)))
 
             matrix = [['None' for x in range(self._world_x)] for y in range(self._world_z)]
             for i in range(len(grid)):
