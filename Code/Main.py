@@ -27,11 +27,7 @@ MSE = []
 def main():
     global NUM_REPS, N, ALPHA, GAMMA, MSE, agent
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
-
     debug = True if len(sys.argv) > 1 and sys.argv[1] == "debug=True" else False
-    # debug = False
-    # if len(sys.argv) > 1 and sys.argv[1] == "debug=True":
-    #     debug = True
 
     # Create default Malmo objects:
     agent_host = MalmoPython.AgentHost()
@@ -40,7 +36,6 @@ def main():
         agent_host.parse(sys.argv)
     except RuntimeError as e:
         print 'ERROR(Runtime):', e, "\n", agent_host.getUsage()
-        # print agent_host.getUsage()
         exit(1)
     if agent_host.receivedArgument("help"):
         print agent_host.getUsage()
@@ -63,8 +58,6 @@ def main():
                 if (retry == 0):
                     # The Zombie Does Not Exist On the First Try Caused by Drawing Error
                     new_gen = False if i >= 2 else True
-                    # if i < 2:
-                    #     new_gen = True
                     map_gen = auto_env()
 
                     missionXML = map_gen.mob_XML_generator(new_gen)
@@ -106,8 +99,6 @@ def main():
         print "Mission running "
 
         show_best = False if (i + 1) % 5 != 0 else True
-        # if (i + 1) % 5 == 0:
-        #     show_best = True
 
         # Loop until mission ends:
         while world_state.is_mission_running:
@@ -118,15 +109,12 @@ def main():
             ent_matrix = ws_interpre.entities_to_matrix()
             env_matrix = ws_interpre.grid_matrix()
 
-            # if ent_matrix != False and env_matrix != False:
             if ent_matrix and env_matrix:
                 visual.get_entities(ent_matrix)
                 visual.get_environment(env_matrix)
                 visual.draw()
                 matrix = visual.get_matrix()
 
-            # if matrix != None:
-            #     action_available.get_ws(ws_interpre)
             if matrix:
                 agent.run(agent_host, matrix, False)
 

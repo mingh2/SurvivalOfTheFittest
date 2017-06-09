@@ -116,7 +116,6 @@ class world_state_interpreter:
 
             matrix = [['None' for x in range(self._world_x)] for y in range(self._world_z)]
             for i in range(len(grid)):
-
                 x = i // axis
                 z = axis - 1 - (i % axis)
                 matrix[x][z] = grid[i]

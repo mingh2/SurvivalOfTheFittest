@@ -8,7 +8,7 @@ class visualization:
         matrix we showed on Tkinter, entities and envrionments,
         and a smaller canvas to show a vertical view of 
         the game map. The default size of the game matrix
-        is 21 x 21.
+        is 11 x 11.
     """
 
     def __init__(self, x = 21, y = 21, debug=False):
