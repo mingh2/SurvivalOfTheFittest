@@ -41,25 +41,6 @@ class action:
     def get_ws(self, ws):
         self._ws = ws
 
-    def find_yaw(self):
-        """
-            Working In Progress... (5/26/2017)
-            
-            The idea of this function is to find the nearest enemy 
-            Then figure out the yaw to face the enemy 
-            Hence, when that attach() is called 
-            The agent can atteck the enemy
-            
-            Without adding more action avaliable for the agent. 
-            It is a simple way to allow the algorithm to choose to attack
-            or to escape. 
-         
-        """
-        ws = self._ws
-        # agent = ws.info_of_agent()
-        # enemies = ws.info_of_enemies()
-
-
     def attack(self):
         """ 
             Working In Progress... (5/26/2017)

@@ -2,8 +2,7 @@ import random, json
 from Action import action as Move
 from NeuralNetwork import neural_network as nn
 from sys import maxint
-from collections import defaultdict, deque
-from math import log, sqrt
+from math import sqrt
 
 class zombies_fighter:
     def __init__(self,  alpha=0.3, gamma=1):
@@ -51,7 +50,6 @@ class zombies_fighter:
             Action:     A class include all action available for the agent,
                             only including up, down, left, and right at this point
         """
-
         self._counter += 1
 
         move = Move(agent_host)
@@ -76,9 +74,6 @@ class zombies_fighter:
             Return values include a list of states, if the agent is surviving or not,
                 the distance to its closest zombie and wall.
         '''
-
-        # wall = 0
-        # enemy = 0
         state = []
 
         closest_wall = sqrt(len(matrix) ** 2 + len(matrix[0]) ** 2)
@@ -88,13 +83,11 @@ class zombies_fighter:
             for row in range(5, 16):
                 # Decide different actions based on the position on the matrix
                 if matrix[col][row] == 'blocked':
-                    # wall = wall + (col * 21 + row)
                     distance = sqrt((col - 10) ** 2 + (row - 10) ** 2)
                     if distance < closest_wall:
                         closest_wall = distance
                     state.append(2)
                 elif matrix[col][row] == 'enemy':
-                    # enemy = col * 21 + row
                     distance = sqrt((col - 10) ** 2 + (row - 10) ** 2)
                     if distance < closest_enemy:
                         closest_enemy = distance
@@ -168,7 +161,6 @@ class zombies_fighter:
                                                     )
 
         possible_actions = self.get_possible_actions(matrix)
-
         a0 = self.choose_action(state, possible_actions, show_best)
 
         if self.previous_state is not None:
@@ -189,16 +181,6 @@ class zombies_fighter:
                     reward = reward - 0.20
 #
             # 2. Reard Based On Closest Enemy
-            '''
-            if self.previous_closest_enemy <= 3.0 and \
-                self.previous_closest_enemy - 1 > closest_enemy:
-                reward = reward - 0.30
-            if self.previous_closest_enemy <= 3.0 and \
-                self.previous_closest_enemy + 1 < closest_enemy:
-                reward = reward + 0.30
-            print closest_enemy, closest_wall
-            '''
-
             if closest_enemy <= 3.0:
                 reward -= 1/max(1, closest_enemy) * 0.20
             else:
@@ -211,8 +193,9 @@ class zombies_fighter:
 
             # 3. Reward Based On Closest Wall
             if closest_wall <= 1.0 or len(possible_actions) <= 2:
-                # reward = reward - 0.15
                 reward -= 0.15
+            elif closest_wall > 1.0 and len(possible_actions) > 2:
+                reward += 0.15
 
             print "Actual Value: ", reward
             self.mse.append((reward - self.predict_value) ** 2)
@@ -224,7 +207,6 @@ class zombies_fighter:
 
             self.previous_closest_enemy = closest_enemy
             self.previous_closest_wall = closest_wall
-#            self.previous_two_states = [x + y for x, y in zip(self.previous_state, state)]
 
         # Update information of previous state for the agent
         self.previous_life = life
