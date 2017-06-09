@@ -36,7 +36,7 @@ class neural_network:
         wts = 2 * np.random.random((self.layers[i] + 1, self.layers[i+1])) - 1
         self.weights.append(wts)
 
-    def train(self, x, action, y, learning_rate = 0.2):
+    def train(self, x, action, y, possible_actions, learning_rate = 0.2):
         a = np.concatenate((np.ones(1).T, np.array(x)))
         a = [a]
 
@@ -46,10 +46,19 @@ class neural_network:
             a.append(activation)
 
         error = y - a[-1][action]
-        deltas = [error * tanh_prime(a[-1])]
+        prime = np.zeros(a[-1].shape[0])
+        action_prime = tanh_prime(a[-1])
+        unavailable_actions = [ac for ac in [0, 1, 2, 3] if ac not in possible_actions]
+        for unavailable_action in unavailable_actions:
+            prime[unavailable_action] = action_prime[unavailable_action] * -0.30
+
+        prime[action] = action_prime[action] * error
+        deltas = [prime]
+        # print "Prime: ", prime
 
         for l in range(len(a) - 2, 0, -1):
             deltas.append(deltas[-1].dot(self.weights[l].T)*tanh_prime(a[l]))
+            # print "Deltas: ", deltas[-1]
 
         deltas.reverse()
         for i in range(len(self.weights)):
@@ -94,7 +103,7 @@ class neural_network:
                             max_q_value = q_value
                     target = target + self.gamma * max_q_value
                 target = max(-1, min(1, target))
-                self.train(state, action, target)
+                self.train(state, action, target, possible_actions)
 
         if len(self.memories) > 1500:
             np.random.shuffle(self.memories)

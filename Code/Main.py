@@ -16,10 +16,10 @@ from Visual import visualization
 from Action import action
 from Auto_Env import auto_env
 
-NUM_REPS = 20
+NUM_REPS = 300
 N = 25
 ALPHA = 1
-GAMMA = 0.8
+GAMMA = 0.5
 agent = zombies_fighter(gamma=GAMMA)
 MSE = []
 

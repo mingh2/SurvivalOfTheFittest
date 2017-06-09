@@ -183,10 +183,7 @@ class zombies_fighter:
 
             # 1. Reward Based On Health
             if self.previous_life > life:
-                if len(possible_actions) <= 2:
-                    reward = reward - 0.30
-                else:
-                    reward = reward - 0.20
+                reward = reward - 0.40
 #
             # 2. Reard Based On Closest Enemy
             '''
@@ -199,20 +196,22 @@ class zombies_fighter:
             print closest_enemy, closest_wall
             '''
 
-            if closest_enemy <= 3.0:
-                reward -= 1/max(1, closest_enemy) * 0.20
-            else:
-                reward += min(20, closest_enemy) / 20 * 0.3
-
-            if self.previous_closest_enemy > closest_enemy or (closest_enemy <= 1.0):
+            if closest_enemy <= 5.0:
                 reward -= 0.30
-            elif self.previous_closest_enemy < closest_enemy:
-                reward += 0.40
+            else:
+                reward += 0.30
+            #
+            # if self.previous_closest_enemy > closest_enemy or (closest_enemy <= 1.0):
+            #     reward -= 0.30
+            # elif self.previous_closest_enemy < closest_enemy:
+            #     reward += 0.30
 
             # 3. Reward Based On Closest Wall
             if closest_wall <= 1.0 or len(possible_actions) <= 2:
                 # reward = reward - 0.15
                 reward -= 0.15
+            elif closest_wall > 2.0:
+                reward += 0.15
 
             print "Actual Value: ", reward
             self.mse.append((reward - self.predict_value) ** 2)
