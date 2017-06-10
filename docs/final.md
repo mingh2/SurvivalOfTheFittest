@@ -23,13 +23,7 @@ As described in our Status Report, the team had created an agent with Deep Q Net
 
 NEAT (Placehoder ..... nothing yet)
 
-Map Environment
-
 A set of 21 by 21 wall defined the initial playground for the agent and the zombie in the early stage of agent development. The limited environment provides a suitable testing ground for our task. Hence, the identical background would repeatedly appear during the training process to a reduce the learning workload for the agents. After the agents can fulfill their task in the predefined environment, the team develops a randomized environment to enlarge the available map space and with more diverse enemy variety.
-
-The initial
-
-Random Agent
 
 
 
@@ -45,6 +39,6 @@ Random Agent
 
 
 #### Deep Q Network
-[GitHub. * Deep Reinforcement Learning: Pong from Pixels * , 13 May 2016. Web.](http://karpathy.github.io/2016/05/31/rl/)
+[GitHub. Deep Reinforcement Learning: Pong from Pixels, 13 May 2016. Web.](http://karpathy.github.io/2016/05/31/rl/)
 
 #### NEAT
