@@ -23,7 +23,15 @@ The project requires us to review, comprehend, and implement what we have learne
 
 As described in our Status Report, the team had created an agent with Deep Q Network whom can tackle the task of surviving from one Zombie in a limited cage. Since then, the team has been working on improving the performance of the agent. The MSE – Mean Squared Error – of the Deep Q Network agent shows an ambiguous result, as described in the Status Report. Now, the improvement of performance can be undoubtedly demonstrated by a chart (in-depth demonstration in Evaluation section).
 
+NEAT (Placehoder ..... nothing yet)
 
+Map Environment
+
+A set of 21 by 21 wall defined the initial playground for the agent and the zombie in the early stage of agent development. The limited environment provides a suitable testing ground for our task. Hence, the identical background would repeatedly appear during the training process to a reduce the learning workload for the agents. After the agents can fulfill their task in the predefined environment, the team develops a randomized environment to enlarge the available map space and with more diverse enemy variety. 
+
+The initial
+
+Random Agent
 
 
 
