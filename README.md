@@ -1,58 +1,31 @@
----
-layout: default
-title:  Proposal
----
+_A Malmo Project for CompSci 175 at UC Irvine_
 
-# 1. Summary of the Project
+# A Path To Train The Best Zombie Fighter
 
-The Project aims to create an agent who can learn to fight with different creatures in Minecraft within a designated arena. We intend to start working with an agent combating with a single Zombie in an unobstructed map. Then, we would train the agent with other Minecraft Monsters – Zombie Pigman, Wither, Blaze, etc. If possible, the agent should learn to utilize the terrain to its advantage when given a more complex map. The agent does not take any command from human users. The agent should also save evolutionary information for the evolutionary neural network to be used and analyzed by future generation and human users. It would focus on eliminating more monsters with less damage on its health.  
+<img src="http://game-accessibility.com/wp/wp-content/uploads/2015/08/Minecraft-1.jpg" width="100%">
 
-Input(s): TBA (No user input for now. The agent should learn to combat with Mobs without user intervention)
+(Image Source: Game Accessibility)
 
-Output(s): Agent's Actions
+##### Our team, under the guidance of Professor Singh, aims to utilize what we have learn in Donald Bren School of Information and Computer Sciences ragarding intelligent systems and machine learning to created a Zombie Fighter in Minecraft Project Malmo.
 
-### Minecraft Mobs and Survival 
+##### The world of Minecraft is a world of survivorship. Only the one who knows how to survive from endless Zombie attack would see the beauty of the world for another day.  The best actor would learn from experience and utilize sense from all direction to avoid close body combat with the Zombie.  Distance is an advantage that survivor agent must use. A sufficient distance from Zombie would provide a safer environment.
 
-Minecraft has a broad range of mobs with different kinds of behavior. Some of them are passive, but there are many hostile mobs during night time and in the Nether. There are several bosses that user can battle with for a longer and harder times. One of the main gaming mod in Minecraft is survival. The agent needs to build shelters and combat with Mobs to survive and flourish. For the project, we are focusing on hostile mobs and boss mobs including Blaze, Chicken Jockey, Creeper, Skeleton, et cetera. 
-
-<img src="https://hydra-media.cursecdn.com/minecraft.gamepedia.com/b/bd/Blaze.png?version=15f9a1312c42fe4ea4e1cc032972c086" width="100px"><img src="https://hydra-media.cursecdn.com/minecraft.gamepedia.com/d/d3/Chicken_Jockey.png?version=8b1140769c932f3fab34df81354068bf" width="100px"><img src="https://hydra-media.cursecdn.com/minecraft.gamepedia.com/0/0a/Creeper.png?version=29e05da97976522ab5c6d5c1bb6f09fd" width="100px"><img src="https://hydra-media.cursecdn.com/minecraft.gamepedia.com/c/c3/Zombie.png?version=4e99cb43244a05db3d1fa8675610918b" width="100px">
-
-# 2. AI/ML Algorithms
-
-The agent acts on dynamic programming with shortest path algorithm such as Bellman-Ford to conduct action and evolutionary neural network to make decision.
-
-Moreover, if the time will be available later on, we would spend more time on designing different game mode (i.e., maze, jungle, ocean islands, etc), and more algorithms would be implemented, such as Depth-First Search, Greedy, and Alpha-Beta Pruning.
+#### So, let's survive ... In the harsh environment of Minecraft.
 
 
-# 3. Evaluation Plan
-
-## 3.1 Variable for the Evaluation 
-
-N	= Number of Monster Eliminated
-
-T = Number of Different Types of Monster the Agent Can Combat with
-
-H = Agent’s Health Level
-
-## 3.2 Evaluation Equation 
-
-Performance = NTH (May add on weights or other factors. To be decided later)
-
-## 3.3 Evaluation Summary 
-
-The performance will be evaluated by three factors – number of monster eliminated, number of different types of monster the agent can handle, and the health remained after the combat. The baseline would be fighting with one Zombie without dying. The first improvement would be concentrate on increasing the number of Zombie that agent can combat with without dying. Then, we would work on allowing the agent to learn not only how to deal with Zombie, but also other creatures – Cave Spider, Creeper, and Skeleton – that has different behavior.
-
-To evaluate the performance of the agent at each generation, the agent has access to the three evaluation variables. It would be programmed to maximize all three variables. The base goal is surviving and triumph in a flat unobstructed map with one Zombie. Our midterm goal includes an agent who can teach itself to fight with Zombie, Creeper, and Skeleton in the same map at the same time with more than 20 unit of Monsters. The moonshot case would be a combat with the Enderdragon.
+## Repository
+#### Main Branch:
+[https://github.com/mingh2/SurvivalOfTheFittest](https://github.com/mingh2/SurvivalOfTheFittest)
+#### Active Working Branch:
+[https://github.com/Ai-Zixun/SurvivalOfTheFittest](https://github.com/Ai-Zixun/SurvivalOfTheFittest)
 
 
-# 4. Appointment with the Instructor:
+## Inspirational Resource  
 
-The appointment time is on April 25, Tuesday afternoon at 3:30pm.
+#### Neural Network
 
-# 5. Reference
+[Shaikh, Faizan, Nss, Guest Blog, and Dishashree Gupta. "An Introduction to Implementing Neural Networks Using TensorFlow." Analytics Vidhya. N.p., 23 Jan. 2017. Web.](https://www.analyticsvidhya.com/blog/2016/10/an-introduction-to-implementing-neural-networks-using-tensorflow/)
 
-https://en.wikipedia.org/wiki/Neuroevolution
 
-https://en.wikipedia.org/wiki/Evolutionary_algorithm
-
-https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm
+#### Deep Q Network
+[GitHub. Deep Reinforcement Learning: Pong from Pixels, 13 May 2016. Web.](http://karpathy.github.io/2016/05/31/rl/)
