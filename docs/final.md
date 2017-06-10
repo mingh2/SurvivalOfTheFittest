@@ -3,14 +3,12 @@ layout: default
 title:  Final
 ---
 
+*A Malmo Project for CompSci 175 at UC Irvine*
+
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/w_hhVbIIH90" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+
 Work in Progress (・`ω´・)
-
-Please check our Status Report
-
-
-## Video
-
-  Placeholder for the video we are working on
+The video is still the status report video, just a placeholder while we are working on the structure for the final report. .....
 
 ## Project Summary
 
@@ -27,7 +25,7 @@ NEAT (Placehoder ..... nothing yet)
 
 Map Environment
 
-A set of 21 by 21 wall defined the initial playground for the agent and the zombie in the early stage of agent development. The limited environment provides a suitable testing ground for our task. Hence, the identical background would repeatedly appear during the training process to a reduce the learning workload for the agents. After the agents can fulfill their task in the predefined environment, the team develops a randomized environment to enlarge the available map space and with more diverse enemy variety. 
+A set of 21 by 21 wall defined the initial playground for the agent and the zombie in the early stage of agent development. The limited environment provides a suitable testing ground for our task. Hence, the identical background would repeatedly appear during the training process to a reduce the learning workload for the agents. After the agents can fulfill their task in the predefined environment, the team develops a randomized environment to enlarge the available map space and with more diverse enemy variety.
 
 The initial
 
@@ -47,6 +45,6 @@ Random Agent
 
 
 #### Deep Q Network
-[GitHub. Deep Reinforcement Learning: Pong from Pixels, 13 May 2016. Web.](http://karpathy.github.io/2016/05/31/rl/)
+[GitHub. * Deep Reinforcement Learning: Pong from Pixels * , 13 May 2016. Web.](http://karpathy.github.io/2016/05/31/rl/)
 
 #### NEAT
