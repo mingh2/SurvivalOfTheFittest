@@ -23,8 +23,7 @@ As described in our Status Report, the team had created an agent with Deep Q Net
 
 NEAT (Placehoder ..... nothing yet)
 
-A set of 21 by 21 wall defined the initial playground for the agent and the zombie in the early stage of agent development. The limited environment provides a suitable testing ground for our task. Hence, the identical background would repeatedly appear during the training process to a reduce the learning workload for the agents. After the agents can fulfill their task in the predefined environment, the team develops a randomized environment to enlarge the available map space and with more diverse enemy variety.
-
+A set of 21 by 21 wall defined the initial playground for the agent and the zombie in the early stage of agent development, while the scope of our agent is only 11 by 11. The limited environment provides a suitable testing ground for our task. Hence, the identical background would repeatedly appear during the training process to a reduce the learning workload for the agents. After the agents can fulfill their task in the predefined environment, the team develops a randomized environment to enlarge the available map space and with more diverse enemy variety.
 
 
 ## Approaches
@@ -34,6 +33,10 @@ A set of 21 by 21 wall defined the initial playground for the agent and the zomb
 ## Reference
 
 #### Neural Network
+
+##### The Training Function
+
+##### The Score Calculation
 
 [Shaikh, Faizan, Nss, Guest Blog, and Dishashree Gupta. "An Introduction to Implementing Neural Networks Using TensorFlow." Analytics Vidhya. N.p., 23 Jan. 2017. Web.](https://www.analyticsvidhya.com/blog/2016/10/an-introduction-to-implementing-neural-networks-using-tensorflow/)
 
