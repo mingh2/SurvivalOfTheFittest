@@ -45,6 +45,7 @@ def main():
     map_gen = environment_generator()
     visual = visualization(x, y, debug)
 
+
     for i in range(NUM_REPS):
         print "Survival Mode # " + str(i + 1)
 
@@ -55,27 +56,16 @@ def main():
         max_retries = 3
         for retry in range(max_retries):
             try:
-                if (retry == 0):
-                    # The Zombie Does Not Exist On the First Try Caused by Drawing Error
-                    new_gen = False if i >= 2 else True
+                missionXML = map_gen.generator(False)
+                if i == 0:
+                    missionXML = map_gen.generator(True)
 
+                my_mission = MalmoPython.MissionSpec(missionXML, True)
+                my_mission_record = MalmoPython.MissionRecordSpec()
+                agent_host.startMission(my_mission, my_mission_record)
 
-                    missionXML = map_gen.generator(new_gen)
-                    my_mission = MalmoPython.MissionSpec(missionXML, True)
-                    my_mission_record = MalmoPython.MissionRecordSpec()
-                    agent_host.startMission(my_mission, my_mission_record)
+                time.sleep(3)
 
-                    time.sleep(3)
-
-                    missionXML = map_gen.generator(False)
-                    my_mission = MalmoPython.MissionSpec(missionXML, True)
-                    my_mission_record = MalmoPython.MissionRecordSpec()
-                    agent_host.startMission(my_mission, my_mission_record)
-                else:
-                    missionXML = map_gen.generator(False)
-                    my_mission = MalmoPython.MissionSpec(missionXML, True)
-                    my_mission_record = MalmoPython.MissionRecordSpec()
-                    agent_host.startMission(my_mission, my_mission_record)
                 break
 
             except RuntimeError as e:
