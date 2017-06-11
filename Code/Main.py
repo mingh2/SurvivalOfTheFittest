@@ -9,12 +9,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Import Code Written by Us
-from Environment import mob_XML_generator
 from Agent import zombies_fighter
 from World_state_interpreter import world_state_interpreter
 from Visual import visualization
 from Action import action
-from Auto_Env import auto_env
+from Environment_Generator import environment_generator
 
 NUM_REPS = 300
 N = 25
@@ -43,8 +42,9 @@ def main():
 
     # Set the size of the matrix
     x, y = 21, 21
-
+    map_gen = environment_generator()
     visual = visualization(x, y, debug)
+
     for i in range(NUM_REPS):
         print "Survival Mode # " + str(i + 1)
 
@@ -58,21 +58,21 @@ def main():
                 if (retry == 0):
                     # The Zombie Does Not Exist On the First Try Caused by Drawing Error
                     new_gen = False if i >= 2 else True
-                    map_gen = auto_env()
 
-                    missionXML = map_gen.mob_XML_generator(new_gen)
+
+                    missionXML = map_gen.generator(new_gen)
                     my_mission = MalmoPython.MissionSpec(missionXML, True)
                     my_mission_record = MalmoPython.MissionRecordSpec()
                     agent_host.startMission(my_mission, my_mission_record)
 
                     time.sleep(3)
 
-                    missionXML = mob_XML_generator(False)
+                    missionXML = map_gen.generator(False)
                     my_mission = MalmoPython.MissionSpec(missionXML, True)
                     my_mission_record = MalmoPython.MissionRecordSpec()
                     agent_host.startMission(my_mission, my_mission_record)
                 else:
-                    missionXML = mob_XML_generator(False)
+                    missionXML = map_gen.generator(False)
                     my_mission = MalmoPython.MissionSpec(missionXML, True)
                     my_mission_record = MalmoPython.MissionRecordSpec()
                     agent_host.startMission(my_mission, my_mission_record)
