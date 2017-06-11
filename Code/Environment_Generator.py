@@ -13,17 +13,12 @@ class environment_generator:
         self._complex = complex
 
     def generator(self, init):
-        if self._complex:
-            XML = self.random_XML()
-        else:
-            XML = self.standard_XML()
+        XML = self.standard_XML()
 
         if init:
             XML = self.special_XML()
         return XML
 
-    def random_XML(self):
-        return True
 
     def re_init(self):
         XML = '''<DrawCuboid  x1="-'''+ str(self._max) +'''" y1="0" z1="-'''+ str(self._max) +'''" x2="'''+ str(self._max) +'''" y2="30" z2="'''+ str(self._max) +'''" type="air"/>'''
@@ -37,8 +32,7 @@ class environment_generator:
             <DrawCuboid  x1="-'''+ str(self._max) +'''" y1="20" z1="-'''+ str(self._max) +'''" x2="'''+ str(self._max) +'''" y2="10" z2="-'''+ str(self._max) +'''" type="stone"/>
             <DrawCuboid  x1="-'''+ str(self._max) +'''" y1="20" z1="-'''+ str(self._max) +'''" x2="-'''+ str(self._max) +'''" y2="10" z2="'''+ str(self._max) +'''" type="stone"/>
             <DrawCuboid  x1="'''+ str(self._max) +'''" y1="20" z1="-'''+ str(self._max) +'''" x2="'''+ str(self._max) +'''" y2="10" z2="'''+ str(self._max) +'''" type="stone"/>'''
-        XML = '''<DrawSphere x="0" y="16" z="0" radius="50" type="air"/>
-                 <DrawCuboid  x1="-10" y1="21" z1="-10" x2="10" y2="21" z2="10" type="beacon"/>
+        XML = '''<DrawCuboid  x1="-10" y1="21" z1="-10" x2="10" y2="21" z2="10" type="beacon"/>
                  <DrawCuboid  x1="-10" y1="15" z1="-10" x2="10" y2="15" z2="10" type="beacon"/>
                  <DrawCuboid  x1="-10" y1="20" z1="10" x2="10" y2="10" z2="10" type="stone"/>
                  <DrawCuboid  x1="-10" y1="20" z1="-10" x2="10" y2="10" z2="-10" type="stone"/>
@@ -74,63 +68,10 @@ class environment_generator:
                         <ServerHandlers>
                           <FlatWorldGenerator generatorString="3;3*7,3*3,10*1;7;"/>
                           <DrawingDecorator>
-                            ''' + self.re_init() + self.room() + self.complication() + self.zombie() + '''
-                          </DrawingDecorator>
-                          <ServerQuitFromTimeUp timeLimitMs="1"/>
-                          <ServerQuitWhenAnyAgentFinishes/>
-                        </ServerHandlers>
-                      </ServerSection>
-
-                      <AgentSection mode="Survival">
-                        <Name>SOTF Bot</Name>
-                        <AgentStart>
-                          <Placement x="5" y="16" z="0" yaw="90"/>
-                          <Inventory>
-                            <InventoryItem slot="0" type="diamond_sword"/>
-                          </Inventory>
-                        </AgentStart>
-                        <AgentHandlers>
-                          <ObservationFromNearbyEntities>
-                            <Range name="entities" xrange="'''+str(self._range)+'''" yrange="2" zrange="'''+str(self._range)+'''" />
-                          </ObservationFromNearbyEntities>
-                          <ObservationFromFullStats/>
-                          <ContinuousMovementCommands turnSpeedDegs="180"/>
-                          <AbsoluteMovementCommands/>
-                          <ObservationFromGrid>
-                            <Grid name="env">
-                              <min x="-10" y="0" z="-10"/>
-                              <max x="10" y="0" z="10"/>
-                            </Grid>
-                          </ObservationFromGrid>
-                        </AgentHandlers>
-                      </AgentSection>
-                    </Mission>'''
-
-        missionXML = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-                    <Mission xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-                      <About>
-                        <Summary>Survival of the Fittest!</Summary>
-                      </About>
-
-                      <ServerSection>
-                        <ServerInitialConditions>
-                          <Time>
-                            <StartTime>17000</StartTime>
-                            <AllowPassageOfTime>false</AllowPassageOfTime>
-                          </Time>
-                        </ServerInitialConditions>
-                        <ServerHandlers>
-                          <FlatWorldGenerator generatorString="3;3*7,3*3,10*1;7;"/>
-                          <DrawingDecorator>
-                            <DrawSphere x="0" y="16" z="0" radius="50" type="air"/>
-                            <DrawCuboid  x1="-10" y1="21" z1="-10" x2="10" y2="21" z2="10" type="beacon"/>
-                            <DrawCuboid  x1="-10" y1="15" z1="-10" x2="10" y2="15" z2="10" type="beacon"/>
-                            <DrawCuboid  x1="-10" y1="20" z1="10" x2="10" y2="10" z2="10" type="stone"/>
-                            <DrawCuboid  x1="-10" y1="20" z1="-10" x2="10" y2="10" z2="-10" type="stone"/>
-                            <DrawCuboid  x1="-10" y1="20" z1="-10" x2="-10" y2="10" z2="10" type="stone"/>
-                            <DrawCuboid  x1="10" y1="20" z1="-10" x2="10" y2="10" z2="10" type="stone"/>
-                            <DrawEntity x="-5" y="16" z="0" type="Zombie"/>
+                            ''' + self.re_init() + '''
+                            ''' + self.room() + '''
+                            ''' + self.complication() + '''
+                            ''' + self.zombie() + '''
                           </DrawingDecorator>
                           <ServerQuitFromTimeUp timeLimitMs="30000"/>
                           <ServerQuitWhenAnyAgentFinishes/>
@@ -147,7 +88,7 @@ class environment_generator:
                         </AgentStart>
                         <AgentHandlers>
                           <ObservationFromNearbyEntities>
-                            <Range name="entities" xrange="''' + str(10) + '''" yrange="2" zrange="''' + str(10) + '''" />
+                            <Range name="entities" xrange="10" yrange="2" zrange="10" />
                           </ObservationFromNearbyEntities>
                           <ObservationFromFullStats/>
                           <ContinuousMovementCommands turnSpeedDegs="180"/>
@@ -205,7 +146,7 @@ class environment_generator:
                             </AgentStart>
                             <AgentHandlers>
                               <ObservationFromNearbyEntities>
-                                 <max name="entities" xmax="''' + str(10) + '''" ymax="2" zmax="''' + str(10) + '''" />
+                                 <max name="entities" xmax="10" ymax="2" zmax="10" />
                               </ObservationFromNearbyEntities>
                               <ContinuousMovementCommands turnSpeedDegs="180"/>
                               <AbsoluteMovementCommands/>
