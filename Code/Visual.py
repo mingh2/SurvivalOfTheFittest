@@ -61,7 +61,7 @@ class visualization:
                                                   outline="#fff", fill="#000")
                 self._matrix[self._world_y - 1 - y][self._world_x - 1 - x] = "clear"
 
-                if self._env[x][y] == "stone":
+                if self._env[x][y] == "stone" or self._env[x][y] == "hay_block" :
                     if self.debug:
                         self._canvas.create_rectangle((self._world_x - 1 - x) * self._scale,
                                                       (self._world_y - 1 - y) * self._scale,
