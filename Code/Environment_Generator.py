@@ -1,3 +1,5 @@
+from random import randint
+
 # This file creates the game environment automatically and keeps
 # generating new environment every time the episode is updated.
 
@@ -11,6 +13,14 @@ class environment_generator:
         self._max = max
         self._ent = ent
         self._complex = complex
+        self.init_matrix()
+
+    def init_matrix(self):
+        self._matrix = [[False for x in range(2 * self._max - 1)] for y in range(2 * self._max - 1)]
+        # space for the agent
+        for i in range(-5,6):
+            for j in range(-5,6):
+                self._matrix[i][j] = True
 
     def generator(self, init):
         if init:
@@ -41,7 +51,32 @@ class environment_generator:
         return XML
 
     def zombie(self):
-        XML = '''<DrawEntity x="-5" y="16" z="0" type="Zombie"/>'''
+        max = self._max
+
+        size = 2 * max - 1
+        offset = max - 1
+
+        XML = ''''''
+
+        for i in range(self._ent):
+            x = randint(0, 2 * max - 2)
+            y = randint(0, 2 * max - 2)
+            while self._matrix[x][y]:
+                x = randint(0, 2 * max - 2)
+                y = randint(0, 2 * max - 2)
+
+            # Mark the 3x3 area where zombie
+            for i in range(-1, 2):
+                for j in range(-1, 2):
+                    if x + i >= 0 and x + i <= 2 * max - 2 and y + j >= 0 and y + j <= 2 * max - 2 :
+                        self._matrix[x + i][y + j] = True
+
+            x = x - offset
+            y = y - offset
+
+            XML = XML + '''<DrawEntity x="''' + str(x) + '''" y="16" z="''' + str(y) + '''" type="Zombie"/>
+                        '''
+
         return XML
 
     # Move Commands. Similar to what we have in Environment.py,
@@ -76,7 +111,7 @@ class environment_generator:
                       <AgentSection mode="Survival">
                         <Name>SOTF Bot</Name>
                         <AgentStart>
-                          <Placement x="5" y="16" z="0" yaw="90"/>
+                          <Placement x="0" y="16" z="0" yaw="90"/>
                           <Inventory>
                             <InventoryItem slot="0" type="diamond_sword"/>
                           </Inventory>
@@ -133,7 +168,7 @@ class environment_generator:
                       <AgentSection mode="Survival">
                         <Name>SOTF Bot</Name>
                         <AgentStart>
-                          <Placement x="5" y="16" z="0" yaw="90"/>
+                          <Placement x="0" y="16" z="0" yaw="90"/>
                           <Inventory>
                             <InventoryItem slot="0" type="diamond_sword"/>
                           </Inventory>
