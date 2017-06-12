@@ -159,7 +159,7 @@ class environment_generator:
                             ''' + self.complication() + '''
                             ''' + self.zombie() + '''
                           </DrawingDecorator>
-                          <ServerQuitFromTimeUp timeLimitMs="30000"/>
+                          <ServerQuitFromTimeUp timeLimitMs="100000"/>
                           <ServerQuitWhenAnyAgentFinishes/>
                         </ServerHandlers>
                       </ServerSection>
@@ -216,7 +216,7 @@ class environment_generator:
                             ''' + self.complication() + '''
                             ''' + self.zombie() + '''
                           </DrawingDecorator>
-                          <ServerQuitFromTimeUp timeLimitMs="30000"/>
+                          <ServerQuitFromTimeUp timeLimitMs="100000"/>
                           <ServerQuitWhenAnyAgentFinishes/>
                         </ServerHandlers>
                       </ServerSection>
