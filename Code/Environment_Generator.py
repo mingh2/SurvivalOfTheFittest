@@ -7,7 +7,7 @@ class environment_generator:
     """
         Automatic Generation of Environment XML
     """
-    def __init__(self, range = 10, complexity = 10, max = 25, ent = 1, complex = False):
+    def __init__(self, range = 10, complexity = 30, max = 25, ent = 1, complex = False):
         self._range = range
         self._complexity = complexity
         self._max = max
@@ -18,8 +18,8 @@ class environment_generator:
     def init_matrix(self):
         self._matrix = [[False for x in range(2 * self._max - 1)] for y in range(2 * self._max - 1)]
         # space for the agent
-        for i in range(-5,6):
-            for j in range(-5,6):
+        for i in range(-2,3):
+            for j in range(-2,3):
                 self._matrix[i][j] = True
 
     def generator(self, init):
@@ -47,8 +47,73 @@ class environment_generator:
         return XML
 
     def complication(self):
+        max = self._max
+
+        size = 2 * max - 1
+        offset = max - 1
+
         XML = ''''''
+
+        for i in range(self._complexity):
+
+            length = randint(1, int(max / 2))
+            dir = randint(0, 1)
+
+            x1 = randint(0, 2 * max - 2)
+            y1 = randint(0, 2 * max - 2)
+            while self._matrix[x1][y1]:
+                x1 = randint(0, 2 * max - 2)
+                y1 = randint(0, 2 * max - 2)
+
+            x2, y2 = x1, y1
+
+            while length >= 1:
+                if dir == 0 and x2 + 1 <= 2 * max - 2:
+                    if not self._matrix[x2 + 1][y2]:
+                        x2 += 1
+                        length -= 1
+                    else:
+                        break
+                elif dir == 1 and y2 + 1 <= 2 * max - 2:
+                    if not self._matrix[x2][y2 + 1]:
+                        y2 += 1
+                        length -= 1
+                    else:
+                        break
+                else:
+                    break
+
+
+            # Mark the 3x3 area where the wall is
+            if dir == 0:
+                x_temp, y_temp = x1, y2
+                while x_temp <= x2 and y_temp <= y2:
+                    for i in range(-1, 2):
+                        for j in range(-1, 2):
+                            if x_temp + i >= 0 and x_temp + i <= 2 * max - 2 and y_temp + j >= 0 and y_temp + j <= 2 * max - 2:
+                                self._matrix[x_temp + i][y_temp + j] = True
+                    x_temp += 1
+            elif dir == 1:
+                x_temp, y_temp = x1, y2
+                while x_temp <= x2 and y_temp <= y2:
+                    for i in range(-1, 2):
+                        for j in range(-1, 2):
+                            if x_temp + i >= 0 and x_temp + i <= 2 * max - 2 and y_temp + j >= 0 and y_temp + j <= 2 * max - 2:
+                                self._matrix[x_temp + i][y_temp + j] = True
+                    y_temp += 1
+
+            x1 = x1 - offset
+            y1 = y1 - offset
+            x2 = x2 - offset
+            y2 = y2 - offset
+
+            print ("Check 1")
+
+            XML = XML + '''<DrawCuboid  x1="'''+ str(x1) +'''" y1="16" z1="'''+ str(y1) +'''" x2="'''+ str(x2) +'''" y2="20" z2="'''+ str(y2) +'''" type="stone"/>
+                        '''
+
         return XML
+
 
     def zombie(self):
         max = self._max

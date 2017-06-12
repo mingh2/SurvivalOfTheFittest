@@ -42,7 +42,7 @@ def main():
 
     # Set the size of the matrix
     x, y = 21, 21
-    map_gen = environment_generator(complexity = 10, max = 25, ent = 10)
+    map_gen = environment_generator(complexity = 30, max = 25, ent = 10)
     visual = visualization(x, y, debug)
 
 
