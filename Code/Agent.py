@@ -121,7 +121,10 @@ class zombies_fighter:
         print "Possible Actions: ", possible_actions
 
         if rnd <= self.epsilon and not show_best:
-            return random.choice(possible_actions)
+            if not possible_actions:
+                return random.choice(possible_actions)
+            else:
+                return random.choice([0, 1, 2, 3])
 
         q_values = self.nn.predict(curr_state)
 
@@ -136,7 +139,7 @@ class zombies_fighter:
 
         self.predict_value = max_q_value
         print "Q_Values:", q_values
-        print "Action, Predicted Q Value:", action, max_q_value
+        print "Action, Predicted Q Value:", max_q_value_action, max_q_value
         return max_q_value_action
 
     def get_possible_actions(self, matrix):
