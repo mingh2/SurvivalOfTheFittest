@@ -23,11 +23,7 @@ class environment_generator:
                 self._matrix[i][j] = True
 
     def generator(self, init):
-        if init:
-            return self.special_XML()
-        else:
-            return self.standard_XML()
-
+        return self.special_XML() if init else self.standard_XML()
 
     def clear_space(self):
         XML = '''<DrawCuboid  x1="'''+ str(-self._max + 1) +'''" y1="0" z1="'''+ str(-self._max) +'''" x2="'''+ str(self._max) +'''" y2="30" z2="'''+ str(self._max) +'''" type="air"/>'''
@@ -48,7 +44,6 @@ class environment_generator:
 
     def complication(self):
         max = self._max
-
         size = 2 * max - 1
         offset = max - 1
 
@@ -83,7 +78,6 @@ class environment_generator:
                 else:
                     break
 
-
             # Mark the 3x3 area where the wall is
             if dir == 0:
                 x_temp, y_temp = x1, y2
@@ -102,14 +96,11 @@ class environment_generator:
                                 self._matrix[x_temp + i][y_temp + j] = True
                     y_temp += 1
 
-            x1 = x1 - offset
-            y1 = y1 - offset
-            x2 = x2 - offset
-            y2 = y2 - offset
+            for position in [x1, y1, x2, y2]:
+                position -= offset
 
             XML = XML + '''<DrawCuboid  x1="'''+ str(x1) +'''" y1="16" z1="'''+ str(y1) +'''" x2="'''+ str(x2) +'''" y2="20" z2="'''+ str(y2) +'''" type="hay_block"/>
                         '''
-
         return XML
 
 
