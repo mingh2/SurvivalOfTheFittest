@@ -36,7 +36,7 @@ class environment_generator:
     def clear_room(self):
         XML = '''<DrawCuboid  x1="'''+ str(-self._max + 1) +'''" y1="16" z1="'''+ str(-self._max + 1) +'''" x2="'''+ str(self._max - 1) +'''" y2="20" z2="'''+ str(self._max - 1) +'''" type="air"/>'''
         return XML
-    
+
     def room(self):
         XML = '''<DrawCuboid  x1="'''+ str(-self._max) +'''" y1="21" z1="'''+ str(-self._max) +'''" x2="'''+ str(self._max) +'''" y2="21" z2="'''+ str(self._max) +'''" type="beacon"/>
                  <DrawCuboid  x1="'''+ str(-self._max) +'''" y1="15" z1="'''+ str(-self._max) +'''" x2="'''+ str(self._max) +'''" y2="15" z2="'''+ str(self._max) +'''" type="beacon"/>
@@ -106,8 +106,6 @@ class environment_generator:
             y1 = y1 - offset
             x2 = x2 - offset
             y2 = y2 - offset
-
-            print ("Check 1")
 
             XML = XML + '''<DrawCuboid  x1="'''+ str(x1) +'''" y1="16" z1="'''+ str(y1) +'''" x2="'''+ str(x2) +'''" y2="20" z2="'''+ str(y2) +'''" type="hay_block"/>
                         '''
@@ -255,5 +253,3 @@ class environment_generator:
                       </AgentSection>
                     </Mission>'''
         return missionXML
-
-
