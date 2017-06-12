@@ -16,7 +16,6 @@ class environment_generator:
         self.init_matrix()
 
     def init_matrix(self):
-        self.init_matrix()
         self._matrix = [[False for x in range(2 * self._max - 1)] for y in range(2 * self._max - 1)]
         # space for the agent
         for i in range(-2,3):
@@ -24,6 +23,7 @@ class environment_generator:
                 self._matrix[i][j] = True
 
     def generator(self, init):
+        self.init_matrix()
         return self.special_XML() if init else self.standard_XML()
 
     def clear_space(self):
