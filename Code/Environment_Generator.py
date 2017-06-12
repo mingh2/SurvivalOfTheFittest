@@ -16,6 +16,7 @@ class environment_generator:
         self.init_matrix()
 
     def init_matrix(self):
+        self.init_matrix()
         self._matrix = [[False for x in range(2 * self._max - 1)] for y in range(2 * self._max - 1)]
         # space for the agent
         for i in range(-2,3):
