@@ -96,8 +96,10 @@ class environment_generator:
                                 self._matrix[x_temp + i][y_temp + j] = True
                     y_temp += 1
 
-            for position in [x1, y1, x2, y2]:
-                position -= offset
+            x1 = x1 - offset
+            y1 = y1 - offset
+            x2 = x2 - offset
+            y2 = y2 - offset
 
             XML = XML + '''<DrawCuboid  x1="'''+ str(x1) +'''" y1="16" z1="'''+ str(y1) +'''" x2="'''+ str(x2) +'''" y2="20" z2="'''+ str(y2) +'''" type="hay_block"/>
                         '''
