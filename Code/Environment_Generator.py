@@ -13,7 +13,6 @@ class environment_generator:
         self._max = max
         self._ent = ent
         self._complex = complex
-        self.init_matrix()
 
     def init_matrix(self):
         self._matrix = [[False for x in range(2 * self._max - 1)] for y in range(2 * self._max - 1)]
