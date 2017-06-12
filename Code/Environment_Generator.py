@@ -109,7 +109,7 @@ class environment_generator:
 
             print ("Check 1")
 
-            XML = XML + '''<DrawCuboid  x1="'''+ str(x1) +'''" y1="16" z1="'''+ str(y1) +'''" x2="'''+ str(x2) +'''" y2="20" z2="'''+ str(y2) +'''" type="stone"/>
+            XML = XML + '''<DrawCuboid  x1="'''+ str(x1) +'''" y1="16" z1="'''+ str(y1) +'''" x2="'''+ str(x2) +'''" y2="20" z2="'''+ str(y2) +'''" type="hay_block"/>
                         '''
 
         return XML
