@@ -19,7 +19,9 @@ class environment_generator:
         # space for the agent
         for i in range(-2,3):
             for j in range(-2,3):
-                self._matrix[i][j] = True
+                x = i + self._max
+                y = j + self._max
+                self._matrix[x][y] = True
 
     def generator(self, init):
         self.init_matrix()
@@ -165,8 +167,8 @@ class environment_generator:
                           <FlatWorldGenerator generatorString="3;3*7,3*3,10*1;7;"/>
                           <DrawingDecorator>
                             ''' + self.clear_room() + '''
-                            ''' + self.complication() + '''
                             ''' + self.zombie() + '''
+                            ''' + self.complication() + '''
                           </DrawingDecorator>
                           <ServerQuitFromTimeUp timeLimitMs="100000"/>
                           <ServerQuitWhenAnyAgentFinishes/>
@@ -222,8 +224,8 @@ class environment_generator:
                           <DrawingDecorator>
                             ''' + self.clear_space() + '''
                             ''' + self.room() + '''
-                            ''' + self.complication() + '''
                             ''' + self.zombie() + '''
+                            ''' + self.complication() + '''
                           </DrawingDecorator>
                           <ServerQuitFromTimeUp timeLimitMs="100000"/>
                           <ServerQuitWhenAnyAgentFinishes/>
