@@ -130,7 +130,16 @@ class environment_generator:
             x = x - offset
             y = y - offset
 
-            XML = XML + '''<DrawEntity x="''' + str(x) + '''" y="16" z="''' + str(y) + '''" type="Zombie"/>
+            type = "Zombie"
+            type_int = randint(0, 2)
+            if type_int == 0:
+                type = "Zombie"
+            elif type_int == 1:
+                type = "Skeleton"
+            else:
+                type = "Spider"
+
+            XML = XML + '''<DrawEntity x="''' + str(x) + '''" y="16" z="''' + str(y) + '''" type="''' + str(type) + '''"/>
                         '''
 
         return XML
