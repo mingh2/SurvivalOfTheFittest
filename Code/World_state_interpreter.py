@@ -38,7 +38,7 @@ class world_state_interpreter:
 
             entities = []
             for ent in ob["entities"]:
-                if ent[u'name'] == u'Zombie':
+                if ent[u'name'] == u'Zombie' or ent[u'name'] == u'Skeleton' or ent[u'name'] == u'Spider' :
                     entities.append(EntityInfo(**ent))
             return entities
         return False
