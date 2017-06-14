@@ -15,7 +15,7 @@ from Visual import visualization
 from Action import action
 from Environment_Generator import environment_generator
 
-NUM_REPS = 300
+NUM_REPS = 10
 N = 25
 ALPHA = 1
 GAMMA = 0.5
@@ -42,7 +42,7 @@ def main():
 
     # Set the size of the matrix
     x, y = 21, 21
-    map_gen = environment_generator(complexity = 30, max = 25, ent = 10)
+    map_gen = environment_generator(complexity = 0, max = 21, ent = 2)
     visual = visualization(x, y, debug)
 
 

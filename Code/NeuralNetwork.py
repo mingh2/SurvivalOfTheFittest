@@ -47,14 +47,14 @@ class neural_network:
 
         error = y - a[-1][action]
         prime = np.zeros(a[-1].shape[0])
-        action_prime = tanh_prime(a[-1])
-        unavailable_actions = [ac for ac in [0, 1, 2, 3] if ac not in possible_actions]
-        for unavailable_action in unavailable_actions:
-            prime[unavailable_action] = action_prime[unavailable_action] * -0.30
+        # action_prime = tanh_prime(a[-1])
+        # unavailable_actions = [ac for ac in [0, 1, 2, 3] if ac not in possible_actions]
+        # for unavailable_action in unavailable_actions:
+        #     prime[unavailable_action] = action_prime[unavailable_action] * -0.30
 
-        prime[action] = action_prime[action] * error
+        prime[action] = tanh_prime(a[-1])[action] * error
+        # print "PRIME: ", prime
         deltas = [prime]
-        # print "Prime: ", prime
 
         for l in range(len(a) - 2, 0, -1):
             deltas.append(deltas[-1].dot(self.weights[l].T)*tanh_prime(a[l]))

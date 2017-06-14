@@ -122,9 +122,9 @@ class zombies_fighter:
 
         if rnd <= self.epsilon and not show_best:
             if not possible_actions:
-                return random.choice(possible_actions)
-            else:
                 return random.choice([0, 1, 2, 3])
+            else:
+                return random.choice(possible_actions)
 
         q_values = self.nn.predict(curr_state)
 
@@ -181,20 +181,20 @@ class zombies_fighter:
                 reward = reward - 0.40
 #
             # 2. Reard Based On Closest Enemy
-            if closest_enemy <= 5.0:
-                reward -= 0.30
-            else:
-                reward += 0.30
-            #
-            # if self.previous_closest_enemy > closest_enemy or (closest_enemy <= 1.0):
+            # if closest_enemy <= 5.0:
             #     reward -= 0.30
-            # elif self.previous_closest_enemy < closest_enemy:
+            # else:
             #     reward += 0.30
+            #
+            if self.previous_closest_enemy > closest_enemy or (closest_enemy <= 1.0):
+                reward -= 0.30
+            elif self.previous_closest_enemy + 0.5 < closest_enemy:
+                reward += 0.30
 
             # 3. Reward Based On Closest Wall
             if closest_wall <= 1.0 or len(possible_actions) <= 2:
                 reward -= 0.15
-            elif closest_wall > 2.0:
+            elif self.previous_closest_wall < closest_wall:
                 reward += 0.15
 
             print "Actual Value: ", reward
