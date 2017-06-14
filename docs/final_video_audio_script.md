@@ -17,7 +17,9 @@ We have greatly expanded and revised the game environment comparing to our work 
 
 As you can see in this game sample, our environment is a 41 by 41 matrix, where multiple zombies are created, and they automatically move toward and attack our agent. Even more amazing is that the map generates several blocks inside randomly, so that while our agent is escaping away from enemies, it also has to learn how to bypass those blocks.
 
-### Algorithm (Neural Network) & Improvements
+### Algorithm (Neural Network) & Learning Improvements
+Although we reduce the state from a previous 21 by 21 matrix to a 11 by 11 one right now, it is undoubtable that our agent has an incredibly huge state space. Therefore, instead of using direct Q-Learning process, our intuitive idea is applying Neural Network to estimate our Q-values in order to use a Q-table.
 
+Under this circumstance, we decided to use Deep-Q Network to train the agent as suggested by Professor Singh. In order to make the agent smarter, we have built up a valid training function and a sophisticated system to calculate rewards, which is the Q-values for every possible actions. The core idea is to minimize the MSE of calculating rewards of actions as the number of training goes up. For your convenience of comparison, here we have a baseline agent, which can only move randomly no matter where are walls, blocks, or enemies. As you can see, this baseline agent can only survive barely more than 10 seconds, while our agent can survive over 40 seconds after a certain time of training (100 times in this case).
 
 ### Other Tips
