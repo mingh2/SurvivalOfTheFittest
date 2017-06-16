@@ -95,12 +95,63 @@ Agent that choose next action randomly
         else:
             return random.choice([0, 1, 2, 3])
 ```
-Comparing to our optimal agent, random acton agent survive less than 10 seconds.
+Comparing to our optimal agent, random action agent survive less than 10 seconds.
 
 #### Mob Fun Agent
+Agent that searches for best angles to move based on the surrounding entities (modified based on mob_fun.py provided by Malmo Project)
+```python
+def getBestAngle(entities, current_yaw, current_health):
+    '''Scan through 360 degrees, looking for the best direction in which to take the next step.'''
+    us = findUs(entities)
+    scores=[]
+    # Normalise current yaw:
+    while current_yaw < 0:
+        current_yaw += 360
+    while current_yaw > 360:
+        current_yaw -= 360
 
+    # Look for best option
+    for i in xrange(agent_search_resolution):
+        # Calculate cost of turning:
+        ang = 2 * math.pi * (i / float(agent_search_resolution))
+        yaw = i * 360.0 / float(agent_search_resolution)
+        yawdist = min(abs(yaw-current_yaw), 360-abs(yaw-current_yaw))
+        turncost = agent_turn_weight * yawdist
+        score = turncost
 
+        # Calculate entity proximity cost for new (x,z):
+        x = us.x + agent_stepsize - math.sin(ang)
+        z = us.z + agent_stepsize * math.cos(ang)
+        for ent in entities:
+            dist = (ent.x - x)*(ent.x - x) + (ent.z - z)*(ent.z - z)
+            if (dist == 0):
+                continue
+            weight = 0.0
+            if ent.name == MOB_TYPE:
+                weight = agent_mob_weight
+                dist -= 1   # assume mobs are moving towards us
+                if dist <= 0:
+                    dist = 0.1
+            score += weight / float(dist)
 
+        # Calculate cost of proximity to edges:
+        distRight = (2+ARENA_WIDTH/2) - x
+        distLeft = (-2-ARENA_WIDTH/2) - x
+        distTop = (2+ARENA_BREADTH/2) - z
+        distBottom = (-2-ARENA_BREADTH/2) - z
+        score += agent_edge_weight / float(distRight * distRight * distRight * distRight)
+        score += agent_edge_weight / float(distLeft * distLeft * distLeft * distLeft)
+        score += agent_edge_weight / float(distTop * distTop * distTop * distTop)
+        score += agent_edge_weight / float(distBottom * distBottom * distBottom * distBottom)
+        scores.append(score)
+
+    # Find best score:
+    i = scores.index(max(scores))
+    # Return as an angle in degrees:
+    return i * 360.0 / float(agent_search_resolution)
+```
+Comparing to our optimal agent, mob fun agent takes ~0.3 seconds more to produce each action.
+Also, the surviving time for this agent does not improve as the episode increases.
 
 ## Evaluation
 
