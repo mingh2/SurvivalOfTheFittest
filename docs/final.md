@@ -185,7 +185,9 @@ The evaluation of the agents's performance is based on two criteria, the average
 
 #### Neural Network
 
-##### The Training Function
+##### The Training Function (Backpropagation)
+[IMPLEMENTING A NEURAL NETWORK FROM SCRATCH IN PYTHON – AN INTRODUCTION](http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/)
+[NEURAL NETWORKS WITH BACKPROPAGATION FOR XOR USING ONE HIDDEN LAYER](http://www.bogotobogo.com/python/python_Neural_Networks_Backpropagation_for_XOR_using_one_hidden_layer.php)
 
 ##### The Score Calculation
 
@@ -194,5 +196,10 @@ The evaluation of the agents's performance is based on two criteria, the average
 
 #### Deep Q Network
 [GitHub. Deep Reinforcement Learning: Pong from Pixels, 13 May 2016. Web.](http://karpathy.github.io/2016/05/31/rl/)
+[Simple Reinforcement Learning with Tensorflow Part 4: Deep Q-Networks and Beyond](https://medium.com/@awjuliani/simple-reinforcement-learning-with-tensorflow-part-4-deep-q-networks-and-beyond-8438a3e2b8df)
+
+#### Figure
+[Deep Q Network Representation](https://cdn-images-1.medium.com/max/800/1*T54Ngd-b_CKcP3N6hyXLVg.png)
+[Deep Q Network Improvements](https://www.nervanasys.com/wp-content/uploads/2015/12/Screen-Shot-2015-12-21-at-11.27.12-AM.png)
 
 #### NEAT
