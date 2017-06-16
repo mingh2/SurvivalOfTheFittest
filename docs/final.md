@@ -161,25 +161,36 @@ Also, the surviving time for this agent does not improve as the episode increase
 ## Evaluation
 The evaluation of the agents's performance is based on two criteria, the average survival time and the Mean Square Error between the actual Q-Value and the predicted Q-Value.
 
-#### MSE for previous implemetation
+### Quantitative Evaluation
+
+#### MSE for Previous Implementation 
+The graph below is the MSE during the trainning process in our previous implementation. Our agent tried to survive in an environment with size as 11-by-11, no wall and only one Zombie.
 <img src="Mean_Sqaure_Error.png" width="60%"> 
 <br/>
 
-#### MSE for the updated version
-##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 1, Number of Episodes: 150)
+#### MSE for the Updated Version
+##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 2, Number of Episodes: 150)
 <img src="Pics/episode_100_c0m10e2.png" width="60%"> 
 
-##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 1, Number of Episodes: 300)
+##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 2, Number of Episodes: 300)
 <img src="Pics/episode_300_c0m10e2.png" width="60%"> 
 
-##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 1, Number of Episodes: 1000)
+##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 2, Number of Episodes: 1000)
 <img src="Pics/episode_1000_c0m10e2.png" width="60%"> 
 
 ##### (Complexity: 5, Environment Size: 21 * 21, Number of Enemies: 5, Number of Episodes: 100)
 <img src="Pics/episode_100_c5m20e5.png" width="60%"> 
 
-##### (Complexity: 5, Environment Size: 21 * 21, Number of Enemies: 2, Number of Episodes: 300)
+##### (Complexity: 5, Environment Size: 21 * 21, Number of Enemies: 5, Number of Episodes: 300)
 <img src="Pics/episode_300_c5m20e5.png" width="60%"> 
+
+Notes: To train our agent to survive in a variety of environment, the types of enemies are randomly generated for each episode.
+
+### Qualitative Evaluation
+Our way to qualitatively evaluate the agent is observaing the average survival time for differents types of agent.
+1. Comparing to that of the random action agent, the average survival time of optimal agent is relatively longer. Random action agent usually die within 10 seconds, while the optimal agent survives up to 100 seconds.
+2. Comparing to that of the random action agent, the average survival time of optimal agent gradually increases as number of episode increases, which means our agent is learning from past episode.
+3. Comparing to the mob fun agent, our agent takes less time to figure the next action given the current states. We conclude this becasue we can observe clear lag between each action when using mob fun agent.
 
 ## Reference
 
