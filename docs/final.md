@@ -34,12 +34,10 @@ A set of 21 by 21 wall defined the initial playground for the agent and the zomb
 
 Comparing to the previous version, where our agent tries to survive inside a 21-by-21 cage with one enemy shown as above, we update the complexity of the environment.
 
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![](<img src="/Pics/Updated_Environment1.png" width="40%"> )  |  ![](<img src="/Pics/Updated_Environment1.png" width="50%"> )
-<img src="/Pics/Updated_Environment1.png" width="50%"> 
-<img src="/Pics/Updated_Environment2.png" width="50%"> 
-<img src="/Pics/Updated_Environment1.png" width="50%"> 
+:------------------------------------------------------:|:------------------------------------------------------:
+<img src="/Pics/Updated_Environment1.png" width="50%">  |  <img src="/Pics/Updated_Environment2.png" width="50%">
+:------------------------------------------------------:|:------------------------------------------------------:
+<img src="/Pics/Updated_Environment3.png" width="50%">  |  <img src="/Pics/Updated_Environment4.png" width="50%">
 
 The environment our agent can see is also a 21-by-21 matrix where the agent itself is located at the center of the matrix (matrix[10][10]) at the very beginning.
 
