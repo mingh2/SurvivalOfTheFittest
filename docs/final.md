@@ -160,6 +160,10 @@ Also, the surviving time for this agent does not improve as the episode increase
 
 ## Evaluation
 
+To compare, here's an MSE for the previous implementation within first 300 episodes.
+
+<img src="Mean_Sqaure_Error.png" width="60%"> 
+
 
 ## Reference
 
