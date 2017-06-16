@@ -169,17 +169,24 @@ To compare, here's an MSE for the previous implementation within first 300 episo
 Belows are MSE for the updated version:
 
 ##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 1, Number of Episodes: 150)
-<img src="Pics/episode_100_c0m10e2.png" width="80%"> 
+<img src="Pics/episode_100_c0m10e2.png" width="60%"> 
 <br/>
 
 ##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 1, Number of Episodes: 300)
-<img src="Pics/episode_300_c0m10e2.png" width="80%"> 
+<img src="Pics/episode_300_c0m10e2.png" width="60%"> 
 <br/>
 
 ##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 1, Number of Episodes: 1000)
-<img src="Pics/episode_1000_c0m10e2.png" width="80%"> 
+<img src="Pics/episode_1000_c0m10e2.png" width="60%"> 
 <br/>
 
+##### (Complexity: 5, Environment Size: 21 * 21, Number of Enemies: 5, Number of Episodes: 100)
+<img src="Pics/episode_100_c5m20e5.png" width="60%"> 
+<br/>
+
+##### (Complexity: 5, Environment Size: 21 * 21, Number of Enemies: 2, Number of Episodes: 300)
+<img src="Pics/episode_300_c5m20e5.png" width="60%"> 
+<br/>
 
 ## Reference
 
