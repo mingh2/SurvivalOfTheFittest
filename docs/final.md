@@ -32,7 +32,7 @@ A set of 21 by 21 wall defined the initial playground for the agent and the zomb
 
 <img src="State%20Representation.png" width="50%"> 
 
-Comparing to the previous version, where our agent tries to survive inside a 21-by-21 cage with one enemy shown as above, we update the complexity of the environment. We are able to set the environment dynamically based on what we need. For example, in the following images, the environment is set to be a 41-by-41 cage with wall inside the cage. Besides the size of the environment, we also introduce two more types of entities, Spiders, which rarely move but would harm agent if agent steps onto them, and Skeletons, which are mostly identical to Zombies but can move much faster. 
+Comparing to the previous version, where our agent tries to survive inside a 21-by-21 cage with one enemy shown as above, our team update the complexity of the environment. We are able to set the environment dynamically based on our needs. For example, in the following images, the environment is set to be a 41-by-41 cage with wall inside the cage. Besides the size of the environment, we also introduce two more types of entities, Spiders, which rarely move but would harm agent if agent steps onto them, and Skeletons, which are mostly identical to Zombies but can move much faster. 
 
 
 <img src="Pics/Updated_Environment1.png" width="425">  <img src="Pics/Updated_Environment2.png" width="425">
@@ -41,7 +41,7 @@ Comparing to the previous version, where our agent tries to survive inside a 21-
 
 
 
-The environment our agent can see is changed from a 21-by-21 matrix to a 11-by-11 matrix where the agent itself is located at the center of the matrix (matrix[5][5]) at the very beginning. The reason why we choose a 11-by-11 matrix is that the reducing of the state size help accelerate the training process. But if we have a state that is too small, the training result will likely to be overfitted. (We will show that later in the Evaluation part)
+The environment our agent can see is changed from a 21-by-21 matrix to a 11-by-11 matrix where the agent itself is located at the center of the matrix (matrix[5][5]) at the very beginning. The reason why the state is updated to a 11-by-11 matrix is that the reducing of the state size help accelerate the training process. But if we have a state that is too small, the training result will likely to be overfitted. (Will show that later in the Evaluation part)
 
 Reward for each state and action only depends on two criteria: agent's current health and distance between agent and closest enemy. Distance between closest wall is no longer a depending criterion because we introduce wall into the updated environment and we would like to see how our agent can utilize wall to escape from the enemies. The agent will be rewarded less if it's attacked by enemy and lose health (-0.5). The agent will have points deducted (-0.2) if the distance between the agent and the closest enemy is less than 2.0 and will have more points deducted (-0.3) if agent choose a move that shorten the distance between agent and closest enemy.
 Of course, the agent will be rewarded if it is able to make a move that increase the distance between enemy (+0.3) and some extra rewards if it is able to keep a long distance for a period of time.
