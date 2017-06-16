@@ -32,53 +32,128 @@ A set of 21 by 21 wall defined the initial playground for the agent and the zomb
 
 <img src="State%20Representation.png" width="50%"> 
 
-Comparing to the previous version, where our agent tries to survive inside a 21-by-21 cage with one enemy shown as above, we update the complexity of the environment.
+Comparing to the previous version, where our agent tries to survive inside a 21-by-21 cage with one enemy shown as above, we update the complexity of the environment. We are able to set the environment dynamically based on what we need. For example, in the following images, the environment is set to be a 41-by-41 cage with wall inside the cage. Besides the size of the environment, we also introduce two more types of entities, Spiders, which rarely move but would harm agent if agent steps onto them, and Skeletons, which are mostly identical to Zombies but can move much faster. 
 
 |                                     |                                     |
 |:-----------------------------------:|:-----------------------------------:|
-|![](/Pics/Updated_Environment1.png)  |  ![](/Pics/Updated_Environment2.png)|
-|![](/Pics/Updated_Environment3.png)  |  ![](/Pics/Updated_Environment4.png)|
-|:-----------------------------------:|:-----------------------------------:|
+|![](https://github.com/mingh2/SurvivalOfTheFittest/blob/master/Pics/Updated_Environment1.png)  |  ![](https://github.com/mingh2/SurvivalOfTheFittest/blob/master/Pics/Updated_Environment2.png)|
+|![](https://github.com/mingh2/SurvivalOfTheFittest/blob/master/Pics/Updated_Environment3.png)  |  ![](https://github.com/mingh2/SurvivalOfTheFittest/blob/master/Pics/Updated_Environment4.png)|
 
-The environment our agent can see is also a 21-by-21 matrix where the agent itself is located at the center of the matrix (matrix[10][10]) at the very beginning.
 
-To simplify the state, we use 1 to represent enemy, 0 to represent both the agent and the air, and -1 to represent block. For each state, there are four associated actions: left (represented by 1), right (represented by 2), up (represented by 4) and down (represented by 8). 
+The environment our agent can see is changed from a 21-by-21 matrix to a 11-by-11 matrix where the agent itself is located at the center of the matrix (matrix[5][5]) at the very beginning. The reason why we choose a 11-by-11 matrix is that the reducing of the state size help accelerate the training process. But if we have a state that is too small, the training result will likely to be overfitted. (We will show that later in the Evaluation part)
 
-Reward for each state and action depends on three criteria: angen's current health, distance between agent and closest enmey (only one enemy for now), distance between agent and cloest wall. The agent will be rewarded less if it's attaced by enemy and lose health (-0.5). The agent will have points deducted (-0.2) if the distance between the agent and the cloeset enemy is less than 2.0 because it is probaly within the enemy's attack range. Also, the distance between the agent and the cloest wall is crucial as well (-0.1 if the distance is less than 1.0), because the closer the agent and the wall is, the more likely the agent is attacked by the enemy.
-
-Of course, the agent will be rewarded if it is able to make a move that increase the distance between enemy (+0.3) or distance between wall (+0.2) and some extra rewards if it is able to keep a long distance for a period of time. 
+Reward for each state and action only depends on two criteria: agent's current health and distance between agent and closest enemy. Distance between closest wall is no longer a depending criterion because we introduce wall into the updated environment and we would like to see how our agent can utilize wall to escape from the enemies. The agent will be rewarded less if it's attacked by enemy and lose health (-0.5). The agent will have points deducted (-0.2) if the distance between the agent and the closest enemy is less than 2.0 and will have more points deducted (-0.3) if agent choose a move that shorten the distance between agent and closest enemy.
+Of course, the agent will be rewarded if it is able to make a move that increase the distance between enemy (+0.3) and some extra rewards if it is able to keep a long distance for a period of time.
 
 Notes: the total reward is within the range of (-1, +1) becasue we use tanh as the activation function.
 
 
 ### Algorithm
 
-We are using Deep Q Network algorithm to train our agent. Here is a good graphic representation of the training process, excpet we do not need to convolute the game state since we already represent the state with matrix:
+#### Algorithm Illustration 
 
-<img src="https://cdn-images-1.medium.com/max/800/1*T54Ngd-b_CKcP3N6hyXLVg.png" width="50%">
+We are using the same algorithm, Deep Q Network algorithm, as we did in previous version to train our agent. Here is a good graphic representation of the training process, excpet we do not need to convolute the game state since we already represent the state with matrix:
+
+<img src="https://cdn-images-1.medium.com/max/800/1*T54Ngd-b_CKcP3N6hyXLVg.png" width="80%">
 
 The basic idea of Deep Q Network is similar to that of the Q-Learning where we have a reward (Q-Value) associated with a state and each of its corresponding action(s). Then we select the action which possesses the maximum Q-Value among all options.
 
-However, Q Learning is not a feasible approach in our case, since the state is too large and complicated. With a map size of 21 * 21 and three possible entities on each block of map, our program will require gigabytes of space to store a Q-Table (3^441 possible states and 4 actions for each state).
+However, Q Learning is not a feasible approach in our case, since the state is too large and complicated. With a state size of 11 * 11 and three possible entities on each block of map, our program will require gigabytes of space to store a Q-Table (3^121 possible states and 4 actions for each state).
 
-Hence, alternatively, we decided to use Deep Q Network, in which the Q-Function is represented by a Neural Network. It takes the state (matrix) and four actions as inputs, and it outputs the Q-Value for each possible action. Fianally, the agent can pick the action with the most optimized predicted Q-Value and follow it.
+Hence, alternatively, we decided to use Deep Q Network, in which the Q-Function is represented by a Neural Network. It takes the state (matrix)as inputs, and it outputs the Q-Values for each possible action. Finally, the agent can pick the action with the most optimized predicted Q-Value and follow it.
 
-For our implementation of Neural Network, we have one input layer with 442 nodes (21 * 21 matrix that represent the current state and 1 value that represent the action), three hidden layers and a output layer with one node. We use hyperbolic tangent as the activation function so the predicted output will be within the range of (-1, 1). 
-
-What truly seperate Deep Q Network with other reinforcemnet learning algorithm is its ability to "replay".
+What truly separate Deep Q Network with other reinforcement learning algorithm is its ability to "replay".
 The pseudocode of replay function is shown as follow:
 
-<img src="Pseudocode.png" width="50%"> 
+<img src="Pseudocode.png" width="80%"> 
 
-As shown in the pseudocode shown above, the experience <previous_state, previous_action, reward, current_state> is stored each time the agent made a move. To implement this function, we use a list (will probably change to deque in the future) to memory the past experience. Once an episode is ended, a small batch of random experience is retrieved from the list and we use stochastic gradient descent to update the weights of Neutral Network based on these experiences. This method can not only help our agent avoiding local minium but also improve and stable the agent's performance since the reward for each state is discrete instead of continuous.
+As shown in the pseudocode shown above, the experience <previous_state, previous_action, reward, current_state> is stored each time the agent made a move. To implement this function, we use a list (will probably change to deque in the future) to memory the past experience. Once an episode is ended, a small batch of random experience is retrieved from the list and we use stochastic gradient descent to update the weights of Neutral Network based on these experiences. This method can not only help our agent avoiding local minimum but also improve and stable the agent's performance since the reward for each state is discrete instead of continuous.
+
+
+
+#### Improvement In Updated Version
+
+In the previous version, for our implementation of Neural Network, we have one input layer with 442 nodes (21 * 21 matrix that represent the current state and 1 value that represent the action), three hidden layers and a output layer with one node. We use hyperbolic tangent as the activation function so the predicted output will be within the range of (-1, 1). 
+
+In the updated version, we changed the size of input layer to a layer with 121 nodes, since the environment states is changed to a 11-by-11 matrix and we remove the node that representing action. Instead, we produce a output layer with 4 values, one for each action (up, down, left, right). A graphic illustration of the new changes would be as follow:
+
+<img src="../Pics/Neutral_Network_Update.png" width="80%"> 
+
+As we stated in the status report, we noticed that, for a given state, the Q-Values predicted for four possible actions are quite similar. The reason for this problem is that, as we use a node in input layer to represent an action, the predictor can hardly distinguish whether it is part of state or an action and, therefore, produce identical predicted Q-values for all possible actions.
+After the modification, we can not only guarantee that training improvements can be shared among all possible actions' predictions but also make sure that the predictor will provide dissimilar Q-Values for each action.
+
+Besides the improvements
+### Baseline Agent
+
+#### Random Action Agent
+Agent that choose next action randomly
+
+```python
+   def choose_action(self, curr_state, possible_actions):
+        if not possible_actions:
+            return random.choice(possible_actions)
+        else:
+            return random.choice([0, 1, 2, 3])
+```
+Comparing to our optimal agent, random action agent survive less than 10 seconds.
+
+#### Mob Fun Agent
+Agent that searches for best angles to move based on the surrounding entities (modified based on mob_fun.py provided by Malmo Project)
+```python
+def getBestAngle(entities, current_yaw, current_health):
+    '''Scan through 360 degrees, looking for the best direction in which to take the next step.'''
+    us = findUs(entities)
+    scores=[]
+    # Normalise current yaw:
+    while current_yaw < 0:
+        current_yaw += 360
+    while current_yaw > 360:
+        current_yaw -= 360
+
+    # Look for best option
+    for i in xrange(agent_search_resolution):
+        # Calculate cost of turning:
+        ang = 2 * math.pi * (i / float(agent_search_resolution))
+        yaw = i * 360.0 / float(agent_search_resolution)
+        yawdist = min(abs(yaw-current_yaw), 360-abs(yaw-current_yaw))
+        turncost = agent_turn_weight * yawdist
+        score = turncost
+
+        # Calculate entity proximity cost for new (x,z):
+        x = us.x + agent_stepsize - math.sin(ang)
+        z = us.z + agent_stepsize * math.cos(ang)
+        for ent in entities:
+            dist = (ent.x - x)*(ent.x - x) + (ent.z - z)*(ent.z - z)
+            if (dist == 0):
+                continue
+            weight = 0.0
+            if ent.name == MOB_TYPE:
+                weight = agent_mob_weight
+                dist -= 1   # assume mobs are moving towards us
+                if dist <= 0:
+                    dist = 0.1
+            score += weight / float(dist)
+
+        # Calculate cost of proximity to edges:
+        distRight = (2+ARENA_WIDTH/2) - x
+        distLeft = (-2-ARENA_WIDTH/2) - x
+        distTop = (2+ARENA_BREADTH/2) - z
+        distBottom = (-2-ARENA_BREADTH/2) - z
+        score += agent_edge_weight / float(distRight * distRight * distRight * distRight)
+        score += agent_edge_weight / float(distLeft * distLeft * distLeft * distLeft)
+        score += agent_edge_weight / float(distTop * distTop * distTop * distTop)
+        score += agent_edge_weight / float(distBottom * distBottom * distBottom * distBottom)
+        scores.append(score)
+
+    # Find best score:
+    i = scores.index(max(scores))
+    # Return as an angle in degrees:
+    return i * 360.0 / float(agent_search_resolution)
+```
+Comparing to our optimal agent, mob fun agent takes ~0.3 seconds more to produce each action.
+Also, the surviving time for this agent does not improve as the episode increases.
 
 ## Evaluation
-For now, we use the Mean Square Error between the actual Q-Value and the predicted Q-Value to evaluate our agent's performance.
-Here's an MSE for our first 300 episode.
-
-<img src="Mean_Sqaure_Error.png" width="50%"> 
-
-Even though the total survival  time for our agent is gradually improving (from the 20s to 30s after 300 episode). The MSE for during this period does not decrease a lot as we expected. One reason might be that the way we assign a reward to each state and its associated  action is too complicated for the Neural Network to learn and approximate. The other reason might be that the learning rate is too small (0.01 as we generated this picture) so that we can hardly see significant  improvements within 300 episode. Therefore, finding a better way to assign reward and a more straightforward evaluation method is a major focus before the final.
 
 
 ## Reference
