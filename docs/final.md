@@ -83,7 +83,7 @@ In the updated version, we changed the size of input layer to a layer with 121 n
 As we stated in the status report, we noticed that, for a given state, the Q-Values predicted for four possible actions are quite similar. The reason for this problem is that, as we use a node in input layer to represent an action, the predictor can hardly distinguish whether it is part of state or an action and, therefore, produce identical predicted Q-values for all possible actions.
 After the modification, we can not only guarantee that training improvements can be shared among all possible actions' predictions but also make sure that the predictor will provide dissimilar Q-Values for each action.
 
-To balance between expolration and exploitation, we introduce Epsilon (\epsilon - greedy) value, which will decrease as number of episode increases:
+To balance between expolration and exploitation, we introduce Epsilon ($\epsilon$-greedy) value, which will decrease as number of episode increases:
 ```python
    self.epsilon = min(1.0, 1.0/(0.1 * current_episode))
 ```
