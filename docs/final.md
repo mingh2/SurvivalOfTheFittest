@@ -34,8 +34,14 @@ A set of 21 by 21 wall defined the initial playground for the agent and the zomb
 
 Comparing to the previous version, where our agent tries to survive inside a 21-by-21 cage with one enemy shown as above, we update the complexity of the environment. We are able to set the environment dynamically based on what we need. For example, in the following images, the environment is set to be a 41-by-41 cage with wall inside the cage. Besides the size of the environment, we also introduce two more types of entities, Spiders, which rarely move but would harm agent if agent steps onto them, and Skeletons, which are mostly identical to Zombies but can move much faster. 
 
-<img src="Pics/Updated_Environment1.png" width="500"/> <img src="Pics/Updated_Environment2.png" width="500"/> 
-<img src="Pics/Updated_Environment3.png" width="500"/> <img src="Pics/Updated_Environment4.png" width="500"/> 
+<figure class="half">
+	<img src="https://mmistakes.github.io/skinny-bones-jekyll/images/image-filename-1.jpg">
+	<img src="https://mmistakes.github.io/skinny-bones-jekyll/images/image-filename-2.jpg">
+	<figcaption>Caption describing these two images.</figcaption>
+</figure>
+
+<img src="Pics/Updated_Environment1.png" width="450"/> <img src="Pics/Updated_Environment2.png" width="450"/> 
+<img src="Pics/Updated_Environment3.png" width="450"/> <img src="Pics/Updated_Environment4.png" width="450"/> 
 
 
 The environment our agent can see is changed from a 21-by-21 matrix to a 11-by-11 matrix where the agent itself is located at the center of the matrix (matrix[5][5]) at the very beginning. The reason why we choose a 11-by-11 matrix is that the reducing of the state size help accelerate the training process. But if we have a state that is too small, the training result will likely to be overfitted. (We will show that later in the Evaluation part)
