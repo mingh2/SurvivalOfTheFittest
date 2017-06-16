@@ -65,7 +65,7 @@ Hence, alternatively, we decided to use Deep Q Network, in which the Q-Function 
 What truly separate Deep Q Network with other reinforcement learning algorithm is its ability to "replay".
 The pseudocode of replay function is shown as follow:
 
-<img src="Pseudocode.png" width="50%"> 
+<img src="Pseudocode.png" width="80%"> 
 
 As shown in the pseudocode shown above, the experience <previous_state, previous_action, reward, current_state> is stored each time the agent made a move. To implement this function, we use a list (will probably change to deque in the future) to memory the past experience. Once an episode is ended, a small batch of random experience is retrieved from the list and we use stochastic gradient descent to update the weights of Neutral Network based on these experiences. This method can not only help our agent avoiding local minimum but also improve and stable the agent's performance since the reward for each state is discrete instead of continuous.
 
@@ -88,13 +88,13 @@ Besides the improvements
 #### Random Action Agent
 Agent that choose next action randomly
 
-'''python
+```python
    def choose_action(self, curr_state, possible_actions):
         if not possible_actions:
             return random.choice(possible_actions)
         else:
             return random.choice([0, 1, 2, 3])
-'''
+```
 Comparing to our optimal agent, random acton agent survive less than 10 seconds.
 
 #### Mob Fun Agent
