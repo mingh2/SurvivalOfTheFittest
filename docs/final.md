@@ -51,6 +51,7 @@ Notes: the total reward is within the range of (-1, +1) becasue we use tanh as t
 ### Algorithm
 
 #### Algorithm Illustration 
+
 We are using the same algorithm, Deep Q Network algorithm, as we did in previous version to train our agent. Here is a good graphic representation of the training process, excpet we do not need to convolute the game state since we already represent the state with matrix:
 
 <img src="https://cdn-images-1.medium.com/max/800/1*T54Ngd-b_CKcP3N6hyXLVg.png" width="80%">
@@ -69,7 +70,9 @@ The pseudocode of replay function is shown as follow:
 As shown in the pseudocode shown above, the experience <previous_state, previous_action, reward, current_state> is stored each time the agent made a move. To implement this function, we use a list (will probably change to deque in the future) to memory the past experience. Once an episode is ended, a small batch of random experience is retrieved from the list and we use stochastic gradient descent to update the weights of Neutral Network based on these experiences. This method can not only help our agent avoiding local minimum but also improve and stable the agent's performance since the reward for each state is discrete instead of continuous.
 
 
+
 #### Improvement In Updated Version
+
 In the previous version, for our implementation of Neural Network, we have one input layer with 442 nodes (21 * 21 matrix that represent the current state and 1 value that represent the action), three hidden layers and a output layer with one node. We use hyperbolic tangent as the activation function so the predicted output will be within the range of (-1, 1). 
 
 In the updated version, we changed the size of input layer to a layer with 121 nodes, since the environment states is changed to a 11-by-11 matrix and we remove the node that representing action. Instead, we produce a output layer with 4 values, one for each action (up, down, left, right). A graphic illustration of the new changes would be as follow:
@@ -100,12 +103,6 @@ Comparing to our optimal agent, random acton agent survive less than 10 seconds.
 
 
 ## Evaluation
-For now, we use the Mean Square Error between the actual Q-Value and the predicted Q-Value to evaluate our agent's performance.
-Here's an MSE for our first 300 episode.
-
-<img src="Mean_Sqaure_Error.png" width="50%"> 
-
-Even though the total survival  time for our agent is gradually improving (from the 20s to 30s after 300 episode). The MSE for during this period does not decrease a lot as we expected. One reason might be that the way we assign a reward to each state and its associated  action is too complicated for the Neural Network to learn and approximate. The other reason might be that the learning rate is too small (0.01 as we generated this picture) so that we can hardly see significant  improvements within 300 episode. Therefore, finding a better way to assign reward and a more straightforward evaluation method is a major focus before the final.
 
 
 ## Reference
