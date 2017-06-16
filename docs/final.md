@@ -36,8 +36,8 @@ Comparing to the previous version, where our agent tries to survive inside a 21-
 
 |                                    |                                    |
 |:----------------------------------:|:----------------------------------:|
-|![](Pics/Updated_Environment1.png){:height="50%" width="50%"}  |  ![](Pics/Updated_Environment2.png){:height="50%" width="50%"}|
-|![](Pics/Updated_Environment3.png){:height="50%" width="50%"}  |  ![](Pics/Updated_Environment4.png){:height="50%" width="50%"}|
+|![](Pics/Updated_Environment1.png)  |  ![](Pics/Updated_Environment2.png)|
+|![](Pics/Updated_Environment3.png)  |  ![](Pics/Updated_Environment4.png)|
 
 
 The environment our agent can see is changed from a 21-by-21 matrix to a 11-by-11 matrix where the agent itself is located at the center of the matrix (matrix[5][5]) at the very beginning. The reason why we choose a 11-by-11 matrix is that the reducing of the state size help accelerate the training process. But if we have a state that is too small, the training result will likely to be overfitted. (We will show that later in the Evaluation part)
