@@ -164,17 +164,19 @@ The evaluation of the agents's performance is based on two criteria, the average
 To compare, here's an MSE for the previous implementation within first 300 episodes.
 
 <img src="Mean_Sqaure_Error.png" width="60%"> 
+<br/>
 
 Belows are MSE for the updated version:
-(Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 1, Number of Episodes: 150)
+
+##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 1, Number of Episodes: 150)
 <img src="Pics/episode_100_c0m10e2.png" width="80%"> 
 <br/>
 
-(Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 1, Number of Episodes: 300)
+##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 1, Number of Episodes: 300)
 <img src="Pics/episode_300_c0m10e2.png" width="80%"> 
 <br/>
 
-(Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 1, Number of Episodes: 1000)
+##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 1, Number of Episodes: 1000)
 <img src="Pics/episode_1000_c0m10e2.png" width="80%"> 
 <br/>
 
