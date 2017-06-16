@@ -35,9 +35,13 @@ A set of 21 by 21 wall defined the initial playground for the agent and the zomb
 Comparing to the previous version, where our agent tries to survive inside a 21-by-21 cage with one enemy shown as above, we update the complexity of the environment. We are able to set the environment dynamically based on what we need. For example, in the following images, the environment is set to be a 41-by-41 cage with wall inside the cage. Besides the size of the environment, we also introduce two more types of entities, Spiders, which rarely move but would harm agent if agent steps onto them, and Skeletons, which are mostly identical to Zombies but can move much faster. 
 
 <figure class="half">
-	<img src="https://mmistakes.github.io/skinny-bones-jekyll/images/image-filename-1.jpg">
-	<img src="https://mmistakes.github.io/skinny-bones-jekyll/images/image-filename-2.jpg">
-	<figcaption>Caption describing these two images.</figcaption>
+	<img src="Pics/Updated_Environment1.png">
+	<img src="Pics/Updated_Environment2.png">
+</figure>
+
+<figure class="half">
+	<img src="Pics/Updated_Environment3.png">
+	<img src="Pics/Updated_Environment4.png">
 </figure>
 
 <img src="Pics/Updated_Environment1.png" width="450"/> <img src="Pics/Updated_Environment2.png" width="450"/> 
