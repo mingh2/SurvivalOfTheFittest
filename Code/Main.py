@@ -15,7 +15,7 @@ from Visual import visualization
 from Action import action
 from Environment_Generator import environment_generator
 
-NUM_REPS = 100
+NUM_REPS = 300
 N = 25
 ALPHA = 1
 GAMMA = 0.5
