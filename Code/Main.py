@@ -15,7 +15,7 @@ from Visual import visualization
 from Action import action
 from Environment_Generator import environment_generator
 
-NUM_REPS = 1000
+NUM_REPS = 100
 N = 25
 ALPHA = 1
 GAMMA = 0.5
@@ -92,7 +92,6 @@ def main():
 
         # Loop until mission ends:
         while world_state.is_mission_running:
-            time.sleep(0.2)
             matrix = None
 
             ws_interpre.input(world_state)
@@ -113,7 +112,10 @@ def main():
             for error in world_state.errors:
                 print "Error:", error.text
 
+            time.sleep(0.2)
+
         MSE.append(agent.calculate_mse() * 100)
+        print MSE[-1]
         agent.reset_mse()
         agent.replay(128)
         print
