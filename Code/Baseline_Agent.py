@@ -12,7 +12,7 @@ class zombies_fighter:
             gamma:  <float>  value decay rate   (default = 1)
             n:      <int>    number of back steps to update (default = 1)
         """
-        self._last_action = 0 
+        self._last_action = 0
 
 
     def act(self, agent_host, action):
@@ -88,37 +88,17 @@ class zombies_fighter:
             elif not world_state.is_mission_running:
                 return state, 0, closest_enemy, closest_wall
 
-    def choose_action(self, curr_state, possible_actions, show_best):
+    def choose_action(self, curr_state, possible_actions):
         '''
             The general idea of this function is similar to what we did
             for Assignment 2 - to implement the algorithm of q-value and
             update the maximum q-value to the agent.
         '''
-        rnd = random.random()
-
         print "Possible Actions: ", possible_actions
-
-        if rnd <= self.epsilon and not show_best:
-            if not possible_actions:
-                return random.choice(possible_actions)
-            else:
-                return random.choice([0, 1, 2, 3])
-
-        q_values = self.nn.predict(curr_state)
-
-        max_q_value = -maxint - 1
-        max_q_value_action = ''
-        random.shuffle(possible_actions)
-        for action in possible_actions:
-            q_value = q_values[action]
-            if q_value > max_q_value:
-                max_q_value = q_value
-                max_q_value_action = action
-
-        self.predict_value = max_q_value
-        print "Q_Values:", q_values
-        print "Action, Predicted Q Value:", max_q_value_action, max_q_value
-        return max_q_value_action
+        if not possible_actions:
+            return random.choice(possible_actions)
+        else:
+            return random.choice([0, 1, 2, 3])
 
     def get_possible_actions(self, matrix):
         possible_actions = []
@@ -133,72 +113,13 @@ class zombies_fighter:
 
         return possible_actions
 
-    def replay(self, batch_size):
-        self.nn.replay(batch_size, 1)
 
-    def run(self, agent_host, matrix, show_best=False):
+    def run(self, agent_host, matrix):
         state, life, closest_enemy, closest_wall = self.get_curr_state(
                                                         agent_host, matrix
                                                     )
 
         possible_actions = self.get_possible_actions(matrix)
-        a0 = self.choose_action(state, possible_actions, show_best)
-
-        if self.previous_state is not None:
-            reward = 0
-
-            done = False
-            if life == 0.0:
-                done = True
-
-            # Set up the rules of reward based on various of factors.
-            # Need to build a more sophisticated rule in the future.
-
-            # 1. Reward Based On Health
-            if self.previous_life > life:
-                reward = reward - 0.40
-#
-            # 2. Reard Based On Closest Enemy
-            if closest_enemy <= 5.0:
-                reward -= 0.30
-            else:
-                reward += 0.30
-            #
-            # if self.previous_closest_enemy > closest_enemy or (closest_enemy <= 1.0):
-            #     reward -= 0.30
-            # elif self.previous_closest_enemy < closest_enemy:
-            #     reward += 0.30
-
-            # 3. Reward Based On Closest Wall
-            if closest_wall <= 1.0 or len(possible_actions) <= 2:
-                reward -= 0.15
-            elif closest_wall > 2.0:
-                reward += 0.15
-
-            print "Actual Value: ", reward
-            self.mse.append((reward - self.predict_value) ** 2)
-            self.nn.remember(
-                self.previous_state, self.previous_action, possible_actions,
-                reward, state, done
-            )
-            self.replay(8)
-
-            self.previous_closest_enemy = closest_enemy
-            self.previous_closest_wall = closest_wall
-
-        # Update information of previous state for the agent
-        self.previous_life = life
-        self.previous_state = state
-        self.previous_action = a0
-        # self.previous_possable_actions = possible_actions
+        a0 = self.choose_action(state, possible_actions)
 
         self.act(agent_host, a0)
-
-    def get_weights(self):
-        return self.nn.get_weights()
-
-    def calculate_mse(self):
-        return sum(self.mse) * 1.0 / len(self.mse)
-
-    def reset_mse(self):
-        self.mse = []
