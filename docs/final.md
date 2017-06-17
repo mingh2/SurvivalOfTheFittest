@@ -55,7 +55,9 @@ Notes: the total reward is within the range of (-1, +1) becasue we use hyperboli
 
 We are using the same algorithm, Deep Q Network algorithm, as we did in previous version to train our agent. Here is a good graphic representation of the training process, excpet we do not need to convolute the game state since we already represent the state with matrix:
 
+<div align="center">
 <img src="https://cdn-images-1.medium.com/max/800/1*T54Ngd-b_CKcP3N6hyXLVg.png" width="50%">
+</div>
 
 The basic idea of Deep Q Network is similar to that of the Q-Learning where we have a reward (Q-Value) associated with a state and each of its corresponding action(s). Then we select the action which possesses the maximum Q-Value among all options.
 
@@ -171,8 +173,10 @@ The evaluation of the agents' performance bases on two criteria - the average su
 
 #### MSE for Previous Implementation
 The graph below is the MSE during the training process of our previous implementation. Our agent tried to survive in an environment with size as 11-by-11, no wall and only one Zombie.
+
+<div align="center">
 <img src="Mean_Sqaure_Error.png" width="60%">
-<br/>
+</div>
 
 #### MSE for the Updated Version
 ##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 2, Number of Episodes: 150)
