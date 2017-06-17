@@ -71,14 +71,14 @@ As shown in the pseudocode shown above, the experience <previous_state, previous
 
 #### Improvement In Updated Version
 
-In the previous version, for our implementation of Neural Network, we have one input layer with 442 nodes (21 * 21 matrix that represent the current state and 1 value that represent the action), three hidden layers and a output layer with one node. We use hyperbolic tangent as the activation function so the predicted output will be within the range of (-1, 1).
+In the previous version, for our implementation of Neural Network, we have one input layer with 442 nodes (21 * 21 matrix that represent the current state and 1 value that represent the action), three hidden layers and an output layer with one node. We use hyperbolic tangent as the activation function, so the predicted output will be within the range of (-1, 1).
 
-In the updated version, we changed the size of input layer to a layer with 121 nodes, since the environment states is changed to a 11-by-11 matrix and we remove the node that representing action. Instead, we produce a output layer with 4 values, one for each action (up, down, left, right). A graphic illustration of the new changes would be as follow:
+In the updated version, we changed the size of input layer to a layer with 121 nodes, since the agent converts the visible environment to an 11-by-11 matrix. Then we remove the node that represents action. Instead, we produce an output layer with four values, one for each action (up, down, left, right). A graphic illustration of the new changes would be as follow:
 
 <img src="Pics/Neutral_Network_Update.png" width="80%">
 
-As we stated in the status report, we noticed that, for a given state, the Q-Values predicted for four possible actions are quite similar. The reason for this problem is that, as we use a node in input layer to represent an action, the predictor can hardly distinguish whether it is part of state or an action and, therefore, produce identical predicted Q-values for all possible actions.
-After the modification, we can not only guarantee that training improvements can be shared among all possible actions' predictions but also make sure that the predictor will provide dissimilar Q-Values for each action.
+As we stated in the status report, we noticed that, for a given state, the Q-Values predicted for four possible actions are quite similar. The reason for this problem is that, as we use a node in input layer to represent an action, the predictor can hardly distinguish whether it is part of the state or an action and, therefore, produce identical predicted Q-values for all possible actions.
+After the modification, we can not only guarantee that training improvements can be shared among all possible measure predictions but also make sure that the predictor will provide distinctive Q-Values for each action.
 
 To balance between expolration and exploitation, we introduce Epsilon (![](https://latex.codecogs.com/gif.latex?%5Cepsilon)-greedy) value, which will decrease as number of episode increases:
 ```python
@@ -156,12 +156,12 @@ Comparing to our optimal agent, mob fun agent takes ~0.3 seconds more to produce
 Also, the surviving time for this agent does not improve as the episode increases.
 
 ## Evaluation
-The evaluation of the agents's performance is based on two criteria, the average survival time and the Mean Square Error between the actual Q-Value and the predicted Q-Value.
+The evaluation of the agents' performance bases on two criteria - the average survival time and the Mean Square Error between the actual Q-Value and the predicted Q-Value.
 
 ### Quantitative Evaluation
 
 #### MSE for Previous Implementation
-The graph below is the MSE during the trainning process in our previous implementation. Our agent tried to survive in an environment with size as 11-by-11, no wall and only one Zombie.
+The graph below is the MSE during the training process of our previous implementation. Our agent tried to survive in an environment with size as 11-by-11, no wall and only one Zombie.
 <img src="Mean_Sqaure_Error.png" width="60%">
 <br/>
 
