@@ -7,15 +7,13 @@ title:  Final
 
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/w_hhVbIIH90" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 
-Work in Progress (・`ω´・)
-The video is still the status report video, just a placeholder while we are working on the structure for the final report. .....
 
 ## Project Summary
 
-The **Survival of the Fittest** Project (Our Computer Sciences 175: Project in AI) provides an opportunity for our team to design several agents to survive under a purplex environment with numerous enemies. From day one, the team has dedicated to an unchanged objective – to find, to design, and to train the best agent to survive in an unpredictable and sophisticated environment, to pursuit the goal of longevity.
+The **Survival of the Fittest** Project (Our Computer Sciences 175: Project in AI) provides an opportunity for our team to design several agents to survive under a convoluted environment with numerous enemies. From day one, the team has dedicated to an unchanged objective – to find, to design, and to train the best agent to survive in an unpredictable and sophisticated environment, to pursue the goal of longevity.
 
 #### Essential Knowledge
-The project requires us to review, comprehend, and implement what we have learned in CompSci 175, and several other Intelligence System courses – CompSci 171, CompSci 177, and CompSci 178. The project utilized Neural Network, Q-Learning, and Neuroevolution of Augmenting Topologies to generate three different agents. Deep Q Network provided the most readily available solution. A neural network delivers an estimation of Q value, and then the agent would determine the best action based on the Q value. Another agent whom the team has been working on is NEAT (Neuroevolution of Augmenting Topologies). NEAT has presented various challenges during the development. It is a powerful method, but the team only has limited knowledge on the subject. Beside Deep Q Network and NEAT, a random agent whose actions are solely determined by unplanned actions without any heuristics. The random one acts as a control group to evaluate the performance of other agents by comparing the performance.
+The project requires us to review, comprehend, and implement what we have learned in CompSci 175, and several other Intelligence System courses – CompSci 171, CompSci 177, and CompSci 178. The project utilized Neural Network and Q-Learning to generate three different agents. Deep Q Network provided the most readily available solution. A neural network delivers an estimation of Q value, and then the agent would determine the best action based on the Q value. Another agent whom the team has been working on is NEAT (Neuroevolution of Augmenting Topologies). NEAT has presented various challenges during the development. It is a powerful method, but the team only has limited knowledge on the subject. The difficulty of working with NEAT prevented use to produce any useful result before the final. Beside Deep Q Network and NEAT, a random agent whose actions are solely determined by unplanned actions without any heuristics. The random one acts as a control group to evaluate the performance of other agents by comparing the performance.
 
 #### Progress Summary  
 
@@ -28,9 +26,9 @@ A set of 21 by 21 wall defined the initial playground for the agent and the zomb
 
 ### Environment Representation / Actions / Reward
 
-<img src="State%20Representation.png" width="50%"> 
+<img src="State%20Representation.png" width="50%">
 
-Comparing to the previous version, where our agent tries to survive inside a 21-by-21 cage with one enemy shown as above, our team update the complexity of the environment. We are able to set the environment dynamically based on our needs. For example, in the following images, the environment is set to be a 41-by-41 cage with wall inside the cage. Besides the size of the environment, we also introduce two more types of entities, Spiders, which rarely move but would harm agent if agent steps onto them, and Skeletons, which are mostly identical to Zombies but can move much faster. 
+Comparing to the previous version, where our agent tries to survive inside a 21-by-21 cage with one enemy shown as above, our team update the complexity of the environment. We were able to set the environment dynamically based on our needs. For example, in the following images, the environment is configured to be a 41-by-41 cage with stumbling blocks inside the cage. Besides the size of the environment, we also introduce two more types of entities, Spiders, which rarely move but would harm agent if agent steps onto them, and Skeletons, which are mostly identical to Zombies but can move much faster.
 
 
 <img src="Pics/Updated_Environment1.png" width="425">  <img src="Pics/Updated_Environment2.png" width="425">
@@ -49,7 +47,7 @@ Notes: the total reward is within the range of (-1, +1) becasue we use tanh as t
 
 ### Algorithm
 
-#### Algorithm Illustration 
+#### Algorithm Illustration
 
 We are using the same algorithm, Deep Q Network algorithm, as we did in previous version to train our agent. Here is a good graphic representation of the training process, excpet we do not need to convolute the game state since we already represent the state with matrix:
 
@@ -64,7 +62,7 @@ Hence, alternatively, we decided to use Deep Q Network, in which the Q-Function 
 What truly separate Deep Q Network with other reinforcement learning algorithm is its ability to "replay".
 The pseudocode of replay function is shown as follow:
 
-<img src="Pseudocode.png" width="80%"> 
+<img src="Pseudocode.png" width="80%">
 
 As shown in the pseudocode shown above, the experience <previous_state, previous_action, reward, current_state> is stored each time the agent made a move. To implement this function, we use a list (will probably change to deque in the future) to memory the past experience. Once an episode is ended, a small batch of random experience is retrieved from the list and we use stochastic gradient descent to update the weights of Neutral Network based on these experiences. This method can not only help our agent avoiding local minimum but also improve and stable the agent's performance since the reward for each state is discrete instead of continuous.
 
@@ -72,11 +70,11 @@ As shown in the pseudocode shown above, the experience <previous_state, previous
 
 #### Improvement In Updated Version
 
-In the previous version, for our implementation of Neural Network, we have one input layer with 442 nodes (21 * 21 matrix that represent the current state and 1 value that represent the action), three hidden layers and a output layer with one node. We use hyperbolic tangent as the activation function so the predicted output will be within the range of (-1, 1). 
+In the previous version, for our implementation of Neural Network, we have one input layer with 442 nodes (21 * 21 matrix that represent the current state and 1 value that represent the action), three hidden layers and a output layer with one node. We use hyperbolic tangent as the activation function so the predicted output will be within the range of (-1, 1).
 
 In the updated version, we changed the size of input layer to a layer with 121 nodes, since the environment states is changed to a 11-by-11 matrix and we remove the node that representing action. Instead, we produce a output layer with 4 values, one for each action (up, down, left, right). A graphic illustration of the new changes would be as follow:
 
-<img src="Pics/Neutral_Network_Update.png" width="80%"> 
+<img src="Pics/Neutral_Network_Update.png" width="80%">
 
 As we stated in the status report, we noticed that, for a given state, the Q-Values predicted for four possible actions are quite similar. The reason for this problem is that, as we use a node in input layer to represent an action, the predictor can hardly distinguish whether it is part of state or an action and, therefore, produce identical predicted Q-values for all possible actions.
 After the modification, we can not only guarantee that training improvements can be shared among all possible actions' predictions but also make sure that the predictor will provide dissimilar Q-Values for each action.
@@ -161,26 +159,26 @@ The evaluation of the agents's performance is based on two criteria, the average
 
 ### Quantitative Evaluation
 
-#### MSE for Previous Implementation 
+#### MSE for Previous Implementation
 The graph below is the MSE during the trainning process in our previous implementation. Our agent tried to survive in an environment with size as 11-by-11, no wall and only one Zombie.
-<img src="Mean_Sqaure_Error.png" width="60%"> 
+<img src="Mean_Sqaure_Error.png" width="60%">
 <br/>
 
 #### MSE for the Updated Version
 ##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 2, Number of Episodes: 150)
-<img src="Pics/episode_100_c0m10e2.png" width="60%"> 
+<img src="Pics/episode_100_c0m10e2.png" width="60%">
 
 ##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 2, Number of Episodes: 300)
-<img src="Pics/episode_300_c0m10e2.png" width="60%"> 
+<img src="Pics/episode_300_c0m10e2.png" width="60%">
 
 ##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 2, Number of Episodes: 1000)
-<img src="Pics/episode_1000_c0m10e2.png" width="60%"> 
+<img src="Pics/episode_1000_c0m10e2.png" width="60%">
 
 ##### (Complexity: 5, Environment Size: 21 * 21, Number of Enemies: 5, Number of Episodes: 100)
-<img src="Pics/episode_100_c5m20e5.png" width="60%"> 
+<img src="Pics/episode_100_c5m20e5.png" width="60%">
 
 ##### (Complexity: 5, Environment Size: 21 * 21, Number of Enemies: 5, Number of Episodes: 300)
-<img src="Pics/episode_300_c5m20e5.png" width="60%"> 
+<img src="Pics/episode_300_c5m20e5.png" width="60%">
 
 Notes: To train our agent to survive in a variety of environment, the types of enemies are randomly generated for each episode.
 
