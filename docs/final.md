@@ -25,8 +25,9 @@ A set of 21 by 21 wall defined the initial playground for the agent and the zomb
 ## Approach
 
 ### Environment Representation / Actions / Reward
-
+<div align="center">
 <img src="State%20Representation.png" width="50%">
+</div>
 
 Comparing to the previous version, where our agent tries to survive inside a 21-by-21 cage with one enemy shown as above, our team update the complexity of the environment. We were able to set the environment dynamically based on our needs. For example, in the following images, the environment is configured to be a 41-by-41 cage with stumbling blocks inside the cage. Besides the size of the environment, we also introduce two more types of entities, Spiders, which rarely move but would harm agent if agent steps onto them, and Skeletons, which are mostly identical to Zombies but can move much faster.
 
