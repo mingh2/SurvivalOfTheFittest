@@ -52,7 +52,7 @@ Notes: the total reward is within the range of (-1, +1) becasue we use hyperboli
 
 We are using the same algorithm, Deep Q Network algorithm, as we did in previous version to train our agent. Here is a good graphic representation of the training process, excpet we do not need to convolute the game state since we already represent the state with matrix:
 
-<img src="https://cdn-images-1.medium.com/max/800/1*T54Ngd-b_CKcP3N6hyXLVg.png" width="80%">
+<img src="https://cdn-images-1.medium.com/max/800/1*T54Ngd-b_CKcP3N6hyXLVg.png" width="50%">
 
 The basic idea of Deep Q Network is similar to that of the Q-Learning where we have a reward (Q-Value) associated with a state and each of its corresponding action(s). Then we select the action which possesses the maximum Q-Value among all options.
 
@@ -63,7 +63,7 @@ Hence, alternatively, we decided to use Deep Q Network, in which the Q-Function 
 What truly separate Deep Q Network with other reinforcement learning algorithm is its ability to "replay".
 The pseudocode of replay function is shown as follow:
 
-<img src="Pseudocode.png" width="80%">
+<img src="Pseudocode.png" width="50%">
 
 As shown in the pseudocode shown above, the experience <previous_state, previous_action, reward, current_state> is stored each time the agent made a move. To implement this function, we use a list (will probably change to deque in the future) to memory the past experience. Once an episode is ended, a small batch of random experience is retrieved from the list and we use stochastic gradient descent to update the weights of Neutral Network based on these experiences. This method can not only help our agent avoiding local minimum but also improve and stable the agent's performance since the reward for each state is discrete instead of continuous.
 
@@ -75,7 +75,7 @@ In the previous version, for our implementation of Neural Network, we have one i
 
 In the updated version, we changed the size of input layer to a layer with 121 nodes, since the agent converts the visible environment to an 11-by-11 matrix. Then we remove the node that represents action. Instead, we produce an output layer with four values, one for each action (up, down, left, right). A graphic illustration of the new changes would be as follow:
 
-<img src="Pics/Neutral_Network_Update.png" width="80%">
+<img src="Pics/Neutral_Network_Update.png" width="50%">
 
 As we stated in the status report, we noticed that, for a given state, the Q-Values predicted for four possible actions are quite similar. The reason for this problem is that, as we use a node in input layer to represent an action, the predictor can hardly distinguish whether it is part of the state or an action and, therefore, produce identical predicted Q-values for all possible actions.
 After the modification, we can not only guarantee that training improvements can be shared among all possible measure predictions but also make sure that the predictor will provide distinctive Q-Values for each action.
