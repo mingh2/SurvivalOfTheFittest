@@ -31,9 +31,12 @@ A set of 21 by 21 wall defined the initial playground for the agent and the zomb
 Comparing to the previous version, where our agent tries to survive inside a 21-by-21 cage with one enemy shown as above, our team update the complexity of the environment. We were able to set the environment dynamically based on our needs. For example, in the following images, the environment is configured to be a 41-by-41 cage with stumbling blocks inside the cage. Besides the size of the environment, we also introduce two more types of entities, Spiders, which rarely move but would harm agent if agent steps onto them, and Skeletons, which are mostly identical to Zombies but can move much faster.
 
 
+<div align="center">
 <img src="Pics/Updated_Environment1.png" width="425">  <img src="Pics/Updated_Environment2.png" width="425">
 <br />
 <img src="Pics/Updated_Environment3.png" width="425">  <img src="Pics/Updated_Environment4.png" width="425">
+</div>
+
 
 
 
@@ -63,7 +66,10 @@ Hence, alternatively, we decided to use Deep Q Network, in which the Q-Function 
 What truly separate Deep Q Network with other reinforcement learning algorithm is its ability to "replay".
 The pseudocode of replay function is shown as follow:
 
+<div align="center">
 <img src="Pseudocode.png" width="50%">
+</div>
+
 
 As shown in the pseudocode shown above, the experience <previous_state, previous_action, reward, current_state> is stored each time the agent made a move. To implement this function, we use a list (will probably change to deque in the future) to memory the past experience. Once an episode is ended, a small batch of random experience is retrieved from the list and we use stochastic gradient descent to update the weights of Neutral Network based on these experiences. This method can not only help our agent avoiding local minimum but also improve and stable the agent's performance since the reward for each state is discrete instead of continuous.
 
@@ -75,7 +81,10 @@ In the previous version, for our implementation of Neural Network, we have one i
 
 In the updated version, we changed the size of input layer to a layer with 121 nodes, since the agent converts the visible environment to an 11-by-11 matrix. Then we remove the node that represents action. Instead, we produce an output layer with four values, one for each action (up, down, left, right). A graphic illustration of the new changes would be as follow:
 
+
+<div align="center">
 <img src="Pics/Neutral_Network_Update.png" width="50%">
+</div>
 
 As we stated in the status report, we noticed that, for a given state, the Q-Values predicted for four possible actions are quite similar. The reason for this problem is that, as we use a node in input layer to represent an action, the predictor can hardly distinguish whether it is part of the state or an action and, therefore, produce identical predicted Q-values for all possible actions.
 After the modification, we can not only guarantee that training improvements can be shared among all possible measure predictions but also make sure that the predictor will provide distinctive Q-Values for each action.
@@ -167,19 +176,29 @@ The graph below is the MSE during the training process of our previous implement
 
 #### MSE for the Updated Version
 ##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 2, Number of Episodes: 150)
+<div align="center">
 <img src="Pics/episode_100_c0m10e2.png" width="60%">
+</div>
 
 ##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 2, Number of Episodes: 300)
+<div align="center">
 <img src="Pics/episode_300_c0m10e2.png" width="60%">
+</div>
 
 ##### (Complexity: 0, Environment Size: 11 * 11, Number of Enemies: 2, Number of Episodes: 1000)
+<div align="center">
 <img src="Pics/episode_1000_c0m10e2.png" width="60%">
+</div>
 
 ##### (Complexity: 5, Environment Size: 21 * 21, Number of Enemies: 5, Number of Episodes: 100)
+<div align="center">
 <img src="Pics/episode_100_c5m20e5.png" width="60%">
+</div>
 
 ##### (Complexity: 5, Environment Size: 21 * 21, Number of Enemies: 5, Number of Episodes: 300)
+<div align="center">
 <img src="Pics/episode_300_c5m20e5.png" width="60%">
+</div>
 
 Notes: To train our agent to survive in a variety of environment, the types of enemies are randomly generated for each episode.
 
