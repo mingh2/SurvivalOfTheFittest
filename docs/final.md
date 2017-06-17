@@ -24,7 +24,7 @@ A set of 21 by 21 wall defined the initial playground for the agent and the zomb
 
 ## Approach
 
-### Environment Representation / Actions / Reward
+#### Environment Representation / Actions / Reward
 <div align="center">
 <img src="State%20Representation.png" width="50%">
 </div>
@@ -50,9 +50,9 @@ Of course, the agent will be rewarded if it can make a move that increases the d
 Notes: the total reward is within the range of (-1, +1) becasue we use hyperbolic tangent as the activation function.
 
 
-### Algorithm
+#### Algorithm
 
-#### Algorithm Illustration
+##### Algorithm Illustration
 
 We are using the same algorithm, Deep Q Network algorithm, as we did in previous version to train our agent. Here is a good graphic representation of the training process, excpet we do not need to convolute the game state since we already represent the state with matrix:
 
@@ -78,7 +78,7 @@ As shown in the pseudocode shown above, the experience <previous_state, previous
 
 
 
-#### Improvement In Updated Version
+##### Improvement In Updated Version
 
 In the previous version, for our implementation of Neural Network, we have one input layer with 442 nodes (21 * 21 matrix that represent the current state and 1 value that represent the action), three hidden layers and an output layer with one node. We use hyperbolic tangent as the activation function, so the predicted output will be within the range of (-1, 1).
 
@@ -97,9 +97,9 @@ To balance between expolration and exploitation, we introduce Epsilon (![](https
    self.epsilon = min(1.0, 1.0/(0.1 * current_episode))
 ```
 
-### Baseline Agent
+#### Baseline Agent
 
-#### Random Action Agent
+##### Random Action Agent
 Agent that choose next action randomly
 
 ```python
@@ -170,9 +170,9 @@ Also, the surviving time for this agent does not improve as the episode increase
 ## Evaluation
 The evaluation of the agents' performance bases on two criteria - the average survival time and the Mean Square Error between the actual Q-Value and the predicted Q-Value.
 
-### Quantitative Evaluation
+#### Quantitative Evaluation
 
-#### MSE for Previous Implementation
+##### MSE for Previous Implementation
 The graph below is the MSE during the training process of our previous implementation. Our agent tried to survive in an environment with size as 11-by-11, no wall and only one Zombie.
 
 <div align="center">
@@ -207,7 +207,7 @@ The graph below is the MSE during the training process of our previous implement
 
 Notes: To train our agent to survive in a variety of environment, the types of enemies are randomly generated for each episode.
 
-### Qualitative Evaluation
+#### Qualitative Evaluation
 Our way to qualitatively evaluate the agent is observing the average survival time for differents types of agent.
 1. Comparing to that of the random action agent, the average survival time of optimal agent is relatively longer. Random action agent usually dies within 10 seconds, while the optimal agent survives up to 100 seconds.
 2. Comparing to that of the random action agent, the average survival time of optimal agent gradually increases as the number of episode increases, which means our agent is learning from past event.
