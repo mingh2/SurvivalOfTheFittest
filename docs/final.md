@@ -37,12 +37,13 @@ Comparing to the previous version, where our agent tries to survive inside a 21-
 
 
 
-The environment our agent can see is changed from a 21-by-21 matrix to a 11-by-11 matrix where the agent itself is located at the center of the matrix (matrix[5][5]) at the very beginning. The reason why the state is updated to a 11-by-11 matrix is that the reducing of the state size help accelerate the training process. But if we have a state that is too small, the training result will likely to be overfitted. (Will show that later in the Evaluation part)
+Now, our agent automatically converts the 21-by-21 matrix environment to an 11-by-11 matrix to reduce the effective state space.  The agent itself remains located at the center of the matrix (matrix[5][5]). Reduction of the state size help accelerates the training process. But if we have a state space that is too small, the training result will likely to be overfitted. (Will show that later in the Evaluation part)
 
-Reward for each state and action only depends on two criteria: agent's current health and distance between agent and closest enemy. Distance between closest wall is no longer a depending criterion because we introduce wall into the updated environment and we would like to see how our agent can utilize wall to escape from the enemies. The agent will be rewarded less if it's attacked by enemy and lose health (-0.5). The agent will have points deducted (-0.2) if the distance between the agent and the closest enemy is less than 2.0 and will have more points deducted (-0.3) if agent choose a move that shorten the distance between agent and closest enemy.
-Of course, the agent will be rewarded if it is able to make a move that increase the distance between enemy (+0.3) and some extra rewards if it is able to keep a long distance for a period of time.
+The reward for each state and action only depends on two criteria: agent's current health and distance between agent and closest enemy. The distance between nearest wall is no longer a depending criterion because we introduce wall into the updated environment and we would like to see how our agent can utilize wall to escape from the enemies. The agent will be rewarded less if an enemy attacks it and lose health (-0.5). The agent will have points deducted (-0.2) if the distance between the agent and the closest enemy is less than 2.0 and will have more points deducted (-0.3) if the agent chooses a move that shortens the distance between agent and most intimate enemy.
 
-Notes: the total reward is within the range of (-1, +1) becasue we use tanh as the activation function.
+Of course, the agent will be rewarded if it can make a move that increases the distance between enemy (+0.3) and some extra rewards if it is able to keep a long distance for a period of time.
+
+Notes: the total reward is within the range of (-1, +1) becasue we use hyperbolic tangent as the activation function.
 
 
 ### Algorithm
@@ -183,10 +184,10 @@ The graph below is the MSE during the trainning process in our previous implemen
 Notes: To train our agent to survive in a variety of environment, the types of enemies are randomly generated for each episode.
 
 ### Qualitative Evaluation
-Our way to qualitatively evaluate the agent is observaing the average survival time for differents types of agent.
-1. Comparing to that of the random action agent, the average survival time of optimal agent is relatively longer. Random action agent usually die within 10 seconds, while the optimal agent survives up to 100 seconds.
-2. Comparing to that of the random action agent, the average survival time of optimal agent gradually increases as number of episode increases, which means our agent is learning from past episode.
-3. Comparing to the mob fun agent, our agent takes less time to figure the next action given the current states. We conclude this becasue we can observe clear lag between each action when using mob fun agent.
+Our way to qualitatively evaluate the agent is observing the average survival time for differents types of agent.
+1. Comparing to that of the random action agent, the average survival time of optimal agent is relatively longer. Random action agent usually dies within 10 seconds, while the optimal agent survives up to 100 seconds.
+2. Comparing to that of the random action agent, the average survival time of optimal agent gradually increases as the number of episode increases, which means our agent is learning from past event.
+3. Comparing to the mob fun agent, our agent takes less time to figure the next action given the current states. We conclude this because we can observe clear lag between each action when using mob fun agent.
 
 ## Reference
 
